@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://hf68id65umtw"]
+
+[ext_resource type="Material" uid="uid://wyp2pryfoiko" path="res://Art/Material/MI_Demo_Grass.tres" id="1_m43ph"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv0m5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wyp2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vj02n"]
+
+[node name="Sandbox" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -10, 0)
+physics_material_override = SubResource("PhysicsMaterial_rv0m5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_0wyp2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+material_override = ExtResource("1_m43ph")
+mesh = SubResource("BoxMesh_vj02n")
+skeleton = NodePath("../..")
