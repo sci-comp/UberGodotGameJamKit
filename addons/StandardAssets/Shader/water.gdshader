@@ -1,4 +1,4 @@
-// "Wind Waker Ocean" by @Polyflare (29/1/15)
+// by @Polyflare (29/1/15)
 // License: Creative Commons Attribution 4.0 International
 
 // Source code for the texture generator is available at:

@@ -36,6 +36,7 @@ shape = SubResource("BoxShape3D_6fcqa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5564, -9.53674e-07, 6.66547)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Center Cube2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3577, 0.0139198, -8.07076)
 material_override = ExtResource("3_ony54")
 mesh = SubResource("PlaneMesh_nc1kt")
 
