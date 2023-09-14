@@ -17,3 +17,11 @@ config/icon="res://icon.svg"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
+
+[plugin]
+
+"Editor Toolbox/enabled"=true

@@ -1,0 +1,7 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://e6ygi335shhf"]
+
+[ext_resource type="Sky" uid="uid://slork6er5f8u" path="res://addons/StandardAssets/Environment/DefaultSky.tres" id="1_hbajo"]
+
+[resource]
+background_mode = 2
+sky = ExtResource("1_hbajo")

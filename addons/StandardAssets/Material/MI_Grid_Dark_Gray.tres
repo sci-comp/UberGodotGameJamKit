@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dilf1qyvo4hod"]
+
+[ext_resource type="Texture2D" uid="uid://vd4luqyv05ko" path="res://addons/StandardAssets/Texture/T_Grid_Dark_Gray.png" id="1_4lnr5"]
+
+[resource]
+albedo_texture = ExtResource("1_4lnr5")
