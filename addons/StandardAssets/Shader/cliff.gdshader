@@ -14,35 +14,53 @@ uniform vec2 tex_scale = vec2(1.0, 1.0);
 
 void fragment()
 {
-	vec4 worldPos = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
-	vec2 world_uv = worldPos.xz * tex_scale;
-	
-    vec4 albedo1 = texture(tex_1_albedo, world_uv);
-    vec4 albedo2 = texture(tex_2_albedo, world_uv);
-    vec3 normal1 = texture(tex_1_normal, world_uv).rgb;
-    vec3 normal2 = texture(tex_2_normal, world_uv).rgb;
+    vec4 worldPos = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
+    
+    vec4 albedo1;
+    vec4 albedo2;
+    vec3 normal1;
+    vec3 normal2;
     float mix_factor = 0.0;
-    float addends = 0.0;
+
+    // Triplanar mapping
+    vec3 norm = abs(normalize(NORMAL));
+    vec3 triplanarWeights = abs(norm);
+    triplanarWeights /= dot(triplanarWeights, vec3(1.0));
+
+    vec2 uvX = worldPos.zy * tex_scale;
+    vec2 uvY = worldPos.xz * tex_scale;
+    vec2 uvZ = worldPos.xy * tex_scale;
+
+    albedo1 = texture(tex_1_albedo, uvX) * triplanarWeights.x + 
+              texture(tex_1_albedo, uvY) * triplanarWeights.y + 
+              texture(tex_1_albedo, uvZ) * triplanarWeights.z;
+
+    albedo2 = texture(tex_2_albedo, uvX) * triplanarWeights.x + 
+              texture(tex_2_albedo, uvY) * triplanarWeights.y + 
+              texture(tex_2_albedo, uvZ) * triplanarWeights.z;
+
+    normal1 = texture(tex_1_normal, uvX).rgb * triplanarWeights.x + 
+              texture(tex_1_normal, uvY).rgb * triplanarWeights.y + 
+              texture(tex_1_normal, uvZ).rgb * triplanarWeights.z;
+
+    normal2 = texture(tex_2_normal, uvX).rgb * triplanarWeights.x + 
+              texture(tex_2_normal, uvY).rgb * triplanarWeights.y + 
+              texture(tex_2_normal, uvZ).rgb * triplanarWeights.z;
 
     if (use_world_direction)
     {
-        // Transforming the normal texture values to a range of [-1, 1].
         vec3 unpacked_normal = normal1 * 2.0 - vec3(1.0);
         unpacked_normal.z = sqrt(max(0.0, 1.0 - dot(unpacked_normal.xy, unpacked_normal.xy)));
-        
-        // Transforming the 2D normal map into 3D space.
+
         vec3 world_tangent = (VIEW_MATRIX * vec4(TANGENT, 0.0)).xyz;
         vec3 world_binormal = (VIEW_MATRIX * vec4(BINORMAL, 0.0)).xyz;
         vec3 world_normal = (INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz;
-        
-        // Mixing normals based on Godot's Vulkan spatial shader.
+
         vec3 normalmap_normal = normalize(unpacked_normal.y * world_tangent + unpacked_normal.x * world_binormal + world_normal * unpacked_normal.z);
-        
-        // Weight of second texture is determined by how aligned the world-space normal is with world_direction.
+
         mix_factor += clamp(dot(normalmap_normal, world_direction), 0.0, 1.0);
-        addends += 1.0;
     }
-    
+
     mix_factor = smoothstep(0.0, blend_smoothness, mix_factor - threshold);
 
     NORMAL = mix(normal1, normal2, mix_factor);
