@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=12 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Environment/DefaultEnvironment.tres" id="1_ncw1l"]
 [ext_resource type="Material" uid="uid://bkun7ytwxriir" path="res://addons/StandardAssets/Material/mi_checkers.tres" id="2_v0b5k"]
 [ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Shader/Water/mi_water.tres" id="3_wq16w"]
 [ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Shader/Vegetation/pf_bush_01.tscn" id="4_kxdeh"]
+[ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/mister dungeon/terrain kit lite/models/Boulder/Boulder-Bare-Cliff-Round.scn" id="5_yeb3a"]
+[ext_resource type="PackedScene" uid="uid://cmnmiyag6ydui" path="res://addons/mister dungeon/terrain kit lite/models/Formation/Formation-Bare-Cliff-Henge-01.scn" id="7_afofb"]
+[ext_resource type="PackedScene" uid="uid://ckiv4u8j0xy23" path="res://addons/mister dungeon/terrain kit lite/models/Overhang/Overhang-Bare-Cliff-Medium.scn" id="8_6xqi8"]
+[ext_resource type="PackedScene" uid="uid://2o2j7qrruhbf" path="res://addons/mister dungeon/terrain kit lite/models/Formation/Formation-Bare-Rock-03.scn" id="8_yjfk1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ikf7"]
 
@@ -17,6 +21,10 @@ subdivide_depth = 32
 [node name="Sandbox" type="Node3D"]
 
 [node name="Organizer" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Organizer"]
+transform = Transform3D(-0.953197, -0.0831081, 0.290705, 0, 0.961481, 0.274873, -0.302351, 0.262008, -0.91648, 0.986877, 1.55892, -2.1231)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Organizer"]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 9999, 0)
@@ -34,21 +42,31 @@ mesh = SubResource("BoxMesh_6ikf7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Organizer/Center Cube"]
 shape = SubResource("BoxShape3D_6fcqa")
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Water" type="Node3D" parent="Organizer"]
+visible = false
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Water"]
 material_override = ExtResource("3_wq16w")
 mesh = SubResource("PlaneMesh_nc1kt")
 skeleton = NodePath("")
 
-[node name="pf_bush_01" parent="." instance=ExtResource("4_kxdeh")]
+[node name="pf_bush_01" parent="Organizer" instance=ExtResource("4_kxdeh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="pf_bush_02" parent="." instance=ExtResource("4_kxdeh")]
+[node name="pf_bush_02" parent="Organizer" instance=ExtResource("4_kxdeh")]
 transform = Transform3D(0.501133, 0, 0.86537, 0, 1, 0, -0.86537, 0, 0.501133, -1.22051, 0, -0.97949)
 
-[node name="pf_bush_03_" parent="." instance=ExtResource("4_kxdeh")]
+[node name="pf_bush_03_" parent="Organizer" instance=ExtResource("4_kxdeh")]
 transform = Transform3D(0.842244, 0, 0.064615, 0, 0.844719, 0, -0.064615, 0, 0.842244, -0.721882, 0, 0.962666)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.953197, -0.0831081, 0.290704, 0, 0.961481, 0.274873, -0.302351, 0.262008, -0.91648, 0.986877, 1.55892, -2.1231)
+[node name="Boulder-Bare-Cliff-Round" parent="Organizer" instance=ExtResource("5_yeb3a")]
+transform = Transform3D(1.01832, 0, 0, 0, 1.01832, 0, 0, 0, 1.01832, 4.74435, -3.45874, -1.31984)
+
+[node name="Formation-Bare-Cliff-Henge-01" parent="." instance=ExtResource("7_afofb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.69447, 0, -7.93477)
+
+[node name="Formation-Bare-Rock-03" parent="." instance=ExtResource("8_yjfk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1584, 0, 19.7126)
+
+[node name="Overhang-Bare-Cliff-Medium" parent="." instance=ExtResource("8_6xqi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5992, 0, 31.2803)

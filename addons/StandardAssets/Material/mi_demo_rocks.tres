@@ -1,9 +1,9 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://gvfcts50m6r1"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://1fwbkbr1rflm"]
 
-[ext_resource type="Texture2D" uid="uid://jdoprldp3d3h" path="res://addons/StandardAssets/Texture/T_Demo_Rocks.png" id="1_tlvyi"]
-[ext_resource type="Texture2D" uid="uid://yi08drqe33n" path="res://addons/StandardAssets/Texture/T_Demo_Rocks_n.png" id="2_wnlrj"]
+[ext_resource type="Texture2D" uid="uid://64g7fvw1wqc8" path="res://addons/StandardAssets/Texture/t_demo_rocks.png" id="1_wogvk"]
+[ext_resource type="Texture2D" uid="uid://b1cinkn0d01y7" path="res://addons/StandardAssets/Texture/t_demo_rocks_n.png" id="2_jhsog"]
 
 [resource]
-albedo_texture = ExtResource("1_tlvyi")
+albedo_texture = ExtResource("1_wogvk")
 normal_enabled = true
-normal_texture = ExtResource("2_wnlrj")
+normal_texture = ExtResource("2_jhsog")

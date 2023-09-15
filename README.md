@@ -6,3 +6,12 @@ A collection of freely usable art, scripts, and sounds that will benefit many pr
 
 ![demo](./addons/StandardAssets/Documentation/Image/demo.png)
 
+## License
+
+Most content is either MIT or cc0. Please see license.txt files in their respective folders. Exceptions are listed below,
+
+The water shader is originally by Polyflare
+  License: CC-BY 4.0
+  URL: https://creativecommons.org/licenses/by/4.0/
+
+
