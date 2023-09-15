@@ -1,16 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=8 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Environment/DefaultEnvironment.tres" id="1_ncw1l"]
 [ext_resource type="Material" uid="uid://ce5spndeu82pc" path="res://addons/StandardAssets/Material/MI_Checkers.tres" id="2_1wvia"]
 [ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Shader/Water/mi_water.tres" id="3_wq16w"]
-[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://addons/StandardAssets/Shader/Vegetation/mi_foliage.material" id="4_22v7y"]
-[ext_resource type="ArrayMesh" uid="uid://dkvadnswib2u" path="res://addons/StandardAssets/Shader/Vegetation/m_bush_01.tres" id="5_8ubgi"]
+[ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Shader/Vegetation/pf_bush_01.tscn" id="4_kxdeh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ikf7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6fcqa"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nc1kt"]
+size = Vector2(512, 512)
+subdivide_width = 32
+subdivide_depth = 32
 
 [node name="Sandbox" type="Node3D"]
 
@@ -33,15 +35,22 @@ mesh = SubResource("BoxMesh_6ikf7")
 shape = SubResource("BoxShape3D_6fcqa")
 
 [node name="Water" type="StaticBody3D" parent="Organizer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5564, -9.53674e-07, 6.66547)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Water"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3577, 0.0139198, -8.07076)
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
 material_override = ExtResource("3_wq16w")
 mesh = SubResource("PlaneMesh_nc1kt")
+skeleton = NodePath("../../Organizer/Water")
 
-[node name="PF_Bush_01" type="MeshInstance3D" parent="Organizer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.29682)
-material_override = ExtResource("4_22v7y")
-mesh = ExtResource("5_8ubgi")
-skeleton = NodePath("")
+[node name="pf_bush_01" parent="." instance=ExtResource("4_kxdeh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="pf_bush_02" parent="." instance=ExtResource("4_kxdeh")]
+transform = Transform3D(0.501133, 0, 0.86537, 0, 1, 0, -0.86537, 0, 0.501133, -1.22051, 0, -0.97949)
+
+[node name="pf_bush_03_" parent="." instance=ExtResource("4_kxdeh")]
+transform = Transform3D(0.842244, 0, 0.064615, 0, 0.844719, 0, -0.064615, 0, 0.842244, -0.721882, 0, 0.962666)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, 0.55848, 12.9844)

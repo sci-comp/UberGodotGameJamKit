@@ -4,4 +4,9 @@ The UV Checkers are from Blender.
 
 Prototype grid textures are from Kenney's prototype textures kit.
 
+The water shader is originally by Polyflare
+  License: CC-BY 4.0
+  URL: https://creativecommons.org/licenses/by/4.0/
+
 All other contributions are MIT.
+
