@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmv0rfek1xk8w"
-path.s3tc="res://.godot/imported/T_Grid_Light_Gray.png-c0496dd1a76486dfc32c1759376b74c3.s3tc.ctex"
+path.s3tc="res://.godot/imported/t_grid_light_gray.png-af1c5b7ef0297a9e04c330f32ab0a801.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/StandardAssets/Texture/T_Grid_Light_Gray.png"
-dest_files=["res://.godot/imported/T_Grid_Light_Gray.png-c0496dd1a76486dfc32c1759376b74c3.s3tc.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_grid_light_gray.png"
+dest_files=["res://.godot/imported/t_grid_light_gray.png-af1c5b7ef0297a9e04c330f32ab0a801.s3tc.ctex"]
 
 [params]
 

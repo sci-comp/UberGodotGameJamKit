@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwdi4tiruhcu"
-path="res://.godot/imported/T_Gradient_Vegetation_04.png-5e847c784d136656ddc5d188da9bc23f.ctex"
+path="res://.godot/imported/t_gradient_vegetation_04.png-77173c2f2818b1986e62585e81ee2ba6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/StandardAssets/Texture/T_Gradient_Vegetation_04.png"
-dest_files=["res://.godot/imported/T_Gradient_Vegetation_04.png-5e847c784d136656ddc5d188da9bc23f.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_gradient_vegetation_04.png"
+dest_files=["res://.godot/imported/t_gradient_vegetation_04.png-77173c2f2818b1986e62585e81ee2ba6.ctex"]
 
 [params]
 

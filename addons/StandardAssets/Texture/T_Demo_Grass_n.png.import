@@ -2,34 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1fn61jbvxb48"
-path.s3tc="res://.godot/imported/T_Demo_Grass_n.png-ea5b2fa713bab2caa37c361eb0a4f854.s3tc.ctex"
+uid="uid://cp1nawjx5nvll"
+path="res://.godot/imported/t_demo_grass_n.png-cfe91c19d79a6ba3f0ce35962e922225.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/StandardAssets/Texture/T_Demo_Grass_n.png"
-dest_files=["res://.godot/imported/T_Demo_Grass_n.png-ea5b2fa713bab2caa37c361eb0a4f854.s3tc.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_demo_grass_n.png"
+dest_files=["res://.godot/imported/t_demo_grass_n.png-cfe91c19d79a6ba3f0ce35962e922225.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Art/Texture/T_Demo_Grass_n.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

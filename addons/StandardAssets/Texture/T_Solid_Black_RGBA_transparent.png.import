@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl141orm112bp"
-path="res://.godot/imported/T_Solid_Black_RGBA_transparent.png-47a1dd39f14056104475ced90bdafa01.ctex"
+path="res://.godot/imported/t_solid_black_rgba_transparent.png-bb5e273f0e02e4a594ce335dafcdf93a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/StandardAssets/Texture/T_Solid_Black_RGBA_transparent.png"
-dest_files=["res://.godot/imported/T_Solid_Black_RGBA_transparent.png-47a1dd39f14056104475ced90bdafa01.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_solid_black_rgba_transparent.png"
+dest_files=["res://.godot/imported/t_solid_black_rgba_transparent.png-bb5e273f0e02e4a594ce335dafcdf93a.ctex"]
 
 [params]
 

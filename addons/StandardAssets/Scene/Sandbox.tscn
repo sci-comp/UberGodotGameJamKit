@@ -2,9 +2,9 @@
 
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Environment/DefaultEnvironment.tres" id="1_ncw1l"]
 [ext_resource type="Material" uid="uid://ce5spndeu82pc" path="res://addons/StandardAssets/Material/MI_Checkers.tres" id="2_1wvia"]
-[ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Shader/MI_Water.tres" id="3_ony54"]
-[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://addons/StandardAssets/Shader/MI_Foliage.material" id="3_uwqrr"]
-[ext_resource type="ArrayMesh" uid="uid://dkvadnswib2u" path="res://addons/StandardAssets/Shader/M_Bush_01.tres" id="4_w6utq"]
+[ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Shader/Water/mi_water.tres" id="3_wq16w"]
+[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://addons/StandardAssets/Shader/Vegetation/mi_foliage.material" id="4_22v7y"]
+[ext_resource type="ArrayMesh" uid="uid://dkvadnswib2u" path="res://addons/StandardAssets/Shader/Vegetation/m_bush_01.tres" id="5_8ubgi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ikf7"]
 
@@ -32,16 +32,16 @@ mesh = SubResource("BoxMesh_6ikf7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Organizer/Center Cube"]
 shape = SubResource("BoxShape3D_6fcqa")
 
-[node name="Center Cube2" type="StaticBody3D" parent="Organizer"]
+[node name="Water" type="StaticBody3D" parent="Organizer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5564, -9.53674e-07, 6.66547)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Center Cube2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Water"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3577, 0.0139198, -8.07076)
-material_override = ExtResource("3_ony54")
+material_override = ExtResource("3_wq16w")
 mesh = SubResource("PlaneMesh_nc1kt")
 
 [node name="PF_Bush_01" type="MeshInstance3D" parent="Organizer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.57652)
-material_override = ExtResource("3_uwqrr")
-mesh = ExtResource("4_w6utq")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.29682)
+material_override = ExtResource("4_22v7y")
+mesh = ExtResource("5_8ubgi")
 skeleton = NodePath("")

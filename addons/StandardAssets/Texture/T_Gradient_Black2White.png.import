@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dydl2nnrkcnsp"
-path="res://.godot/imported/T_Gradient_Black2White.png-63ba419ca2f336fbf984f5bba6911da2.ctex"
+path="res://.godot/imported/t_gradient_black2white.png-f11a1cb4905286727a72de9002f5f69e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/StandardAssets/Texture/T_Gradient_Black2White.png"
-dest_files=["res://.godot/imported/T_Gradient_Black2White.png-63ba419ca2f336fbf984f5bba6911da2.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_gradient_black2white.png"
+dest_files=["res://.godot/imported/t_gradient_black2white.png-f11a1cb4905286727a72de9002f5f69e.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dj5cv4744igg8"]
 
-[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/water.gdshader" id="1_lekbn"]
+[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/Water/water.gdshader" id="1_lekbn"]
 
 [resource]
 render_priority = 0
