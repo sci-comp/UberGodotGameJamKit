@@ -5,3 +5,8 @@
 [resource]
 background_mode = 2
 sky = ExtResource("1_hbajo")
+fog_light_color = Color(0.596078, 0.85098, 1, 1)
+fog_light_energy = 0.1
+fog_density = 0.001
+fog_sky_affect = 0.579
+fog_height_density = -0.0794

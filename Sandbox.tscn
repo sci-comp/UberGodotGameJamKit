@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=13 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Environment/DefaultEnvironment.tres" id="1_ncw1l"]
 [ext_resource type="Material" uid="uid://bkun7ytwxriir" path="res://addons/StandardAssets/Material/mi_checkers.tres" id="2_v0b5k"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Prefab/pf_cliff_long.scn" id="4_80lgf"]
 [ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Prefab/pf_bush_01.tscn" id="4_kxdeh"]
 [ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Prefab/pf_cliff_round.scn" id="5_yeb3a"]
-[ext_resource type="Shape3D" uid="uid://cufqcle3gbcbx" path="res://addons/StandardAssets/Godot_Shapes/cylinder_shape_3d.tres" id="7_sqsfr"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Player.gd" id="7_xe1gs"]
+[ext_resource type="CapsuleMesh" uid="uid://ct8gmj4pb1xpq" path="res://addons/StandardAssets/Godot_Shapes/m_capsule.tres" id="8_kki7t"]
+[ext_resource type="Shape3D" uid="uid://cwe0vulo2mc42" path="res://addons/StandardAssets/Godot_Shapes/capsule_shape_3d.tres" id="9_wi37d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ikf7"]
 
@@ -21,10 +23,6 @@ subdivide_depth = 32
 transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
 
 [node name="Organizer" type="Node" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="Organizer"]
-transform = Transform3D(-0.953197, -0.0831081, 0.290705, 0, 0.961481, 0.274873, -0.302351, 0.262008, -0.91648, 0.986877, 1.55892, -2.1231)
-visible = false
 
 [node name="Setup" type="Node" parent="Organizer"]
 
@@ -172,8 +170,28 @@ material_override = ExtResource("3_t3ym6")
 mesh = SubResource("PlaneMesh_nc1kt")
 skeleton = NodePath("")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.208117, 2.04941, 16.7214)
+[node name="Player" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280459, 2.30778, 9.70746)
+lock_rotation = true
+linear_damp = 3.0
+script = ExtResource("7_xe1gs")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = ExtResource("7_sqsfr")
+[node name="TwistPivot" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PitchPivot" type="Node3D" parent="Player/TwistPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1, 5)
+
+[node name="Camera3D" type="Camera3D" parent="Player/TwistPivot/PitchPivot"]
+transform = Transform3D(0.997934, 0, 0, 0, 0.997934, 0, 0, 0, 0.997934, 0, 0, 0)
+visible = false
+fov = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("8_kki7t")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+shape = ExtResource("9_wi37d")
