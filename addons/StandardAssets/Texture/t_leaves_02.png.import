@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://me42hv1kdegm"
-path.s3tc="res://.godot/imported/t_leaves_02.png-2efdf323893b0c8bb36a25f19f68d6f3.s3tc.ctex"
+path.s3tc="res://.godot/imported/t_leaves_02.png-37edcdd1e7678fd50b3d623e5057accb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/StandardAssets/Shader/Vegetation/t_leaves_02.png"
-dest_files=["res://.godot/imported/t_leaves_02.png-2efdf323893b0c8bb36a25f19f68d6f3.s3tc.ctex"]
+source_file="res://addons/StandardAssets/Texture/t_leaves_02.png"
+dest_files=["res://.godot/imported/t_leaves_02.png-37edcdd1e7678fd50b3d623e5057accb.s3tc.ctex"]
 
 [params]
 
