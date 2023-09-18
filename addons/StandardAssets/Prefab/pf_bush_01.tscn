@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbjhcip4ilptt"]
-
-[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://addons/StandardAssets/Material/mi_foliage.material" id="1_tk04o"]
-[ext_resource type="ArrayMesh" uid="uid://dkvadnswib2u" path="res://addons/StandardAssets/Mesh/m_bush_01.tres" id="2_k3u46"]
-
-[node name="pf_bush_01" type="MeshInstance3D"]
-material_override = ExtResource("1_tk04o")
-mesh = ExtResource("2_k3u46")
-skeleton = NodePath("")

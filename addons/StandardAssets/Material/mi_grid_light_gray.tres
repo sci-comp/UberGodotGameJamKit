@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bfsxgx82pww2m"]
-
-[ext_resource type="Texture2D" uid="uid://dmv0rfek1xk8w" path="res://addons/StandardAssets/Texture/t_grid_light_gray.png" id="1_bv721"]
-
-[resource]
-albedo_texture = ExtResource("1_bv721")

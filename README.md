@@ -46,7 +46,7 @@ We remove submodules by typing,
 	- git rm --cached addons/ExampleSubmodule
 	- rm -r addons/ExampleSubmodule
 
-If you delete a submodule without first calling submodule deinit, which is an easy mistake to make, then we have to manullly remove the submodule referendes in the following locations,
+If you delete a submodule without first calling submodule deinit, which is an easy mistake to make, then we have to manully remove the submodule references in the following locations,
 
 	- ./.git/config
 	- ./.git/modules/
