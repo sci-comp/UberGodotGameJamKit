@@ -8,7 +8,7 @@ A collection of freely usable art, scripts, and sounds that will benefit many pr
 
 ## License
 
-Most content is either MIT or cc0. Please see license.txt files in their respective folders. Exceptions are listed below,
+Most content is either MIT or cc0. Please see license.txt files in their respective folders for more information.
 
 #### CC0 creators:
 	
