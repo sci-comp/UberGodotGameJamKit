@@ -15,6 +15,10 @@ run/main_scene="res://addons/StandardAssets/Scene/Sandbox.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="UberGodotGameJamKit"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
