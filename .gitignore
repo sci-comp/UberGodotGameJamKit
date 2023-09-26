@@ -1,6 +1,4 @@
 # Godot 4+ specific ignores
-.godot/
-.Temp/
-/addons/mister dungeon
-/addons/phantom_camera
-/addons/mannequiny
+.godot*
+.Temp*
+.Screenshot*

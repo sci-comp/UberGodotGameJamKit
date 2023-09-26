@@ -4,7 +4,7 @@
 
 This project has just been started! Come back soon!
 
-![demo](./addons/StandardAssets/Documentation/Image/demo.png)
+![demo](./Documentation/Image/demo.png)
 
 ## Introduction
 
