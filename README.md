@@ -62,13 +62,17 @@ For new projects, I think the following submodules work well together.
 
 Most content is either MIT or cc0. Please see license.txt files in their respective folders for more information.
 
-#### CC0 creators:
+#### CC0 content
 	
 	FlynnCat: https://flynncat.itch.io/mrd-terrain
 	Kenney: https://kenney.itch.io/
 
-#### CC-BY creators:
+#### CC-BY content
 	
 The water shader is originally by Polyflare
 	License: CC-BY 4.0
 	URL: https://creativecommons.org/licenses/by/4.0/
+
+#### MIT content
+
+	https://github.com/selgesel/godot4-third-person-controller
