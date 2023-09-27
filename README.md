@@ -27,7 +27,7 @@ or use Github Desktop. By cloning, submodules will automatically be included.
 Links to submobule repositories,
 
 - EditorToolbox  [link](https://github.com/sci-comp/EditorToolbox)
-- StandardAssets  [link](todo)
+- StandardAssets  [link](https://github.com/sci-comp/StandardAssets)
 
 ### Adding and Removing Submodules
 
