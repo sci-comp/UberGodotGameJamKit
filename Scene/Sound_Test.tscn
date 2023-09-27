@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7r73835wgcp1"]
+
+[ext_resource type="Theme" uid="uid://x87r5gxs7pdd" path="res://addons/StandardAssets/Default/ui_theme_default.tres" id="1_f51c7"]
+[ext_resource type="AudioStream" uid="uid://dmm7km4ok3xmi" path="res://addons/StandardAssets/Demo/Audio/bubbles/bubbles_01.wav" id="1_ol62n"]
+[ext_resource type="AudioStream" uid="uid://dsx81prt0ll38" path="res://addons/StandardAssets/Demo/Audio/bubbles/bubbles_02.wav" id="2_hi7w5"]
+[ext_resource type="AudioStream" uid="uid://xx8aiknqj0fc" path="res://addons/StandardAssets/Demo/Audio/bubbles/bubbles_03.wav" id="3_spn3t"]
+[ext_resource type="AudioStream" uid="uid://bro14wr3jxx6p" path="res://addons/StandardAssets/Demo/Audio/bubbles/bubbles_04.wav" id="4_5wufc"]
+[ext_resource type="AudioStream" uid="uid://8mqlrw0xc84m" path="res://addons/StandardAssets/Demo/Audio/bubbles/bubbles_05.wav" id="5_pymt7"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/SoundGroup.cs" id="6_8jm8e"]
+[ext_resource type="AudioStream" uid="uid://ce8bq3bohd0w3" path="res://addons/StandardAssets/Demo/Audio/velcro/velcro_01.wav" id="7_2bga5"]
+[ext_resource type="AudioStream" uid="uid://dnhonka6b6heu" path="res://addons/StandardAssets/Demo/Audio/velcro/velcro_02.wav" id="8_p5rlq"]
+[ext_resource type="AudioStream" uid="uid://yh7p4wbpondj" path="res://addons/StandardAssets/Demo/Audio/velcro/velcro_03.wav" id="9_wvfgm"]
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Demo_Sound_Manager" type="Node" parent="."]
+
+[node name="SFX" type="Node" parent="Demo_Sound_Manager"]
+
+[node name="sfx_bubbles" type="Node" parent="Demo_Sound_Manager/SFX"]
+
+[node name="sfx_bubbles_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("1_ol62n")
+bus = &"SFX"
+
+[node name="sfx_bubbles_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("2_hi7w5")
+bus = &"SFX"
+
+[node name="sfx_bubbles_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("3_spn3t")
+bus = &"SFX"
+
+[node name="sfx_bubbles_04" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("4_5wufc")
+bus = &"SFX"
+
+[node name="sfx_bubbles_05" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("5_pymt7")
+bus = &"SFX"
+
+[node name="sfx_velcro" type="Node" parent="Demo_Sound_Manager/SFX"]
+script = ExtResource("6_8jm8e")
+
+[node name="sfx_velcro_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("7_2bga5")
+bus = &"SFX"
+
+[node name="sfx_velcro_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("8_p5rlq")
+bus = &"SFX"
+
+[node name="sfx_velcro_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("9_wvfgm")
+bus = &"SFX"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 136.0
+offset_right = 1081.0
+offset_bottom = 253.0
+theme = ExtResource("1_f51c7")
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "bubbles"
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "velcro"

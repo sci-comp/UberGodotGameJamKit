@@ -1,4 +1,4 @@
-# Godot-Standard-Assets
+# Uber Godot Game Jam Kit
 
 ## Welcome early visitor
 
@@ -10,37 +10,38 @@ This project has just been started! Come back soon!
 
 This repository is a collection of freely usable art, scripts, and sounds that hopes to benefit many projects.
 
-This project is currently empty, it serves as a base for addons. A scene will soon be added that demonstrates how to use multiple addons together.
+This project is currently empty, though the project.godot file contains the input map, layer definition, and other project related information. This project serves as a base for addons. 
 
-Since advanced users often have their own solutions, I hope that a modular approach will enable collaboration between many different projects.
+Please see the ./Scene/ folder for examples.
 
 ## Installation
 
-### Creating an empty project
+Simply type,
 
-	- For new users, I would recommend GitHub Desktop as a way to manage your new project.
-	- After installing GitHub Desktop, go to github.com -> Repositories -> New, and set up an empty repository for your game.
-	- In GitHub Desktop, clone your new empty respository.
+`git clone https://github.com/sci-comp/UberGodotGameJamKit`
 
-### Adding submodules
+or use Github Desktop. By cloning, submodules will automatically be included.
 
-#### Why Submodules?
+### Submodules
 
-You do not need to add repositories as a submodule. You can simply download a project from github as a zip file, then unpack /addons into your project. Some addons are available through Godot's UI in the AssetLib tab.
+Links to submobule repositories,
 
-Howver, submodules managed with GitHub Desktop are a very convenient way to keep your project up-to-date with the main branch.
+- EditorToolbox  [link](https://github.com/sci-comp/EditorToolbox)
+- StandardAssets  [link](todo)
 
-#### How-to
+### Adding and Removing Submodules
 
-We need to add and remove submodules manually before opening them locally in the Github Desktop application.
+Although the Uber Godot Game Jam Kit already has submodules added, you will need to add them yourself if you start from a new project. The following commands serve as helpful reminders.
 
-We can add submodules by opening up the console and typing,
+Note for Github Desktop users: Github Desktop cannot add or remove submodules. However, once a submodule has been added through the console, we can manage it from within the Github Desktop UI.
+
+We can add submodules with,
 
 	- git submodule add --force https://github.com/sci-comp/ExampleSubmodule addons/ExampleSubmodule
 	- git submodule init
 	- git submodule update
 
-We remove submodules by typing,
+We remove submodules with,
 
 	- git submodule deinit -f addons/ExampleSubmodule
 	- git rm --cached addons/ExampleSubmodule
@@ -51,24 +52,20 @@ If you delete a submodule without first calling submodule deinit, which is an ea
 	- ./.git/config
 	- ./.git/modules/
 
-#### Recommended submodules
-
-For new projects, I think the following submodules work well together.
-
-- EditorToolbox  [link](https://github.com/sci-comp/EditorToolbox)
-- StandardAssets  [link](todo)
-
 ## License
 
-Most content is either MIT or cc0. Please see license.txt files in their respective folders for more information.
+Most content is either MIT or cc0. Please see license.txt files in their respective folders for more information. 
+
+A summary of all content is included below,
 
 #### CC0 content
 	
 	FlynnCat: https://flynncat.itch.io/mrd-terrain
 	Kenney: https://kenney.itch.io/
+	Sound files by FilmCow
 
 #### CC-BY content
-	
+
 The water shader is originally by Polyflare
 	License: CC-BY 4.0
 	URL: https://creativecommons.org/licenses/by/4.0/

@@ -1,4 +1,9 @@
 # Godot 4+ specific ignores
+
 .godot*
-.Temp*
 .Screenshot*
+.Temp*
+.vs*
+
+*.csproj
+*.sln
