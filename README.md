@@ -10,7 +10,7 @@ This project has just been started! Come back soon!
 
 This repository is a collection of freely usable art, scripts, and sounds that hopes to benefit many projects.
 
-This project is currently empty, though the project.godot file contains the input map, layer definition, and other project related information. This project serves as a base for addons. 
+This project is currently empty, though the project.godot file contains the input map, layer definitions, and other project related information. This project serves as a base for addons. 
 
 Please see the ./Scene/ folder for examples.
 
@@ -59,18 +59,18 @@ Most content is either MIT or cc0. Please see license.txt files in their respect
 A summary of all content is included below,
 
 #### CC0 content
-	
-	FlynnCat: https://flynncat.itch.io/mrd-terrain
-	Kenney: https://kenney.itch.io/
-	Sound files by FilmCow
+
+- FlynnCat: https://flynncat.itch.io/mrd-terrain
+- Kenney: https://kenney.itch.io/
+- Sound files by FilmCow
 
 #### CC-BY content
 
 The water shader is originally by Polyflare
-	License: CC-BY 4.0
-	URL: https://creativecommons.org/licenses/by/4.0/
+- License: CC-BY 4.0
+- URL: https://creativecommons.org/licenses/by/4.0/
 
 #### MIT content
 
-	The third person controller is from (note: this is temporary!): https://github.com/selgesel/godot4-third-person-controller
-	The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
+- The third person controller is from (note: this is temporary!): https://github.com/selgesel/godot4-third-person-controller
+- The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
