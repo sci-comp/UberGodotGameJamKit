@@ -72,4 +72,5 @@ The water shader is originally by Polyflare
 
 #### MIT content
 
-	https://github.com/selgesel/godot4-third-person-controller
+	The third person controller is from (note: this is temporary!): https://github.com/selgesel/godot4-third-person-controller
+	The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
