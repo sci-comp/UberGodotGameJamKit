@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://c0vnqt6uyxaoa" path="res://addons/CharacterController/player/Player.tscn" id="1_b5uvc"]
-[ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/DefaultEnvironment.tres" id="2_vuab8"]
+[ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_1jo43"]
 [ext_resource type="Material" uid="uid://bkun7ytwxriir" path="res://addons/StandardAssets/Material/mi_checkers.tres" id="3_mxl1a"]
 [ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_round.scn" id="4_4a1xh"]
 [ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_long.scn" id="5_5mlh8"]
@@ -32,7 +32,7 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Organizer/Setup"]
-environment = ExtResource("2_vuab8")
+environment = ExtResource("2_1jo43")
 
 [node name="Center Cube" type="StaticBody3D" parent="Organizer/Setup"]
 
