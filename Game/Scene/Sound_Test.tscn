@@ -104,23 +104,18 @@ SoundBus = 2
 
 [node name="sfx_bubbles_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
 stream = ExtResource("1_ol62n")
-bus = &"SFX"
 
 [node name="sfx_bubbles_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
 stream = ExtResource("2_hi7w5")
-bus = &"SFX"
 
 [node name="sfx_bubbles_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
 stream = ExtResource("3_spn3t")
-bus = &"SFX"
 
 [node name="sfx_bubbles_04" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
 stream = ExtResource("4_5wufc")
-bus = &"SFX"
 
 [node name="sfx_bubbles_05" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
 stream = ExtResource("5_pymt7")
-bus = &"SFX"
 
 [node name="sfx_velcro" type="Node" parent="Demo_Sound_Manager/SFX"]
 script = ExtResource("6_8jm8e")
@@ -128,15 +123,12 @@ SoundBus = 2
 
 [node name="sfx_velcro_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
 stream = ExtResource("7_2bga5")
-bus = &"SFX"
 
 [node name="sfx_velcro_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
 stream = ExtResource("8_p5rlq")
-bus = &"SFX"
 
 [node name="sfx_velcro_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
 stream = ExtResource("9_wvfgm")
-bus = &"SFX"
 
 [node name="Test" type="Node" parent="Demo_Sound_Manager" node_paths=PackedStringArray("btnBubbles", "btnVelcro", "sfxInfoText")]
 script = ExtResource("16_0ns7x")

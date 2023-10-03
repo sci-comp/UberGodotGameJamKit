@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SceneSpecificInformation" load_steps=2 format=3 uid="uid://4ml2r2fx0diw"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneSpecificInformation.cs" id="1_726wj"]
+
+[resource]
+script = ExtResource("1_726wj")
+SceneName = "Cavernode"
+PlayerExistsInScene = true

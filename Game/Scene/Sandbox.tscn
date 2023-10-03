@@ -1,0 +1,320 @@
+[gd_scene load_steps=22 format=3 uid="uid://y0wbbfugjd8s"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Game.cs" id="1_ogcds"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Debug.cs" id="2_kx2p1"]
+[ext_resource type="PackedScene" uid="uid://c0vnqt6uyxaoa" path="res://addons/CharacterController/player/Player.tscn" id="3_wdpei"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/ScenePortal.cs" id="4_ml1hb"]
+[ext_resource type="Material" uid="uid://bi7wgokmickb4" path="res://addons/StandardAssets/Material/VFX/mi_fx_magic_05.tres" id="5_sxjg2"]
+[ext_resource type="Shape3D" uid="uid://ur6ddorx667f" path="res://addons/StandardAssets/Primitive/Shapes/sphere_shape_3d.tres" id="6_m4i02"]
+[ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="7_16oqy"]
+[ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_round.scn" id="8_a6h7k"]
+[ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_long.scn" id="9_xbcj5"]
+[ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Demo/Prefab/pf_bush_01.tscn" id="10_ry5rd"]
+[ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Material/mi_water.tres" id="11_ok6u1"]
+
+[sub_resource type="Curve" id="Curve_i6e0p"]
+_data = [Vector2(0, 360), 0.0, 0.0, 0, 0, Vector2(1e-05, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, -360), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_67v2p"]
+curve = SubResource("Curve_i6e0p")
+
+[sub_resource type="Gradient" id="Gradient_le4hr"]
+offsets = PackedFloat32Array(0, 0.100865, 0.233429, 0.489914, 0.766571, 1)
+colors = PackedColorArray(0.8, 0.847059, 0.396078, 0, 0.65098, 0.698039, 0.494118, 0.407843, 0.333483, 0.382828, 0.702888, 1, 0.309168, 0.625921, 0.702877, 1, 0.568627, 0.709804, 0.458824, 0.898039, 0.866667, 0.792157, 0.584314, 0.305882)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j6776"]
+gradient = SubResource("Gradient_le4hr")
+
+[sub_resource type="Curve" id="Curve_5w1ab"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.4), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4wjy6"]
+curve = SubResource("Curve_5w1ab")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7v5nw"]
+lifetime_randomness = 0.2
+emission_shape = 2
+emission_sphere_radius = 3.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -3.0
+angle_min = -64.5
+angle_max = 64.5
+angle_curve = SubResource("CurveTexture_67v2p")
+scale_min = 0.75
+scale_max = 1.25
+scale_curve = SubResource("CurveTexture_4wjy6")
+color_ramp = SubResource("GradientTexture1D_j6776")
+turbulence_noise_speed = Vector3(0, 6.48, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0xrto"]
+material = ExtResource("5_sxjg2")
+
+[sub_resource type="Skin" id="Skin_j5jd2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nc1kt"]
+size = Vector2(512, 512)
+subdivide_width = 32
+subdivide_depth = 32
+
+[node name="Sandbox" type="Node3D"]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
+
+[node name="Game" type="Node" parent="."]
+script = ExtResource("1_ogcds")
+
+[node name="Debug" type="CanvasGroup" parent="Game" node_paths=PackedStringArray("label")]
+visible = false
+script = ExtResource("2_kx2p1")
+label = NodePath("Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer/CurrentScene")
+
+[node name="Panel" type="Panel" parent="Game/Debug"]
+offset_right = 360.0
+offset_bottom = 600.0
+
+[node name="Title" type="Label" parent="Game/Debug/Panel"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 25.0
+offset_right = 352.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0.564706, 0.933333, 0.564706, 1)
+text = "Debug"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Game/Debug/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="InnerPanel" type="Panel" parent="Game/Debug/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="InnerMarginContainer" type="MarginContainer" parent="Game/Debug/Panel/MarginContainer/InnerPanel"]
+layout_mode = 2
+offset_right = 344.0
+offset_bottom = 524.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer"]
+layout_mode = 2
+
+[node name="CurrentScene" type="Label" parent="Game/Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Current scene: default_text_here"
+
+[node name="Organizer" type="Node" parent="."]
+
+[node name="Player" parent="Organizer" instance=ExtResource("3_wdpei")]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 2.48354, 1.15269, 8.28436)
+
+[node name="Trigger" type="Node" parent="Organizer"]
+
+[node name="PF_Scene_Portal" type="Area3D" parent="Organizer/Trigger"]
+transform = Transform3D(5.01035, 0, 0, 0, 5.01035, 0, 0, 0, 5.01035, -5.04807, 2.69043, -1.90597)
+script = ExtResource("4_ml1hb")
+SceneToLoad = "Cavernode"
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Organizer/Trigger/PF_Scene_Portal"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+amount = 512
+process_material = SubResource("ParticleProcessMaterial_7v5nw")
+draw_pass_1 = SubResource("QuadMesh_0xrto")
+draw_skin = SubResource("Skin_j5jd2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Organizer/Trigger/PF_Scene_Portal"]
+shape = ExtResource("6_m4i02")
+
+[node name="SP_Sandbox" type="Node3D" parent="Organizer/Trigger"]
+
+[node name="SP_From_Cavernode" type="Node3D" parent="Organizer/Trigger"]
+
+[node name="Setup" type="Node" parent="Organizer"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Organizer/Setup"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 9999, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Organizer/Setup"]
+environment = ExtResource("7_16oqy")
+
+[node name="Cliff" type="Node" parent="Organizer"]
+
+[node name="pf_cliff_round_01pf_cliff_round_07" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.35327, 0.0258424, 0.113, -0.0397829, -0.36746, -0.0403368, 0.108877, -0.0504173, 0.35191, 1.65885, 1.30615, 0.5934)
+
+[node name="pf_cliff_round_01pf_cliff_round_06" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.266728, -0.0652124, 0.0741849, 0.0739179, 0.273482, -0.0253627, -0.0655148, 0.0430637, 0.27341, 8.82358, -1.13946, 1.41415)
+
+[node name="pf_cliff_round_01pf_cliff_round_05" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.407927, -0.0997343, 0.113457, 0.134488, 0.0909967, -0.403555, 0.0687911, 0.413517, 0.116168, 5.3287, -1.96664, -6.84481)
+
+[node name="pf_cliff_round_01pf_cliff_round_08" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.304468, -0.160023, 0.2663, 0.237806, -0.119901, -0.343941, 0.199927, 0.386316, 0.0035588, 2.71905, 6.77299, -8.42253)
+
+[node name="pf_cliff_round_01pf_cliff_round_13" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.34032, 0.0575125, -0.264761, 0.0313034, 0.430584, 0.0532958, 0.26912, 0.0226435, -0.341006, -7.30335, 8.54898, -3.86155)
+
+[node name="pf_cliff_round_01pf_cliff_round_15" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.305554, -0.00819262, -0.113279, 0.0234581, 0.322672, 0.0399388, 0.111126, -0.0455886, 0.303044, -8.31136, 8.72872, 2.21506)
+
+[node name="pf_cliff_round_01pf_cliff_round_16" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.280814, 0.144221, -0.0812782, -0.122707, 0.288764, 0.0884365, 0.111126, -0.0455886, 0.303044, -0.543327, 7.94522, -4.29498)
+
+[node name="pf_cliff_round_01pf_cliff_round_14" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.34032, 0.0575125, -0.264761, 0.0313034, 0.430584, 0.0532958, 0.26912, 0.0226435, -0.341006, -12.2402, 7.23348, -0.646237)
+
+[node name="pf_cliff_round_01pf_cliff_round_12" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.889803, -0.383232, -0.247757, 0.199143, 0.162406, -0.966419, 0.410601, -0.909262, -0.0681913, -9.79114, 0.54018, -4.21615)
+
+[node name="pf_cliff_round_01pf_cliff_round_03" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.326942, -2.85821e-08, 0.580464, -5.82413e-08, -0.666204, 0, 0.580464, -5.07458e-08, -0.326942, -7.33731, 0.566309, -4.94957)
+
+[node name="pf_cliff_round_01pf_cliff_round_09" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.762069, 1.15069e-07, 0.647495, -1.50996e-07, -1, 3.59694e-14, 0.647495, -9.7769e-08, 0.762069, -21.6491, 8.44533, 6.48893)
+
+[node name="pf_cliff_round_01pf_cliff_round_11" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-1.04371, 1.57596e-07, 0.886793, -2.068e-07, -1.36957, 4.92628e-14, 0.886793, -1.33902e-07, 1.04371, 38.4225, 2.12402, 37.0254)
+
+[node name="pf_cliff_round_01pf_cliff_round_02" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.126815, -1.10865e-08, 0.225152, -2.25908e-08, -0.258409, 0, 0.225152, -1.96834e-08, -0.126815, -2.80401, 1.05374, 2.30501)
+
+[node name="pf_cliff_round_01pf_cliff_round_01" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(0.142358, -1.24454e-08, 0.21566, -2.25908e-08, -0.258409, 0, 0.21566, -1.88536e-08, -0.142358, 3.16674, 0.606715, 3.74509)
+
+[node name="pf_cliff_round_01pf_cliff_round_10" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
+transform = Transform3D(-0.0926668, 1.39921e-08, 0.995697, -1.50996e-07, -1, -2.10102e-13, 0.995697, -1.50346e-07, 0.0926668, 4.9023, 0.0140758, 13.6312)
+
+[node name="pf_cliff_long" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(-0.938443, 0, 1.15653, -0.121452, 1.48114, -0.09855, -1.15013, -0.156405, -0.933254, 16.6012, -4.72648, 26.0912)
+
+[node name="pf_cliff_long4" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(0.466854, 0.360035, -1.36772, 0.0562625, 1.43444, 0.396803, 1.41319, -0.176048, 0.436034, 24.9747, -4.37891, 39.0286)
+
+[node name="pf_cliff_long5" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(1.07557, -0.65458, 0.763459, 0.0676973, -1.06819, -1.01123, 1.00338, 0.773748, -0.750163, 52.6301, 1.74388, 23.4976)
+
+[node name="pf_cliff_long6" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(-0.474701, -0.858233, 1.09831, 0.0439985, -1.16891, -0.89438, 1.39317, -0.255514, 0.402479, 57.5116, 1.74388, 40.1178)
+
+[node name="pf_cliff_long7" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(1.27337, -0.587797, 0.448578, -0.305818, 0.394649, 1.38525, -0.673203, -1.2911, 0.219204, 46.7016, -2.85893, 54.2628)
+
+[node name="pf_cliff_long8" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(1.13446, 0.938564, -0.0169378, -0.305818, 0.394649, 1.38525, 0.887507, -1.06374, 0.498985, 26.9856, -2.85893, 52.9744)
+
+[node name="pf_cliff_long2" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(0.80193, 0, -1.25505, 0, 1.48937, 0, 1.25505, 0, 0.80193, -7.78434, -1.46661, 9.82268)
+
+[node name="pf_cliff_long9" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(-0.905171, -0.944624, 0.711744, 0.519737, 0.487411, 1.30788, -1.06244, 1.04323, 0.0334142, -9.25553, 4.47208, 6.55548)
+
+[node name="pf_cliff_long3" parent="Organizer/Cliff" instance=ExtResource("9_xbcj5")]
+transform = Transform3D(-0.360791, -8.39926e-09, -0.934867, 0.0278318, -1.00163, -0.0107411, -0.934452, -0.0298326, 0.360631, -16.1241, 10.2544, 4.16032)
+
+[node name="Vegetation" type="Node" parent="Organizer"]
+
+[node name="pf_bush_01" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.47657, 0, -0.549455, 0, 1.57549, 0, 0.549455, 0, 1.47657, 1.0997, -0.225058, 9.71049)
+
+[node name="pf_bush_03" parent="Organizer/Vegetation/pf_bush_01" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.0248341, 0, 0.999692, 0, 1, 0, -0.999692, 0, 0.0248341, -0.944954, 0.651786, 1.10758)
+
+[node name="pf_bush_15" parent="Organizer/Vegetation/pf_bush_01" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.09985, 0, 0.830783, 0, 1.37835, 0, -0.830783, 0, 1.09985, -0.0383079, 2.02751, 4.8439)
+
+[node name="pf_bush_16" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(2.71188, 0, 0.811283, 0, 2.83063, 0, -0.811283, 0, 2.71188, -10.2896, 2.96926, 14.932)
+
+[node name="pf_bush_17" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(-0.0453151, 0, -1.83581, 0, 1.83637, 0, 1.83581, 0, -0.0453151, -5.98643, 2.96926, 17.3047)
+
+[node name="pf_bush_05" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.415261, 0, 1.03644, 0, 1.11654, 0, -1.03644, 0, 0.415261, -2.97073, 0.801824, 9.45991)
+
+[node name="pf_bush_04" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.774325, 0, 1.93262, 0, 2.08196, 0, -1.93262, 0, 0.774325, -3.39348, 0.801824, 6.83328)
+
+[node name="pf_bush_02" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.21544, 0, 1.00243, 0, 1.57549, 0, -1.00243, 0, 1.21544, -1.0914, -0.225058, 5.56756)
+
+[node name="pf_bush_06" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.864315, 0, 1.49252, 0, 1.72472, 0, -1.49252, 0, 0.864315, -1.8323, 0, -4.44394)
+
+[node name="pf_bush_03_" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.770006, 0.126716, 0.701292, -0.133845, 1.23884, -0.0102683, -0.696545, -0.0979689, 0.777227, -0.712259, 0.12156, 0.550002)
+
+[node name="pf_bush_03_8" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(-1.19749, -0.16949, 1.24608, -0.221695, 2.05196, -0.017008, -1.23441, -0.204102, -1.20577, -5.74985, 0.12156, 2.78444)
+
+[node name="pf_bush_03_2" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.626104, 0.103035, 0.570231, -0.108831, 1.00732, -0.00834928, -0.566371, -0.0796601, 0.631976, 4.32273, 0.12156, -0.42889)
+
+[node name="pf_bush_03_3" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.626104, 0.103035, 0.570231, -0.108831, 1.00732, -0.00834928, -0.566371, -0.0796601, 0.631976, 5.89953, 0.12156, 5.65512)
+
+[node name="pf_bush_03_10" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.819237, 0.123573, -0.206764, -0.108831, 1.00732, -0.00834929, 0.204041, 0.0411291, 0.825715, 8.53954, 0.12156, 6.67358)
+
+[node name="pf_bush_03_11" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.43797, 0.216902, -0.362923, -0.191026, 1.7681, -0.0146551, 0.358143, 0.0721921, 1.44934, 11.3489, 0.12156, 5.19676)
+
+[node name="pf_bush_03_4" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.733328, 0.10781, -0.422721, -0.108831, 1.00732, -0.00834929, 0.418345, 0.0730675, 0.738826, 1.16027, -0.301831, 11.9786)
+
+[node name="pf_bush_03_9" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.457341, 0.0787836, 0.714917, -0.108831, 1.00732, -0.00834929, -0.709663, -0.103706, 0.462007, 0.766847, -0.301831, 16.938)
+
+[node name="pf_bush_03_5" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.733328, 0.10781, -0.422721, -0.108831, 1.00732, -0.00834929, 0.418345, 0.0730675, 0.738826, 6.58297, -0.301831, 15.1551)
+
+[node name="pf_bush_03_6" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.59599, 0.0876195, -0.343553, -0.088449, 0.818668, -0.00678562, 0.339997, 0.0593833, 0.600458, 5.60049, -0.301831, 14.7223)
+
+[node name="pf_bush_03_7" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.994677, 0.146233, -0.573373, -0.147617, 1.36632, -0.0113249, 0.567437, 0.0991078, 1.00213, 6.61056, -0.301831, 14.0254)
+
+[node name="pf_bush_07" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.567571, 0, 0.823325, 0, 1, 0, -0.823325, 0, 0.567571, -3.60795, 0.691909, 3.78866)
+
+[node name="pf_bush_08" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.32341, 0, 0, 0, 1.32341, 0, 0, 0, 1.32341, 17.2741, 0.294691, 18.6872)
+
+[node name="pf_bush_09" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.78919, 0, 1.466, 0, 2.31308, 0, -1.466, 0, 1.78919, 35.8224, 1.16129, 53.2886)
+
+[node name="pf_bush_10" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(-0.268602, 0, 1.80501, 0, 1.82489, 0, -1.80501, 0, -0.268602, 41.8083, 1.5241, 51.9526)
+
+[node name="pf_bush_11" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.79578, 0, -2.47071, 0, 2.5957, 0, 2.47071, 0, 0.79578, 53.0946, 2.64925, 30.4776)
+
+[node name="pf_bush_12" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(0.447171, 0, -1.38836, 0, 1.4586, 0, 1.38836, 0, 0.447171, 48.1474, 3.06609, 27.1441)
+
+[node name="pf_bush_13" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.99527, 0, -0.461121, 0, 2.04786, 0, 0.461121, 0, 1.99527, 51.7267, 1.16129, 35.1708)
+
+[node name="pf_bush_14" parent="Organizer/Vegetation" instance=ExtResource("10_ry5rd")]
+transform = Transform3D(1.59336, 0, -0.368236, 0, 1.63535, 0, 0.368236, 0, 1.59336, 42.9757, 2.38544, 23.2025)
+
+[node name="Water" type="Node3D" parent="Organizer"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Organizer/Water"]
+material_override = ExtResource("11_ok6u1")
+mesh = SubResource("PlaneMesh_nc1kt")
+skeleton = NodePath("")

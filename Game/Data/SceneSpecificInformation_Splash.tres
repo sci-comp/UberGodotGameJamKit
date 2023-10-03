@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SceneSpecificInformation" load_steps=2 format=3 uid="uid://74ldd61wdbq"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneSpecificInformation.cs" id="1_tbfvj"]
+
+[resource]
+script = ExtResource("1_tbfvj")
+SceneName = "Splash"
+PlayerExistsInScene = false

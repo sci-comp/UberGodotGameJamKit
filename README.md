@@ -10,9 +10,13 @@ This project has just been started! Come back soon!
 
 This repository is a collection of freely usable art, scripts, and sounds that hopes to benefit many projects.
 
-This project is currently empty, though the project.godot file contains the input map, layer definitions, and other project related information. This project serves as a base for addons. 
+Please see the ./Game/Scene/ folder for example scenes. Hitting "Play" will start the Splash sceen.
 
-Please see the ./Scene/ folder for examples.
+### Purpose and structure
+
+The primary goal of the UGGJK is to serve as a way to test the contents of the StandardAssets repository. We will do this by creating a small mini-game, a single quest for the player to accomplish.
+
+The StandardAssets repository is a submodule that aims to be a lightweight and reusable collection of scripts, textures, materials, and so on. Since I use this submodule for my owns games, any form of feedback or collaboration is greatly appreciated.
 
 ## Installation
 
@@ -74,3 +78,5 @@ The water shader is originally by Polyflare
 
 - The third person controller is from (note: this is temporary!): https://github.com/selgesel/godot4-third-person-controller
 - The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
+- The scene manager used the following repository for guidance: https://github.com/glass-brick/Scene-Manager
+
