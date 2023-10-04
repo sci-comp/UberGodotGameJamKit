@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn46u2ryif5xh"]
+
+[ext_resource type="Script" path="res://Game/Script/Splash.cs" id="1_e5exp"]
+
+[node name="Splash" type="Node3D"]
+script = ExtResource("1_e5exp")
+StartingScene = "res://Game/Scene/Sandbox.tscn"

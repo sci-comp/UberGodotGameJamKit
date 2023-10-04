@@ -10,7 +10,7 @@ This project has just been started! Come back soon!
 
 This repository is a collection of freely usable art, scripts, and sounds that hopes to benefit many projects.
 
-Please see the ./Game/Scene/ folder for example scenes. Hitting "Play" will start the Splash sceen.
+Please see the ./Game/Scene/ folder for example scenes. Hitting "Play" will start the Splash sceen, which will transition to the first main scene, "Sandbox."
 
 ### Purpose and structure
 

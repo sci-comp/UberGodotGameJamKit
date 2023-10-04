@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="UberGodotGameJamKit"
-run/main_scene="res://Game/Scene/Sandbox.tscn"
-config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+run/main_scene="res://Game/Scene/Splash.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout.tres"
+
+[autoload]
+
+Game="*res://addons/StandardAssets/Prefab/Game.tscn"
 
 [dotnet]
 

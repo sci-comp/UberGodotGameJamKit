@@ -1,59 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=8 format=3 uid="uid://y0wbbfugjd8s"]
 
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Game.cs" id="1_ogcds"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Debug.cs" id="2_kx2p1"]
-[ext_resource type="PackedScene" uid="uid://c0vnqt6uyxaoa" path="res://addons/CharacterController/player/Player.tscn" id="3_wdpei"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/ScenePortal.cs" id="4_ml1hb"]
-[ext_resource type="Material" uid="uid://bi7wgokmickb4" path="res://addons/StandardAssets/Material/VFX/mi_fx_magic_05.tres" id="5_sxjg2"]
-[ext_resource type="Shape3D" uid="uid://ur6ddorx667f" path="res://addons/StandardAssets/Primitive/Shapes/sphere_shape_3d.tres" id="6_m4i02"]
+[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/PF_Scene_Portal.tscn" id="1_p6td6"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="7_16oqy"]
 [ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_round.scn" id="8_a6h7k"]
 [ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_long.scn" id="9_xbcj5"]
 [ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Demo/Prefab/pf_bush_01.tscn" id="10_ry5rd"]
 [ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Material/mi_water.tres" id="11_ok6u1"]
-
-[sub_resource type="Curve" id="Curve_i6e0p"]
-_data = [Vector2(0, 360), 0.0, 0.0, 0, 0, Vector2(1e-05, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, -360), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="CurveTexture" id="CurveTexture_67v2p"]
-curve = SubResource("Curve_i6e0p")
-
-[sub_resource type="Gradient" id="Gradient_le4hr"]
-offsets = PackedFloat32Array(0, 0.100865, 0.233429, 0.489914, 0.766571, 1)
-colors = PackedColorArray(0.8, 0.847059, 0.396078, 0, 0.65098, 0.698039, 0.494118, 0.407843, 0.333483, 0.382828, 0.702888, 1, 0.309168, 0.625921, 0.702877, 1, 0.568627, 0.709804, 0.458824, 0.898039, 0.866667, 0.792157, 0.584314, 0.305882)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_j6776"]
-gradient = SubResource("Gradient_le4hr")
-
-[sub_resource type="Curve" id="Curve_5w1ab"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.4), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_4wjy6"]
-curve = SubResource("Curve_5w1ab")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7v5nw"]
-lifetime_randomness = 0.2
-emission_shape = 2
-emission_sphere_radius = 3.0
-direction = Vector3(0, 0, 0)
-spread = 0.0
-gravity = Vector3(0, 0, 0)
-radial_accel_min = -3.0
-angle_min = -64.5
-angle_max = 64.5
-angle_curve = SubResource("CurveTexture_67v2p")
-scale_min = 0.75
-scale_max = 1.25
-scale_curve = SubResource("CurveTexture_4wjy6")
-color_ramp = SubResource("GradientTexture1D_j6776")
-turbulence_noise_speed = Vector3(0, 6.48, 0)
-
-[sub_resource type="QuadMesh" id="QuadMesh_0xrto"]
-material = ExtResource("5_sxjg2")
-
-[sub_resource type="Skin" id="Skin_j5jd2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nc1kt"]
 size = Vector2(512, 512)
@@ -63,85 +15,17 @@ subdivide_depth = 32
 [node name="Sandbox" type="Node3D"]
 transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
 
-[node name="Game" type="Node" parent="."]
-script = ExtResource("1_ogcds")
-
-[node name="Debug" type="CanvasGroup" parent="Game" node_paths=PackedStringArray("label")]
-visible = false
-script = ExtResource("2_kx2p1")
-label = NodePath("Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer/CurrentScene")
-
-[node name="Panel" type="Panel" parent="Game/Debug"]
-offset_right = 360.0
-offset_bottom = 600.0
-
-[node name="Title" type="Label" parent="Game/Debug/Panel"]
-layout_mode = 2
-offset_left = 8.0
-offset_top = 25.0
-offset_right = 352.0
-offset_bottom = 51.0
-theme_override_colors/font_color = Color(0.564706, 0.933333, 0.564706, 1)
-text = "Debug"
-horizontal_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="Game/Debug/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="InnerPanel" type="Panel" parent="Game/Debug/Panel/MarginContainer"]
-layout_mode = 2
-
-[node name="InnerMarginContainer" type="MarginContainer" parent="Game/Debug/Panel/MarginContainer/InnerPanel"]
-layout_mode = 2
-offset_right = 344.0
-offset_bottom = 524.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Game/Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer"]
-layout_mode = 2
-
-[node name="CurrentScene" type="Label" parent="Game/Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Current scene: default_text_here"
-
 [node name="Organizer" type="Node" parent="."]
-
-[node name="Player" parent="Organizer" instance=ExtResource("3_wdpei")]
-transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 2.48354, 1.15269, 8.28436)
 
 [node name="Trigger" type="Node" parent="Organizer"]
 
-[node name="PF_Scene_Portal" type="Area3D" parent="Organizer/Trigger"]
-transform = Transform3D(5.01035, 0, 0, 0, 5.01035, 0, 0, 0, 5.01035, -5.04807, 2.69043, -1.90597)
-script = ExtResource("4_ml1hb")
-SceneToLoad = "Cavernode"
+[node name="PF_Scene_Portal" parent="Organizer/Trigger" instance=ExtResource("1_p6td6")]
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Organizer/Trigger/PF_Scene_Portal"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-amount = 512
-process_material = SubResource("ParticleProcessMaterial_7v5nw")
-draw_pass_1 = SubResource("QuadMesh_0xrto")
-draw_skin = SubResource("Skin_j5jd2")
+[node name="SP_Sandbox" type="Node3D" parent="Organizer/Trigger" groups=["spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17545, 4.37542, 5.29362)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Organizer/Trigger/PF_Scene_Portal"]
-shape = ExtResource("6_m4i02")
-
-[node name="SP_Sandbox" type="Node3D" parent="Organizer/Trigger"]
-
-[node name="SP_From_Cavernode" type="Node3D" parent="Organizer/Trigger"]
+[node name="SP_From_Cavernode" type="Node3D" parent="Organizer/Trigger" groups=["spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.31109, 3.12658)
 
 [node name="Setup" type="Node" parent="Organizer"]
 
