@@ -1,16 +1,44 @@
-[gd_scene load_steps=8 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=19 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/PF_Scene_Portal.tscn" id="1_p6td6"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="7_16oqy"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_vchse"]
 [ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_round.scn" id="8_a6h7k"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="8_fpd4g"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_atwrn"]
 [ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Demo/Prefab/pf_cliff_long.scn" id="9_xbcj5"]
 [ext_resource type="PackedScene" uid="uid://cbjhcip4ilptt" path="res://addons/StandardAssets/Demo/Prefab/pf_bush_01.tscn" id="10_ry5rd"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd" id="10_w6ked"]
+[ext_resource type="Script" path="res://Game/Script/player_controller_third_person2.gd" id="11_6tvru"]
 [ext_resource type="Material" uid="uid://dj5cv4744igg8" path="res://addons/StandardAssets/Material/mi_water.tres" id="11_ok6u1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nc1kt"]
 size = Vector2(512, 512)
 subdivide_width = 32
 subdivide_depth = 32
+
+[sub_resource type="Resource" id="Resource_ihcea"]
+script = ExtResource("9_atwrn")
+duration = 0.3
+transition = 1
+ease = 2
+
+[sub_resource type="Resource" id="Resource_k68d8"]
+script = ExtResource("10_w6ked")
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+fov = 75.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ptys"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bkccp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bvna"]
+albedo_color = Color(0.988235, 0.498039, 0.498039, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_gw7k4"]
+size = Vector3(0.5, 0.5, 0.3)
 
 [node name="Sandbox" type="Node3D"]
 transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
@@ -202,3 +230,65 @@ transform = Transform3D(1.59336, 0, -0.368236, 0, 1.63535, 0, 0.368236, 0, 1.593
 material_override = ExtResource("11_ok6u1")
 mesh = SubResource("PlaneMesh_nc1kt")
 skeleton = NodePath("")
+
+[node name="Player" type="Node" parent="."]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1.00414, 0, 0, 0, 1.00414, 0, 0, 0, 1.00414, 8.29633, 1.67061, 10.4581)
+
+[node name="MainCamera3D" type="Camera3D" parent="Node3D"]
+unique_name_in_owner = true
+transform = Transform3D(0.999997, 0, 0, 0, 0.86602, 0.499999, 0, -0.499999, 0.86602, -0.0194082, 2.24606, 2.99601)
+current = true
+
+[node name="PhantomCameraHost" type="Node" parent="Node3D/MainCamera3D"]
+script = ExtResource("7_vchse")
+
+[node name="PlayerPhantomCamera3D" type="Node3D" parent="Node3D"]
+unique_name_in_owner = true
+transform = Transform3D(0.999997, 0, 0, 0, 0.86602, 0.499999, 0, -0.499999, 0.86602, -0.0194082, 2.24606, 2.99601)
+script = ExtResource("8_fpd4g")
+priority_override = false
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+follow_parameters/spring_arm/spring_length = 3.5
+follow_parameters/spring_arm/collision_mask = 1
+follow_parameters/spring_arm/shape = null
+follow_parameters/spring_arm/margin = 0.2
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+look_at_mode = 0
+tween_parameters = SubResource("Resource_ihcea")
+tween_on_load = false
+inactive_update_mode = 0
+camera_3D_resource = SubResource("Resource_k68d8")
+
+[node name="PlayerCharacterBody3D" type="CharacterBody3D" parent="Node3D"]
+unique_name_in_owner = true
+transform = Transform3D(0.999903, 0.0139622, 0, -0.0139622, 0.999903, 0, 0, 0, 1, -0.0194088, 0.506884, -0.0163251)
+collision_layer = 2
+script = ExtResource("11_6tvru")
+
+[node name="PlayerArea3D" type="Area3D" parent="Node3D/PlayerCharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/PlayerCharacterBody3D/PlayerArea3D"]
+shape = SubResource("CapsuleShape3D_4ptys")
+
+[node name="PlayerCollisionShape3D" type="CollisionShape3D" parent="Node3D/PlayerCharacterBody3D"]
+shape = SubResource("CapsuleShape3D_4ptys")
+
+[node name="PlayerModel" type="Node3D" parent="Node3D/PlayerCharacterBody3D"]
+
+[node name="PlayerMeshInstance3D" type="MeshInstance3D" parent="Node3D/PlayerCharacterBody3D/PlayerModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 4.65661e-10, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_bkccp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4bvna")
+
+[node name="PlayerMeshInstance3D2" type="MeshInstance3D" parent="Node3D/PlayerCharacterBody3D/PlayerModel"]
+transform = Transform3D(1, 0, 0, -9.31323e-10, 1, 4.65661e-10, 2.98023e-08, 0, 1, -0.0156226, 1.08631, 0)
+mesh = SubResource("PrismMesh_gw7k4")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4bvna")
