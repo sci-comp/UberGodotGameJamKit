@@ -4,4 +4,4 @@
 
 [node name="Splash" type="Node3D"]
 script = ExtResource("1_e5exp")
-StartingScene = "res://Game/Scene/Sandbox.tscn"
+StartingScene = "Sandbox"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btl6rhjf4mykn"]
 
-[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/PF_Scene_Portal.tscn" id="1_7a3en"]
+[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Scene_Portal.tscn" id="1_7a3en"]
 [ext_resource type="Material" uid="uid://bk8fiai80lvyu" path="res://addons/StandardAssets/Demo/Material/mi_demo_cliff.tres" id="1_li706"]
 [ext_resource type="PackedScene" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_long.scn" id="2_553wy"]
 [ext_resource type="PackedScene" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_round.scn" id="3_gghhn"]
@@ -11,7 +11,7 @@
 
 [node name="PF_Scene_Portal" parent="Trigger" instance=ExtResource("1_7a3en")]
 transform = Transform3D(5.01035, 0, 0, 0, 5.01035, 0, 0, 0, 5.01035, 5.88573, 1.16192, 15.6934)
-SceneToLoad = "res://Game/Scene/Sandbox.tscn"
+SceneToLoad = "Sandbox"
 
 [node name="SP_From_Sandbox" type="Node3D" parent="Trigger"]
 transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 0, 2.24375, 0)

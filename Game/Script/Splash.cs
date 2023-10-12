@@ -12,7 +12,6 @@ public partial class Splash : Node
 
         if (frameCount == 2)
         {
-            GD.Print("Leaving splash..");
             SceneManager.Instance.ChangeScene(StartingScene);
             SetProcess(false);
         }

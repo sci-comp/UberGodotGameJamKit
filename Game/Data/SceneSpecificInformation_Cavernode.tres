@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneSpecificInformation.cs" id="1_726wj"]
 
 [resource]
+resource_name = "Cavernode"
 script = ExtResource("1_726wj")
 SceneName = "Cavernode"
 PlayerExistsInScene = true
+Path = "res://Game/Scene/Cavernode.tscn"

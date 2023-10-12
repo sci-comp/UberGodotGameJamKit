@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ccprf811gloit"]
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://ccprf811gloit"]
 
 [ext_resource type="Resource" uid="uid://c2v8v52qehp54" path="res://Game/Data/SceneSpecificInformation_Sandbox.tres" id="1_d8uiv"]
+[ext_resource type="Resource" uid="uid://74ldd61wdbq" path="res://Game/Data/SceneSpecificInformation_Splash.tres" id="1_jijpo"]
 [ext_resource type="Resource" uid="uid://4ml2r2fx0diw" path="res://Game/Data/SceneSpecificInformation_Cavernode.tres" id="2_32b43"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneSpecificInformationCollection.cs" id="3_3irc6"]
 
 [resource]
 script = ExtResource("3_3irc6")
-SceneInfoList = [ExtResource("1_d8uiv"), ExtResource("2_32b43")]
+SceneInfoList = [ExtResource("1_jijpo"), ExtResource("1_d8uiv"), ExtResource("2_32b43")]

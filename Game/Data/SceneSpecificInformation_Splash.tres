@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneSpecificInformation.cs" id="1_tbfvj"]
 
 [resource]
+resource_name = "Splash"
 script = ExtResource("1_tbfvj")
 SceneName = "Splash"
 PlayerExistsInScene = false
+Path = "res://Game/Scene/Splash.tscn"
