@@ -18,6 +18,10 @@ The primary goal of the UGGJK is to serve as a way to test the contents of the S
 
 The StandardAssets repository is a submodule that aims to be a lightweight and reusable collection of scripts, textures, materials, and so on. Since I use this submodule for my owns games, any form of feedback or collaboration is greatly appreciated.
 
+## Dependency
+
+This project assumes that [Phantom Camera](https://github.com/ramokz/phantom-camera) has already been added to your project.
+
 ## Installation
 
 Simply type,
@@ -76,7 +80,6 @@ The water shader is originally by Polyflare
 
 #### MIT content
 
-- The third person controller is from (note: this is temporary!): https://github.com/selgesel/godot4-third-person-controller
+- The camera system is by ramokz: https://github.com/ramokz/phantom-camera
 - The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
 - The scene manager used the following repository for guidance: https://github.com/glass-brick/Scene-Manager
-
