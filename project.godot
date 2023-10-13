@@ -21,7 +21,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 
 [autoload]
 
-Game="*res://addons/StandardAssets/Prefab/Game.tscn"
+Demo_Game_Manager="*res://Game/Scene/Demo_Game_Manager.tscn"
 
 [dotnet]
 

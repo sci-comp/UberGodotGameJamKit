@@ -42,8 +42,6 @@ environment = ExtResource("7_16oqy")
 [node name="pf_demo_cliff_round2" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
 transform = Transform3D(-0.35327, 0.0258424, 0.113, -0.0397829, -0.36746, -0.0403368, 0.108877, -0.0504173, 0.35191, 1.65885, 1.30615, 0.5934)
 
-[node name="Node" type="Node" parent="Organizer/Cliff"]
-
 [node name="pf_demo_cliff_round" parent="Organizer/Cliff" instance=ExtResource("8_a6h7k")]
 transform = Transform3D(0.266728, -0.0652124, 0.0741849, 0.0739179, 0.273482, -0.0253627, -0.0655148, 0.0430637, 0.27341, 8.82358, -1.13946, 1.41415)
 

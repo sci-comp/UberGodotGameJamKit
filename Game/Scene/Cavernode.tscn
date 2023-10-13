@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Scene_Portal.tscn" id="1_7a3en"]
 [ext_resource type="Material" uid="uid://bk8fiai80lvyu" path="res://addons/StandardAssets/Demo/Material/mi_demo_cliff.tres" id="1_li706"]
-[ext_resource type="PackedScene" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_long.scn" id="2_553wy"]
-[ext_resource type="PackedScene" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_round.scn" id="3_gghhn"]
+[ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_long.scn" id="2_553wy"]
+[ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_cliff_round.scn" id="3_gghhn"]
 
 [node name="Cavernode" type="Node3D"]
 
