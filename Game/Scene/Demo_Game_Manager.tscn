@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Debug.cs" id="2_obgs7"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/PlayerSpawner.cs" id="3_vd4v0"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/SceneManager.cs" id="4_qqyas"]
-[ext_resource type="PackedScene" uid="uid://j78f2t2wvn0i" path="res://Game/Scene/Player_Demo.tscn" id="4_u85tc"]
+[ext_resource type="PackedScene" uid="uid://j78f2t2wvn0i" path="res://addons/StandardAssets/Demo/Prefab/pf_demo_player.tscn" id="4_u85tc"]
 [ext_resource type="Texture2D" uid="uid://7ypismovx1sv" path="res://addons/StandardAssets/Texture/Gradient/horizontal.png" id="5_d6fo7"]
 [ext_resource type="Shader" path="res://addons/StandardAssets/Shader/Dissolve2d.gdshader" id="6_aiglr"]
 [ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/StandardAssets/Shader/ShaderFade.tres" id="7_v0kpm"]
