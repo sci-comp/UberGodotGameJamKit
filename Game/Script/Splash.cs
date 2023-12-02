@@ -2,7 +2,7 @@ using Godot;
 
 public partial class Splash : Node
 {
-    [Export] public string StartingScene;
+    [Export] public string StartingLevel;
 
     private int frameCount = 0;
 
@@ -12,7 +12,7 @@ public partial class Splash : Node
 
         if (frameCount == 2)
         {
-            SceneManager.Instance.ChangeScene(StartingScene);
+            LevelManager.Inst.ChangeLevel(StartingLevel);
             SetProcess(false);
         }
     }

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://d3aq6gbtci7ox"]
+
+[ext_resource type="Resource" uid="uid://dmun2byjeapoi" path="res://Game/Data/LevelInformation_Cavernode.tres" id="1_x50ps"]
+[ext_resource type="Resource" uid="uid://bkg83ic34tg65" path="res://Game/Data/LevelInformation_Sandbox.tres" id="2_ueq6s"]
+[ext_resource type="Resource" uid="uid://cqo44jlv6yoh" path="res://Game/Data/LevelInformation_Splash.tres" id="3_4h4mw"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/LevelInfoCollection.cs" id="4_fnaad"]
+
+[resource]
+script = ExtResource("4_fnaad")
+LevelInfoList = [ExtResource("1_x50ps"), ExtResource("2_ueq6s"), ExtResource("3_4h4mw")]

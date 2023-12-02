@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UberGodotGameJamKit"
-run/main_scene="res://Game/Scene/Splash.tscn"
+run/main_scene="res://Game/Level/Splash.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,7 +21,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 
 [autoload]
 
-Demo_Game_Manager="*res://Game/Scene/Demo_Game_Manager.tscn"
+Demo_Game_Manager="*res://Game/Level/Demo_Game_Manager.tscn"
 
 [dotnet]
 

@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bk8fiai80lvyu"]
+
+[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/cliff.gdshader" id="1_1g2kh"]
+[ext_resource type="Texture2D" uid="uid://cv6jkne4sodvu" path="res://Game/Texture/T_Demo_Stone.png" id="2_8vxpp"]
+[ext_resource type="Texture2D" uid="uid://bjuetweqy3afl" path="res://Game/Texture/T_Demo_Stone_n.png" id="3_cijic"]
+[ext_resource type="Texture2D" uid="uid://x2fb66fru55k" path="res://Game/Texture/T_Demo_Grass.png" id="4_eyobj"]
+[ext_resource type="Texture2D" uid="uid://cp1nawjx5nvll" path="res://Game/Texture/T_Demo_Grass_n.png" id="5_08je1"]
+
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1g2kh")
+shader_parameter/blend_smoothness = 0.1
+shader_parameter/threshold = 0.6
+shader_parameter/use_world_direction = true
+shader_parameter/world_direction = Vector3(0, 1, 0)
+shader_parameter/tex_scale = Vector2(1, 1)
+shader_parameter/tex_1_albedo = ExtResource("2_8vxpp")
+shader_parameter/tex_1_normal = ExtResource("3_cijic")
+shader_parameter/tex_2_albedo = ExtResource("4_eyobj")
+shader_parameter/tex_2_normal = ExtResource("5_08je1")

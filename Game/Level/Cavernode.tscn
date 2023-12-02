@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://btl6rhjf4mykn"]
+
+[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_k7wlx"]
+[ext_resource type="Material" uid="uid://bk8fiai80lvyu" path="res://Game/Material/MI_Demo_Cliff.tres" id="2_df0o0"]
+[ext_resource type="PackedScene" uid="uid://q6aitn0mvdmn" path="res://Game/Prefab/PF_Demo_Cliff_Long.scn" id="3_4fqnm"]
+[ext_resource type="PackedScene" uid="uid://cihfu1yylfwtb" path="res://Game/Prefab/PF_Demo_Cliff_Round.scn" id="4_x8n1l"]
+
+[node name="Cavernode" type="Node3D"]
+
+[node name="Trigger" type="Node" parent="."]
+
+[node name="PF_Level_Portal" parent="Trigger" instance=ExtResource("1_k7wlx")]
+transform = Transform3D(5.01035, 0, 0, 0, 5.01035, 0, 0, 0, 5.01035, 5.88573, 1.16192, 15.6934)
+LevelToLoad = "Sandbox"
+
+[node name="SP_From_Sandbox" type="Node3D" parent="Trigger"]
+transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 0, 2.24375, 0)
+
+[node name="SP_Cavernode" type="Node3D" parent="Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45623, 0)
+
+[node name="Geometry" type="Node" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, -25, 0)
+use_collision = true
+material = ExtResource("2_df0o0")
+
+[node name="pf_cliff_long2" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(-4.40427, 0, 0.288208, 0.287787, -0.238533, 4.39784, 0.0155759, 4.40724, 0.238024, 8.14725, 13.2028, -36.2882)
+
+[node name="pf_cliff_long5" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(4.59624, -0.14843, -0.371095, -0.399671, -1.68145, -4.27763, 0.00237349, 4.2937, -1.68799, 1.91925, 11.8917, 29.3895)
+
+[node name="pf_cliff_long4" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(0.177321, 4.20618, 1.63586, 0.875229, -1.63809, 4.11704, 4.42741, 0.155365, -0.879392, -36.5484, 4.82559, -5.74078)
+
+[node name="pf_cliff_long3" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(-0.15488, -4.22841, -0.867032, 0.261413, -0.875186, 4.22148, -4.30847, 0.098901, 0.287303, 39.9761, 5.36004, -9.52657)
+
+[node name="pf_cliff_long6" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(3.66775, 4.62642, 0.0109202, 0.384954, -0.319071, 5.88271, 4.61039, -3.65386, -0.499877, -32.8599, 43.8891, 14.9381)
+
+[node name="pf_cliff_long7" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(-3.80805, 4.63028, -1.46428, -0.534614, -2.24917, -5.72191, -4.82678, -3.40391, 1.78899, 41.2474, 42.1353, -32.9747)
+
+[node name="pf_cliff_long8" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(4.50058, -3.32407, -2.27935, 1.17074, -2.19117, 5.5071, -3.85671, -4.54416, -0.988152, 36.2619, 32.6835, 36.5309)
+
+[node name="pf_cliff_long9" parent="Geometry" instance=ExtResource("3_4fqnm")]
+transform = Transform3D(-4.39433, 3.60942, 1.02041, 0.349675, -1.17068, 5.64681, 3.73455, 4.3567, 0.671959, -31.1552, 33.3984, -40.6605)
+
+[node name="pf_cliff_round" parent="Geometry" instance=ExtResource("4_x8n1l")]
+transform = Transform3D(0.265166, 0.739614, -0.0427637, -0.718713, 0.267834, 0.175744, 0.179744, -0.0201639, 0.765803, -20.2711, -2.65252, -21.6387)
+
+[node name="pf_cliff_round2" parent="Geometry" instance=ExtResource("4_x8n1l")]
+transform = Transform3D(-0.678173, -0.132979, -0.376254, -0.305561, -0.304154, 0.658249, -0.256678, 0.713426, 0.210499, 19.3456, -2.65252, -28.1407)
+
+[node name="pf_cliff_round3" parent="Geometry" instance=ExtResource("4_x8n1l")]
+transform = Transform3D(-0.678173, -0.132979, -0.376254, -0.305561, -0.304154, 0.658249, -0.256678, 0.713426, 0.210499, 19.3456, -2.65252, 12.043)
+
+[node name="pf_cliff_round4" parent="Geometry" instance=ExtResource("4_x8n1l")]
+transform = Transform3D(-0.669789, -0.548305, -0.56427, -0.401244, -0.399397, 0.864374, -0.676789, 0.779423, 0.0459776, -10.9386, -2.65252, 8.61386)
+
+[node name="pf_cliff_round5" parent="Geometry" instance=ExtResource("4_x8n1l")]
+transform = Transform3D(3.14026, 0, 0, 0, 3.14026, 0, 0, 0, 3.14026, 12.7661, 48.3808, -16.9123)
+
+[node name="Light" type="Node" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light"]
+transform = Transform3D(0.999296, -0.0309913, 0.0211373, 0.00661789, 0.700266, 0.713851, -0.0369249, -0.713209, 0.699978, 7.03028, 36.2807, 17.8168)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 77.7767
+spot_angle = 50.2919
