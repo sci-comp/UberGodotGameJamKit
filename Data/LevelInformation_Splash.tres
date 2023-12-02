@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelInfo" load_steps=2 format=3 uid="uid://cqo44jlv6yoh"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelInfo.cs" id="1_3clwm"]
+
+[resource]
+script = ExtResource("1_3clwm")
+LevelName = "Splash"
+PlayerExistsInLevel = false
+Path = "res://Game/Level/Splash.tscn"

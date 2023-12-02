@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqson4gh2yq6n"]
+
+[ext_resource type="Script" path="res://Script/DemoGameManager.cs" id="1_n1mb0"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Utility/Debug.cs" id="2_obgs7"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/PlayerSpawner.cs" id="3_vd4v0"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelManager.cs" id="4_qqyas"]
+[ext_resource type="Texture2D" uid="uid://7ypismovx1sv" path="res://addons/StandardAssets/Texture/Gradient/horizontal.png" id="5_d6fo7"]
+[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/Dissolve2d.gdshader" id="6_aiglr"]
+[ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/StandardAssets/Shader/ShaderFade.tres" id="7_v0kpm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mrsu"]
+shader = ExtResource("6_aiglr")
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/fade_color = Color(0, 0, 0, 1)
+shader_parameter/fade = false
+shader_parameter/inverted = false
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2j4fm"]
+_data = {
+"ShaderFade": ExtResource("7_v0kpm")
+}
+
+[node name="Game" type="Node"]
+script = ExtResource("1_n1mb0")
+
+[node name="Debug" type="CanvasGroup" parent="." node_paths=PackedStringArray("CurrentLevelLabel", "PerformanceLabel")]
+visible = false
+script = ExtResource("2_obgs7")
+CurrentLevelLabel = NodePath("Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer/CurrentLevel")
+PerformanceLabel = NodePath("Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer/Performance")
+
+[node name="Panel" type="Panel" parent="Debug"]
+offset_right = 360.0
+offset_bottom = 600.0
+
+[node name="Title" type="Label" parent="Debug/Panel"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 25.0
+offset_right = 352.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0.564706, 0.933333, 0.564706, 1)
+text = "Debug"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="InnerPanel" type="Panel" parent="Debug/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="InnerMarginContainer" type="MarginContainer" parent="Debug/Panel/MarginContainer/InnerPanel"]
+layout_mode = 2
+offset_right = 344.0
+offset_bottom = 524.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer"]
+layout_mode = 2
+
+[node name="CurrentLevel" type="Label" parent="Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Current level: ---"
+
+[node name="Performance" type="Label" parent="Debug/Panel/MarginContainer/InnerPanel/InnerMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stats: ---"
+
+[node name="PlayerSpawner" type="Node" parent="."]
+script = ExtResource("3_vd4v0")
+PlayerPath = "res://Game/Prefab/PF_Demo_Player.tscn"
+
+[node name="LevelManager" type="Node2D" parent="."]
+script = ExtResource("4_qqyas")
+Speed = 1
+Pattern = ExtResource("5_d6fo7")
+LevelInfoCollectionPath = "res://Game/Data/LevelInformationCollection.tres"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="LevelManager"]
+layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="LevelManager/CanvasLayer"]
+material = SubResource("ShaderMaterial_5mrsu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelManager"]
+libraries = {
+"": SubResource("AnimationLibrary_2j4fm")
+}

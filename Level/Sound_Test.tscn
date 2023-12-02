@@ -1,0 +1,143 @@
+[gd_scene load_steps=14 format=3 uid="uid://c7r73835wgcp1"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Sound/SoundManager.cs" id="1_csynj"]
+[ext_resource type="Theme" uid="uid://x87r5gxs7pdd" path="res://addons/StandardAssets/Default/default_ui_theme.tres" id="1_f51c7"]
+[ext_resource type="AudioStream" uid="uid://dmm7km4ok3xmi" path="res://Game/Audio/bubbles/bubbles_01.wav" id="1_ol62n"]
+[ext_resource type="AudioStream" uid="uid://dsx81prt0ll38" path="res://Game/Audio/bubbles/bubbles_02.wav" id="2_hi7w5"]
+[ext_resource type="AudioStream" uid="uid://xx8aiknqj0fc" path="res://Game/Audio/bubbles/bubbles_03.wav" id="3_spn3t"]
+[ext_resource type="AudioStream" uid="uid://bro14wr3jxx6p" path="res://Game/Audio/bubbles/bubbles_04.wav" id="4_5wufc"]
+[ext_resource type="AudioStream" uid="uid://8mqlrw0xc84m" path="res://Game/Audio/bubbles/bubbles_05.wav" id="5_pymt7"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Sound/SoundGroup.cs" id="6_8jm8e"]
+[ext_resource type="AudioStream" uid="uid://ce8bq3bohd0w3" path="res://Game/Audio/velcro/velcro_01.wav" id="7_2bga5"]
+[ext_resource type="AudioStream" uid="uid://dnhonka6b6heu" path="res://Game/Audio/velcro/velcro_02.wav" id="8_p5rlq"]
+[ext_resource type="AudioStream" uid="uid://yh7p4wbpondj" path="res://Game/Audio/velcro/velcro_03.wav" id="9_wvfgm"]
+[ext_resource type="Texture2D" uid="uid://huao3butpx4q" path="res://addons/StandardAssets/Texture/Common/T_Solid_Black.png" id="15_w5570"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Sound/SoundManagerTest.cs" id="16_0ns7x"]
+
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Demo_Sound_Manager" type="Node" parent="." node_paths=PackedStringArray("SoundGroupsArraySFX", "SoundGroupsArrayUI", "SoundGroupsArrayVoice")]
+script = ExtResource("1_csynj")
+SoundGroupsArraySFX = [NodePath("SFX/sfx_bubbles"), NodePath("SFX/sfx_velcro")]
+SoundGroupsArrayUI = []
+SoundGroupsArrayVoice = []
+
+[node name="Control" type="Control" parent="Demo_Sound_Manager"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Demo_Sound_Manager/Control"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 59.0
+offset_right = 828.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 46
+text = "Sound Manager Test"
+
+[node name="Button_Panel" type="VBoxContainer" parent="Demo_Sound_Manager/Control"]
+layout_mode = 0
+offset_left = 763.0
+offset_top = 259.0
+offset_right = 1036.0
+offset_bottom = 376.0
+theme = ExtResource("1_f51c7")
+
+[node name="btnBubbles" type="Button" parent="Demo_Sound_Manager/Control/Button_Panel"]
+layout_mode = 2
+text = "bubbles"
+
+[node name="btnVelcro" type="Button" parent="Demo_Sound_Manager/Control/Button_Panel"]
+layout_mode = 2
+text = "velcro"
+
+[node name="Display_Info" type="TextureRect" parent="Demo_Sound_Manager/Control"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 188.0
+offset_right = 623.0
+offset_bottom = 700.0
+scale = Vector2(0.884388, 0.720726)
+texture = ExtResource("15_w5570")
+
+[node name="Text_SFX" type="Label" parent="Demo_Sound_Manager/Control/Display_Info"]
+layout_mode = 0
+offset_left = 56.5362
+offset_top = 59.662
+offset_right = 437.536
+offset_bottom = 441.662
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+
+[node name="Text_UI" type="Label" parent="Demo_Sound_Manager/Control/Display_Info"]
+layout_mode = 0
+offset_left = 56.5362
+offset_top = 278.885
+offset_right = 437.536
+offset_bottom = 660.885
+theme_override_font_sizes/font_size = 32
+text = "UI"
+
+[node name="Text_Voice" type="Label" parent="Demo_Sound_Manager/Control/Display_Info"]
+layout_mode = 0
+offset_left = 56.5362
+offset_top = 400.985
+offset_right = 437.536
+offset_bottom = 782.985
+theme_override_font_sizes/font_size = 32
+text = "Voice"
+
+[node name="SFX" type="Node" parent="Demo_Sound_Manager"]
+
+[node name="sfx_bubbles" type="Node" parent="Demo_Sound_Manager/SFX"]
+script = ExtResource("6_8jm8e")
+SoundBus = 2
+
+[node name="sfx_bubbles_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("1_ol62n")
+
+[node name="sfx_bubbles_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("2_hi7w5")
+
+[node name="sfx_bubbles_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("3_spn3t")
+
+[node name="sfx_bubbles_04" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("4_5wufc")
+
+[node name="sfx_bubbles_05" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_bubbles"]
+stream = ExtResource("5_pymt7")
+
+[node name="sfx_velcro" type="Node" parent="Demo_Sound_Manager/SFX"]
+script = ExtResource("6_8jm8e")
+SoundBus = 2
+
+[node name="sfx_velcro_01" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("7_2bga5")
+
+[node name="sfx_velcro_02" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("8_p5rlq")
+
+[node name="sfx_velcro_03" type="AudioStreamPlayer3D" parent="Demo_Sound_Manager/SFX/sfx_velcro"]
+stream = ExtResource("9_wvfgm")
+
+[node name="Test" type="Node" parent="Demo_Sound_Manager"]
+script = ExtResource("16_0ns7x")
+btnBubbles = Object(Button,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":2,"mouse_filter":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","disabled":false,"toggle_mode":false,"button_pressed":false,"action_mode":1,"button_mask":1,"keep_pressed_outside":false,"button_group":null,"shortcut":null,"shortcut_feedback":true,"shortcut_in_tooltip":true,"text":"bubbles","icon":null,"flat":false,"alignment":1,"text_overrun_behavior":0,"clip_text":false,"icon_alignment":0,"vertical_icon_alignment":1,"expand_icon":false,"text_direction":0,"language":"","script":null)
+
+btnVelcro = Object(Button,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":2,"mouse_filter":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","disabled":false,"toggle_mode":false,"button_pressed":false,"action_mode":1,"button_mask":1,"keep_pressed_outside":false,"button_group":null,"shortcut":null,"shortcut_feedback":true,"shortcut_in_tooltip":true,"text":"velcro","icon":null,"flat":false,"alignment":1,"text_overrun_behavior":0,"clip_text":false,"icon_alignment":0,"vertical_icon_alignment":1,"expand_icon":false,"text_direction":0,"language":"","script":null)
+
+sfxInfoText = Object(Label,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":0,"anchors_preset":0,"anchor_left":0.0,"anchor_top":0.0,"anchor_right":0.0,"anchor_bottom":0.0,"offset_left":56.5362,"offset_top":59.662,"offset_right":437.536,"offset_bottom":441.662,"grow_horizontal":1,"grow_vertical":1,"rotation":0.0,"scale":Vector2(1, 1),"pivot_offset":Vector2(0, 0),"size_flags_horizontal":1,"size_flags_vertical":4,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":2,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","theme_override_font_sizes/font_size":32,"text":"SFX","label_settings":null,"horizontal_alignment":0,"vertical_alignment":0,"autowrap_mode":0,"justification_flags":163,"clip_text":false,"text_overrun_behavior":0,"uppercase":false,"tab_stops":PackedFloat32Array(),"lines_skipped":0,"max_lines_visible":-1,"visible_characters":-1,"visible_characters_behavior":0,"visible_ratio":1.0,"text_direction":0,"language":"","structured_text_bidi_override":0,"structured_text_bidi_override_options":[],"script":null)
+
+
+[node name="Camera3D" type="Camera3D" parent="."]
