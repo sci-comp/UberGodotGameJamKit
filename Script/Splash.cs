@@ -12,6 +12,7 @@ public partial class Splash : Node
 
         if (frameCount == 2)
         {
+            GD.Print("Changing to level: " + StartingLevel);
             LevelManager.Inst.ChangeLevel(StartingLevel);
             SetProcess(false);
         }

@@ -6,4 +6,4 @@
 script = ExtResource("1_3clwm")
 LevelName = "Splash"
 PlayerExistsInLevel = false
-Path = "res://Game/Level/Splash.tscn"
+Path = "res://Level/Splash.tscn"

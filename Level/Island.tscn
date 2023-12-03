@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=3 uid="uid://y0wbbfugjd8s"]
+
+[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_8qcsf"]
+[ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_07a3g"]
+[ext_resource type="PackedScene" uid="uid://cw6iu1bfq7r1a" path="res://Prefab/Rocks/PF_Rock_Plate.glb" id="3_gu3vi"]
+[ext_resource type="PackedScene" uid="uid://5g2csv7vovyx" path="res://Prefab/Rocks/PF_Rock_Cave.glb" id="6_5p8te"]
+[ext_resource type="PackedScene" uid="uid://hckru6bawymd" path="res://Prefab/Vegetation/PF_Tree_Pine_old.tscn" id="6_05p52"]
+[ext_resource type="PackedScene" uid="uid://ignpdv10rx52" path="res://addons/boujie_water_shader/prefabs/deep_ocean.tscn" id="6_jj84m"]
+[ext_resource type="PackedScene" uid="uid://cqtoynuivdh0j" path="res://Prefab/Rocks/PF_Rock_Boulder.glb" id="7_5e8ve"]
+[ext_resource type="PackedScene" uid="uid://copc11jvl08jr" path="res://Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="8_l0s28"]
+[ext_resource type="PackedScene" uid="uid://iaj8su8ay84r" path="res://Prefab/Rocks/PF_Rock_Riser_Slant.glb" id="9_nqqq2"]
+[ext_resource type="PackedScene" uid="uid://bt1mc06uuhn88" path="res://Prefab/Rocks/PF_Rock_Overhang.glb" id="10_ooys7"]
+[ext_resource type="PackedScene" uid="uid://7uvdbkbvrnmr" path="res://Prefab/Rocks/PF_Rock_Rubble.glb" id="11_7ykad"]
+[ext_resource type="PackedScene" uid="uid://dt2a7137s0vft" path="res://Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
+[ext_resource type="PackedScene" uid="uid://b5plksyq8qmnj" path="res://Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
+
+[node name="Island" type="Node3D"]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
+
+[node name="Organizer" type="Node" parent="."]
+
+[node name="Trigger" type="Node" parent="Organizer"]
+
+[node name="PF_Level_Portal" parent="Organizer/Trigger" instance=ExtResource("1_8qcsf")]
+transform = Transform3D(7.8869, 0, 0, 0, 7.8869, 0, 0, 0, 7.8869, -7.61089, 5.96211, -3.54041)
+LevelToLoad = "Cave"
+
+[node name="SP_Island" type="Node3D" parent="Organizer/Trigger" groups=["spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0498, 8.49678, 15.255)
+
+[node name="SP_From_Cave" type="Node3D" parent="Organizer/Trigger" groups=["spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09793, 6.841, 5.57644)
+
+[node name="Setup" type="Node" parent="Organizer"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Organizer/Setup"]
+transform = Transform3D(0.549695, -0.246298, 0.798231, 0, 0.955547, 0.294838, -0.835366, -0.162071, 0.525259, 57.8634, 31.4875, 76.4251)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Organizer/Setup"]
+environment = ExtResource("2_07a3g")
+
+[node name="Cliff" type="Node" parent="Organizer"]
+
+[node name="PF_Rock_Plate-n1" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(-0.938443, -8.56444e-10, 1.15653, 0.0187309, 1.48918, 0.0151991, -1.15637, 0.0241228, -0.93832, 47.1888, -1.1519, 36.8647)
+
+[node name="PF_Rock_Plate-n8" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(-0.944776, 0.00881477, 0.30071, 0.0124697, 0.991389, 0.0101185, -0.300577, 0.0134238, -0.944765, 34.799, 0.107291, 28.1675)
+
+[node name="PF_Rock_Plate-n2" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(0.600103, -0.0173045, 0.955844, 0.0141955, 1.1286, 0.0115188, -0.955894, 0.00589734, 0.600246, 31.2323, -2.03099, 45.0164)
+
+[node name="PF_Rock_Plate-n3" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(0.987546, -0.0284768, 1.57296, 0.0233605, 1.85725, 0.0189557, -1.57305, 0.00970483, 0.987781, 13.9949, -4.29661, 28.4995)
+
+[node name="PF_Rock_Plate-n7" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(1.95895, -0.056488, 3.12021, 0.046339, 3.68414, 0.0376016, -3.12037, 0.019251, 1.95941, 95.4553, -7.86565, 60.1954)
+
+[node name="PF_Rock_Plate-n4" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(-2.77984, 0.0372413, -0.222851, 0.0350756, 2.78865, 0.0284619, 0.223207, 0.0255665, -2.77995, 24.41, -6.43481, -13.0343)
+
+[node name="PF_Rock_Plate-n6" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(-3.03067, 0.0178417, 1.98694, 0.0455764, 3.62351, 0.0369828, -1.98649, 0.0559188, -3.0305, -35.6262, -6.43481, -23.7073)
+
+[node name="PF_Rock_Plate-n5" parent="Organizer/Cliff" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(1.8028, -0.0736509, 0.144069, -0.0720896, -1.80847, -0.0224196, 0.144859, 0.0165924, -1.80416, -8.32434, 1.77523, 4.48768)
+
+[node name="PF_Rock_Cave-n1" parent="Organizer/Cliff" instance=ExtResource("6_5p8te")]
+transform = Transform3D(0.81356, 0, 0.585033, 0, 1.00207, 0, -0.585033, 0, 0.81356, -17.1588, 4.13101, -16.5681)
+
+[node name="PF_Rock_Boulder-n1" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(1.70867, 0.0823044, -0.262846, -0.0336278, 1.70164, 0.314226, 0.27337, -0.305115, 1.68155, -8.95735, -1.27813, -43.8048)
+
+[node name="PF_Rock_Boulder-n6" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(-0.54121, -0.581091, 1.2806, -0.251106, 1.39004, 0.52463, -1.38367, -0.0249735, -0.596103, -34.424, 1.31939, -42.5176)
+
+[node name="PF_Rock_Boulder-n7" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(-0.783765, -0.257743, -1.26087, -0.529382, 1.41018, 0.0408026, 1.17302, 0.464197, -0.824047, -47.8238, -3.48315, -31.0957)
+
+[node name="PF_Rock_Boulder-n2" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(-0.353823, 0.209963, -1.68112, -0.381452, 1.66342, 0.288037, 1.65068, 0.429403, -0.293787, -37.971, -5.93837, 10.2833)
+
+[node name="PF_Rock_Boulder-n3" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(1.67525, -0.272414, -0.338741, 0.356375, 1.63298, 0.449228, 0.2489, -0.504578, 1.63673, -33.3403, 5.03342, -23.0215)
+
+[node name="PF_Rock_Boulder-n5" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(0.528959, -0.373996, 0.93988, 0.235048, 1.07704, 0.29629, -0.983869, 0.0562341, 0.576094, -52.1631, 6.84, -6.55641)
+
+[node name="PF_Rock_Boulder-n4" parent="Organizer/Cliff" instance=ExtResource("7_5e8ve")]
+transform = Transform3D(-1.02084, 0.125356, 0.0456945, 0.12819, 1.01927, 0.0676425, -0.037003, 0.0727614, -1.02628, -37.4191, 14.6578, -4.93674)
+
+[node name="PF_Rock_Riser_Henge-n1" parent="Organizer/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(0.977024, 0, -0.222638, 0, 1.00207, 0, 0.222638, 0, 0.977024, -1.59374, 1.95879, 32.4024)
+
+[node name="PF_Rock_Riser_Henge-n2" parent="Organizer/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(-0.805542, 0, 0.596026, 0, 1.00207, 0, -0.596026, 0, -0.805542, 7.1867, 2.28194, 34.7601)
+
+[node name="PF_Rock_Riser_Henge-n3" parent="Organizer/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(0.230729, 0, -0.78628, 0, 0.819435, 0, 0.78628, 0, 0.230729, -9.21912, 3.13865, 23.3565)
+
+[node name="PF_Rock_Riser_Slant-n1" parent="Organizer/Cliff" instance=ExtResource("9_nqqq2")]
+transform = Transform3D(0.0252345, 0, -1.00175, 0, 1.00207, 0, 1.00175, 0, 0.0252345, 21.4426, 3.59368, -22.8379)
+
+[node name="PF_Rock_Riser_Slant-n2" parent="Organizer/Cliff" instance=ExtResource("9_nqqq2")]
+transform = Transform3D(0.460981, 0, 0.511199, 0, 0.688351, 0, -0.511199, 0, 0.460981, 61.8458, 3.97039, 74.1297)
+
+[node name="PF_Rock_Overhang-n1" parent="Organizer/Cliff" instance=ExtResource("10_ooys7")]
+transform = Transform3D(0.670827, 0, -1.28914, 0, 1.45324, 0, 1.28914, 0, 0.670827, 4.76125, 16.2878, -26.3098)
+
+[node name="PF_Rock_Overhang-n2" parent="Organizer/Cliff" instance=ExtResource("10_ooys7")]
+transform = Transform3D(-1.91583, 0, 3.38584e-05, 0, 1.91583, 0, -3.38584e-05, 0, -1.91583, -20.345, 15.2151, 6.15047)
+
+[node name="PF_Rock_Rubble-n1" parent="Organizer/Cliff" instance=ExtResource("11_7ykad")]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 9.12801, 4.41622, -15.9576)
+
+[node name="PF_Rock_Rubble-n2" parent="Organizer/Cliff" instance=ExtResource("11_7ykad")]
+transform = Transform3D(0.132966, 0, -0.747523, 0, 0.759256, 0, 0.747523, 0, 0.132966, -6.71822, 3.51167, 11.2013)
+
+[node name="PF_Rock_Riser_Tall-n1" parent="Organizer/Cliff" instance=ExtResource("12_m4dxn")]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 105.068, 4.2349, 28.0823)
+
+[node name="PF_Rock_Riser_Henge-n4" parent="Organizer/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(0.829527, 0, 0, 0, 0.829527, 0, 0, 0, 0.829527, 119.01, 4.33411, 25.033)
+
+[node name="PF_Rock_Riser_Henge-n5" parent="Organizer/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(1.10164, 0, -0.782951, 0, 1.35152, 0, 0.782951, 0, 1.10164, 127.074, 2.00952, 31.8473)
+
+[node name="PF_Rock_Arch-n1" parent="Organizer/Cliff" instance=ExtResource("13_36rtp")]
+transform = Transform3D(1.34654, 0, 0.582001, 0, 1.46693, 0, -0.582001, 0, 1.34654, 118.642, 3.19486, 67.9909)
+
+[node name="Vegetation" type="Node" parent="Organizer"]
+
+[node name="PF_Tree_Pine_01" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(0.177612, -0.00618994, -0.568043, 0.0207305, 0.594834, 0, 0.567698, -0.0197848, 0.17772, 40.842, 2.70223, 22.381)
+
+[node name="PF_Tree_Pine_02" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(0.0304428, -0.0454739, 1.1487, -0.0812608, 1.14614, 0.0475263, -1.14672, -0.0824268, 0.0271274, 46.6067, 1.64726, 45.2403)
+
+[node name="PF_Tree_Pine_03" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 26.8254, 1.26974, 45.3592)
+
+[node name="PF_Tree_Pine_10" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-0.701916, -0.0262555, -0.566967, -0.0637847, 0.899648, 0.0373052, 0.563978, 0.0690709, -0.701418, 9.60735, 1.86294, 23.4475)
+
+[node name="PF_Tree_Pine_11" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-0.508761, 0, 0.599868, 0, 0.786562, 0, -0.599868, 0, -0.508761, 19.7217, 1.56661, 35.2288)
+
+[node name="PF_Tree_Pine_04" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(0.733077, -0.00796954, 0.223091, 0.000203577, 0.765848, 0.0266897, -0.223233, -0.0254729, 0.732635, 44.915, 3.20365, 29.3244)
+
+[node name="PF_Tree_Pine_05" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-1.4786, -0.0585476, 0.050474, -0.0619863, 1.47565, -0.104154, -0.046186, -0.106124, -1.4761, 48.2636, -0.393785, 25.1964)
+
+[node name="PF_Tree_Pine_06" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(0.00984013, 0, 1.29013, 0, 1.29016, 0, -1.29013, 0, 0.00984013, 42.6707, 0.802777, 47.1723)
+
+[node name="PF_Tree_Pine_07" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-0.738711, 0.0200592, -0.569956, 0.000247924, 0.932679, 0.0325038, 0.570308, 0.025577, -0.738269, 41.5976, 3.02164, 5.75743)
+
+[node name="PF_Tree_Pine_08" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(1.704, 0.112438, 0.578903, -0.0754893, 1.79711, -0.126842, -0.584867, 0.095631, 1.70299, 39.5633, -1.35946, 11.9028)
+
+[node name="PF_Tree_Pine_12" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-1.22458, 0, 0.534904, 0, 1.33631, 0, -0.534904, 0, -1.22458, 88.0164, 3.51078, 29.6908)
+
+[node name="PF_Tree_Pine_16" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-0.906936, 0, 0.396155, 0, 0.989682, 0, -0.396155, 0, -0.906936, 131.322, 3.51078, 44.1762)
+
+[node name="PF_Tree_Pine_13" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(-1.39465, 0.0795595, 1.95723, -0.100669, 2.39653, -0.169151, -1.95625, -0.180045, -1.38664, 54.591, 3.5083, 63.7768)
+
+[node name="PF_Tree_Pine_14" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(1.54732, 0.118034, 0.751439, -0.0721828, 1.71839, -0.121287, -0.757217, 0.0773866, 1.54708, 68.9606, 4.3546, 60.4768)
+
+[node name="PF_Tree_Pine_15" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(2.90279, 0.221433, 1.40971, -0.135416, 3.22372, -0.227535, -1.42055, 0.145178, 2.90233, 80.6173, 4.3546, 70.991)
+
+[node name="PF_Tree_Pine_09" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
+transform = Transform3D(0.545006, 0, -1.47366, 0, 1.57121, 0, 1.47366, 0, 0.545006, 32.5543, 2.07779, -9.94982)
+
+[node name="DeepOcean2" parent="Organizer" instance=ExtResource("6_jj84m")]

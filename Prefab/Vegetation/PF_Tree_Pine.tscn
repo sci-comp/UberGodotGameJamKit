@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://diapkj3r41tp7"]
+
+[ext_resource type="PackedScene" uid="uid://y32tugac0iwi" path="res://Prefab/Vegetation/SM_Tree_Pine.glb" id="1_3ff7e"]
+[ext_resource type="Material" uid="uid://b0d8l0kt4ui4t" path="res://addons/StandardAssets/Material/Vegetation/MI_Bark.tres" id="2_5eg5s"]
+[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://addons/StandardAssets/Material/Vegetation/MI_Foliage.material" id="3_o7gc2"]
+[ext_resource type="Material" uid="uid://d2nfy850cxg6s" path="res://addons/StandardAssets/Material/Vegetation/MI_Stump.tres" id="4_gqj2p"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7sofc"]
+height = 1100.0
+radius = 14.0
+
+[node name="PF_Tree_Pine-n1" instance=ExtResource("1_3ff7e")]
+
+[node name="SM_Tree_Pine" parent="." index="0"]
+material_override = ExtResource("2_5eg5s")
+
+[node name="SM_Branch" parent="SM_Tree_Pine" index="0"]
+surface_material_override/0 = ExtResource("3_o7gc2")
+
+[node name="SM_Stump" parent="SM_Tree_Pine" index="1"]
+material_override = ExtResource("4_gqj2p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Tree_Pine" index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4.03025e-05, -533.823)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Tree_Pine/StaticBody3D" index="0"]
+shape = SubResource("CylinderShape3D_7sofc")
+
+[node name="SM_Tree_Pine-gcp-wood" parent="SM_Tree_Pine" index="3"]
+visible = false

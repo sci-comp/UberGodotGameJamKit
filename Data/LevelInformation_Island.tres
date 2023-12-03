@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelInfo" load_steps=2 format=3 uid="uid://bkg83ic34tg65"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelInfo.cs" id="1_rvamm"]
+
+[resource]
+script = ExtResource("1_rvamm")
+LevelName = "Island"
+PlayerExistsInLevel = true
+Path = "res://Level/Island.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelInfo" load_steps=2 format=3 uid="uid://dmun2byjeapoi"]
+
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelInfo.cs" id="1_2hgwp"]
+
+[resource]
+script = ExtResource("1_2hgwp")
+LevelName = "Cave"
+PlayerExistsInLevel = true
+Path = "res://Level/Cave.tscn"

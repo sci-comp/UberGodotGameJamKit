@@ -20,7 +20,10 @@ The StandardAssets repository is a submodule that aims to be a lightweight and r
 
 ## Dependency
 
-This project assumes that [Phantom Camera](https://github.com/ramokz/phantom-camera) has already been added to your project.
+This project assumes that the following have already been added to your project,
+
+- [Phantom Camera](https://github.com/ramokz/phantom-camera)
+- [Boujie Water Shader](https://github.com/Chrisknyfe/boujie_water_shader)
 
 ## Installation
 

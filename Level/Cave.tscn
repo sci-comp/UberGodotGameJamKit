@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://btl6rhjf4mykn"]
+
+[ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_k7wlx"]
+[ext_resource type="PackedScene" uid="uid://cw6iu1bfq7r1a" path="res://Prefab/PF_Rock_Plate.glb" id="2_i2c66"]
+[ext_resource type="PackedScene" uid="uid://5g2csv7vovyx" path="res://Prefab/PF_Rock_Cave.glb" id="3_y30aa"]
+[ext_resource type="PackedScene" uid="uid://dt2a7137s0vft" path="res://Prefab/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]
+[ext_resource type="PackedScene" uid="uid://copc11jvl08jr" path="res://Prefab/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
+[ext_resource type="PackedScene" uid="uid://cqtoynuivdh0j" path="res://Prefab/PF_Rock_Boulder.glb" id="6_fp03x"]
+[ext_resource type="PackedScene" uid="uid://bt1mc06uuhn88" path="res://Prefab/PF_Rock_Overhang.glb" id="7_rdjie"]
+
+[node name="Cave" type="Node3D"]
+
+[node name="Trigger" type="Node" parent="."]
+
+[node name="PF_Level_Portal" parent="Trigger" instance=ExtResource("1_k7wlx")]
+transform = Transform3D(6.12458, 0, 0, 0, 6.12458, 0, 0, 0, 6.12458, 5.88573, 1.57068, 15.6934)
+LevelToLoad = "Island"
+
+[node name="SP_From_Island" type="Node3D" parent="Trigger"]
+transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 11.5041, 4.36762, 2.69019)
+
+[node name="SP_Cave" type="Node3D" parent="Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.967, 4.26007, -13.5516)
+
+[node name="Geometry" type="Node" parent="."]
+
+[node name="PF_Rock_Plate-n2" parent="Geometry" instance=ExtResource("2_i2c66")]
+transform = Transform3D(3.41015, 0, 0, 0, -3.41015, 2.98125e-07, 0, -2.98125e-07, -3.41015, 10.8283, 27.3121, -8.78111)
+
+[node name="PF_Rock_Plate-n1" parent="Geometry" instance=ExtResource("2_i2c66")]
+transform = Transform3D(2.69164, 0, 0, 0, -2.69164, 2.35311e-07, 0, -2.35311e-07, -2.69164, 12.5688, -2.09524, -10.1134)
+
+[node name="PF_Rock_Plate-n3" parent="Geometry" instance=ExtResource("2_i2c66")]
+transform = Transform3D(-0.0685063, 1.73237e-07, 1.9816, 0, -1.98278, 1.7334e-07, 1.9816, 5.98901e-09, 0.0685063, -2.57185, -2.09524, 32.7224)
+
+[node name="PF_Rock_Cave-n1" parent="Geometry" instance=ExtResource("3_y30aa")]
+transform = Transform3D(-0.895261, 0, 0.445542, 0, 1, 0, -0.445542, 0, -0.895261, -1.23974, -0.53185, 29.5764)
+
+[node name="PF_Rock_Riser_Tall-n1" parent="Geometry" instance=ExtResource("4_lr3e0")]
+transform = Transform3D(0.620174, 0, 0, 0, 0.620174, 0, 0, 0, 0.620174, 24.6582, -1.05484, -31.6449)
+
+[node name="PF_Rock_Riser_Henge-n1" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(2.37519, 0, 0.757473, 0, 2.49305, 0, -0.757473, 0, 2.37519, 13.7916, -7.59492, -42.9349)
+
+[node name="PF_Rock_Riser_Henge-n6" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(2.37678, 0, 2.05433, 0, 3.14155, 0, -2.05433, 0, 2.37678, 5.24054, -7.59492, -36.2873)
+
+[node name="PF_Rock_Riser_Henge-n2" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(-2.30532, 0, 0.949103, 0, 2.49305, 0, -0.949103, 0, -2.30532, 25.3543, -7.59492, -43.7462)
+
+[node name="PF_Rock_Riser_Henge-n3" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(-2.90978, 0, -1.12355, 0, 3.11917, 0, 1.12355, 0, -2.90978, 20.4563, -7.59492, 14.8884)
+
+[node name="PF_Rock_Riser_Henge-n5" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(-2.43592, 0.129649, 1.94388, 0.365806, 3.08734, 0.252488, -1.91355, 0.425154, -2.42627, -6.25496, -6.24078, 9.1991)
+
+[node name="PF_Rock_Riser_Henge-n4" parent="Geometry" instance=ExtResource("5_38m8c")]
+transform = Transform3D(2.93804, 0, 2.36461, 0, 3.77141, 0, -2.36461, 0, 2.93804, 32.0397, -7.66857, 8.02518)
+
+[node name="PF_Rock_Boulder-n1" parent="Geometry" instance=ExtResource("6_fp03x")]
+transform = Transform3D(0.988631, 1.6991, 0.0407834, 0, -0.0471813, 1.96565, 1.69959, -0.988346, -0.0237232, 37.9989, 1.90735e-06, -24.7313)
+
+[node name="PF_Rock_Boulder-n2" parent="Geometry" instance=ExtResource("6_fp03x")]
+transform = Transform3D(-0.705807, 2.35833, 0.0566068, -4.50516e-09, -0.0590862, 2.46163, 2.35901, 0.705604, 0.0169365, 39.487, 1.90735e-06, -4.60447)
+
+[node name="PF_Rock_Boulder-n3" parent="Geometry" instance=ExtResource("6_fp03x")]
+transform = Transform3D(-0.705807, 2.35833, 0.0566068, -4.50516e-09, -0.0590862, 2.46163, 2.35901, 0.705604, 0.0169365, -33.233, -3.8147e-06, -17.4098)
+
+[node name="PF_Rock_Overhang-n1" parent="Geometry" instance=ExtResource("7_rdjie")]
+transform = Transform3D(-0.489008, 0, 2.96994, 0, 3.00993, 0, -2.96994, 0, -0.489008, -10.0648, 14.3184, 28.151)
+
+[node name="Light" type="Node" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light"]
+transform = Transform3D(0.999296, -0.0309913, 0.0211373, 0.00661789, 0.700266, 0.713851, -0.0369249, -0.713209, 0.699978, 7.03028, 36.2807, 17.8168)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 77.7767
+spot_angle = 50.2919

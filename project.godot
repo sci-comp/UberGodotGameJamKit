@@ -21,7 +21,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 
 [autoload]
 
-Demo_Game_Manager="*res://Level/Demo_Game_Manager.tscn"
+Demo_Game_Manager="*res://Prefab/Demo_Game_Manager.tscn"
 
 [dotnet]
 
@@ -34,6 +34,12 @@ enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons
 [filesystem]
 
 import/blender/enabled=false
+
+[importer_defaults]
+
+scene={
+"import_script/path": "res://addons/EditorToolbox/Import/glb_post_import.gd"
+}
 
 [input]
 
