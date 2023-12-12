@@ -6,8 +6,10 @@
 .vs*
 
 *.csproj
+*.csproj.*
 *.sln
 *.tmp
 
 addons/phantom_camera
 addons/boujie_water_shader
+rcedit-x86.exe
