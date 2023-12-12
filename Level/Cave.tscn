@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://btl6rhjf4mykn"]
 
 [ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_k7wlx"]
-[ext_resource type="PackedScene" uid="uid://cw6iu1bfq7r1a" path="res://Prefab/PF_Rock_Plate.glb" id="2_i2c66"]
-[ext_resource type="PackedScene" uid="uid://5g2csv7vovyx" path="res://Prefab/PF_Rock_Cave.glb" id="3_y30aa"]
-[ext_resource type="PackedScene" uid="uid://dt2a7137s0vft" path="res://Prefab/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]
-[ext_resource type="PackedScene" uid="uid://copc11jvl08jr" path="res://Prefab/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
-[ext_resource type="PackedScene" uid="uid://cqtoynuivdh0j" path="res://Prefab/PF_Rock_Boulder.glb" id="6_fp03x"]
-[ext_resource type="PackedScene" uid="uid://bt1mc06uuhn88" path="res://Prefab/PF_Rock_Overhang.glb" id="7_rdjie"]
+[ext_resource type="PackedScene" uid="uid://cw6iu1bfq7r1a" path="res://Prefab/Rocks/PF_Rock_Plate.glb" id="2_i2c66"]
+[ext_resource type="PackedScene" uid="uid://5g2csv7vovyx" path="res://Prefab/Rocks/PF_Rock_Cave.glb" id="3_y30aa"]
+[ext_resource type="PackedScene" uid="uid://dt2a7137s0vft" path="res://Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]
+[ext_resource type="PackedScene" uid="uid://copc11jvl08jr" path="res://Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
+[ext_resource type="PackedScene" uid="uid://cqtoynuivdh0j" path="res://Prefab/Rocks/PF_Rock_Boulder.glb" id="6_fp03x"]
+[ext_resource type="PackedScene" uid="uid://bt1mc06uuhn88" path="res://Prefab/Rocks/PF_Rock_Overhang.glb" id="7_rdjie"]
 
 [node name="Cave" type="Node3D"]
 

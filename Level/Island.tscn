@@ -1,21 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=13 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_8qcsf"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_07a3g"]
-[ext_resource type="PackedScene" uid="uid://cw6iu1bfq7r1a" path="res://Prefab/Rocks/PF_Rock_Plate.glb" id="3_gu3vi"]
-[ext_resource type="PackedScene" uid="uid://5g2csv7vovyx" path="res://Prefab/Rocks/PF_Rock_Cave.glb" id="6_5p8te"]
+[ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Prefab/Rocks/PF_Rock_Plate.glb" id="3_gu3vi"]
+[ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Prefab/Rocks/PF_Rock_Cave.glb" id="6_5p8te"]
 [ext_resource type="PackedScene" uid="uid://hckru6bawymd" path="res://Prefab/Vegetation/PF_Tree_Pine_old.tscn" id="6_05p52"]
-[ext_resource type="PackedScene" uid="uid://ignpdv10rx52" path="res://addons/boujie_water_shader/prefabs/deep_ocean.tscn" id="6_jj84m"]
-[ext_resource type="PackedScene" uid="uid://cqtoynuivdh0j" path="res://Prefab/Rocks/PF_Rock_Boulder.glb" id="7_5e8ve"]
-[ext_resource type="PackedScene" uid="uid://copc11jvl08jr" path="res://Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="8_l0s28"]
-[ext_resource type="PackedScene" uid="uid://iaj8su8ay84r" path="res://Prefab/Rocks/PF_Rock_Riser_Slant.glb" id="9_nqqq2"]
-[ext_resource type="PackedScene" uid="uid://bt1mc06uuhn88" path="res://Prefab/Rocks/PF_Rock_Overhang.glb" id="10_ooys7"]
-[ext_resource type="PackedScene" uid="uid://7uvdbkbvrnmr" path="res://Prefab/Rocks/PF_Rock_Rubble.glb" id="11_7ykad"]
-[ext_resource type="PackedScene" uid="uid://dt2a7137s0vft" path="res://Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
-[ext_resource type="PackedScene" uid="uid://b5plksyq8qmnj" path="res://Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
+[ext_resource type="PackedScene" uid="uid://bcdixo0uw7igd" path="res://Prefab/Rocks/PF_Rock_Boulder.glb" id="7_5e8ve"]
+[ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="8_l0s28"]
+[ext_resource type="PackedScene" uid="uid://b8h3n1lu0cty5" path="res://Prefab/Rocks/PF_Rock_Riser_Slant.glb" id="9_nqqq2"]
+[ext_resource type="PackedScene" uid="uid://c5gec85a0kuek" path="res://Prefab/Rocks/PF_Rock_Overhang.glb" id="10_ooys7"]
+[ext_resource type="PackedScene" uid="uid://bh31t7rauktqm" path="res://Prefab/Rocks/PF_Rock_Rubble.glb" id="11_7ykad"]
+[ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
+[ext_resource type="PackedScene" uid="uid://clrroqgutxg5x" path="res://Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
 
 [node name="Island" type="Node3D"]
-transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 0, 0, 0)
 
 [node name="Organizer" type="Node" parent="."]
 
@@ -178,5 +176,3 @@ transform = Transform3D(2.90279, 0.221433, 1.40971, -0.135416, 3.22372, -0.22753
 
 [node name="PF_Tree_Pine_09" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
 transform = Transform3D(0.545006, 0, -1.47366, 0, 1.57121, 0, 1.47366, 0, 0.545006, 32.5543, 2.07779, -9.94982)
-
-[node name="DeepOcean2" parent="Organizer" instance=ExtResource("6_jj84m")]

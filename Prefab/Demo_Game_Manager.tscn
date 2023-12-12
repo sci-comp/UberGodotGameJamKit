@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dqson4gh2yq6n"]
 
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Utility/Debug.cs" id="2_obgs7"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Utility/StandardDebug.cs" id="2_obgs7"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/PlayerSpawner.cs" id="3_vd4v0"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelManager.cs" id="4_qqyas"]
 [ext_resource type="Texture2D" uid="uid://7ypismovx1sv" path="res://addons/StandardAssets/Texture/Gradient/horizontal.png" id="5_d6fo7"]
@@ -79,7 +79,7 @@ text = "Stats: ---"
 
 [node name="PlayerSpawner" type="Node" parent="."]
 script = ExtResource("3_vd4v0")
-PlayerPath = "res://Prefab/PF_Demo_Player.tscn"
+PlayerPath = "res://addons/dreadpon.kinematic_fps_controller/fps_character.tscn"
 
 [node name="LevelManager" type="Node2D" parent="."]
 script = ExtResource("4_qqyas")

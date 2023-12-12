@@ -1,12 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://j78f2t2wvn0i"]
+[gd_scene load_steps=7 format=3 uid="uid://j78f2t2wvn0i"]
 
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/camera_controller.gd" id="1_g1mlt"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ubnwt"]
 [ext_resource type="Script" path="res://Script/DemoCharacterController.cs" id="3_m7eim"]
 [ext_resource type="Material" uid="uid://bkun7ytwxriir" path="res://addons/StandardAssets/Material/Common/MI_Checkers.tres" id="4_e4ak6"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_p2xwf"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_m33t5"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd" id="7_atow8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ptys"]
 
@@ -14,19 +10,6 @@
 
 [sub_resource type="PrismMesh" id="PrismMesh_gw7k4"]
 size = Vector3(0.5, 0.5, 0.3)
-
-[sub_resource type="Resource" id="Resource_ihcea"]
-script = ExtResource("6_m33t5")
-duration = 0.3
-transition = 1
-ease = 2
-
-[sub_resource type="Resource" id="Resource_k68d8"]
-script = ExtResource("7_atow8")
-cull_mask = 1048575
-h_offset = 0.0
-v_offset = 0.0
-fov = 60.0
 
 [node name="PF_Player" type="Node3D"]
 transform = Transform3D(1.00414, 0, 0, 0, 1.00414, 0, 0, 0, 1.00414, 0, 0, 0)
@@ -41,9 +24,6 @@ script = ExtResource("1_g1mlt")
 mouse_sensitivity = 0.08
 min_yaw = -60.0
 max_yaw = 60.0
-
-[node name="PhantomCameraHost" type="Node" parent="MainCamera3D"]
-script = ExtResource("2_ubnwt")
 
 [node name="PlayerCharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("Rendered", "Camera") groups=["player"]]
 unique_name_in_owner = true
@@ -70,24 +50,3 @@ transform = Transform3D(1.33963, -5.69715e-08, 4.50297e-09, -1.24763e-09, 0.4392
 mesh = SubResource("PrismMesh_gw7k4")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_e4ak6")
-
-[node name="PlayerPhantomCamera3D" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(0.999997, 0, 0, 0, 0.86602, 0.499999, 0, -0.499999, 0.86602, 0, 4.48556, 6.03715)
-script = ExtResource("5_p2xwf")
-priority_override = false
-priority = 10
-follow_mode = 6
-follow_target = NodePath("../PlayerCharacterBody3D")
-follow_parameters/spring_arm/spring_length = 7.0
-follow_parameters/spring_arm/collision_mask = 1
-follow_parameters/spring_arm/shape = null
-follow_parameters/spring_arm/margin = 0.2
-follow_parameters/target_offset = Vector3(0, 0, 0)
-follow_parameters/damping = true
-follow_parameters/damping_value = 10.0
-look_at_mode = 0
-tween_parameters = SubResource("Resource_ihcea")
-tween_on_load = false
-inactive_update_mode = 0
-camera_3D_resource = SubResource("Resource_k68d8")

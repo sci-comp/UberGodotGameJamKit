@@ -10,6 +10,14 @@
 *.sln
 *.tmp
 
-addons/phantom_camera
 addons/boujie_water_shader
+addons/dreadpon.spatial_gardener
+addons/phantom_camera
+
+testing/
+
+# Used by Spatial Gardener
+file_format.sh
+
+# Necessary when building Godot to Windows
 rcedit-x86.exe
