@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=15 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://bd80cjtqo8yoi" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_8qcsf"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_07a3g"]
 [ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Prefab/Rocks/PF_Rock_Plate.glb" id="3_gu3vi"]
 [ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Prefab/Rocks/PF_Rock_Cave.glb" id="6_5p8te"]
-[ext_resource type="PackedScene" uid="uid://hckru6bawymd" path="res://Prefab/Vegetation/PF_Tree_Pine_old.tscn" id="6_05p52"]
+[ext_resource type="PackedScene" uid="uid://hckru6bawymd" path="res://Prefab/Vegetation/PF_Tree_Pine.tscn" id="6_05p52"]
 [ext_resource type="PackedScene" uid="uid://bcdixo0uw7igd" path="res://Prefab/Rocks/PF_Rock_Boulder.glb" id="7_5e8ve"]
 [ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="8_l0s28"]
 [ext_resource type="PackedScene" uid="uid://b8h3n1lu0cty5" path="res://Prefab/Rocks/PF_Rock_Riser_Slant.glb" id="9_nqqq2"]
@@ -12,10 +12,19 @@
 [ext_resource type="PackedScene" uid="uid://bh31t7rauktqm" path="res://Prefab/Rocks/PF_Rock_Rubble.glb" id="11_7ykad"]
 [ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
 [ext_resource type="PackedScene" uid="uid://clrroqgutxg5x" path="res://Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
+[ext_resource type="ArrayMesh" uid="uid://dun1ahhvo87j7" path="res://Prefab/Vegetation/SM_Demo_Grass_M_Demo_Grass_LOD0.res" id="13_pedky"]
+[ext_resource type="ArrayMesh" uid="uid://cf4v7wsacgjt7" path="res://Prefab/Vegetation/SM_Demo_Grass_M_Demo_Grass_LOD1.res" id="14_i7lqn"]
 
 [node name="Island" type="Node3D"]
 
 [node name="Organizer" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Organizer"]
+transform = Transform3D(0.549695, -0.246298, 0.798231, 0, 0.955547, 0.294838, -0.835366, -0.162071, 0.525259, 57.8634, 31.4875, 76.4251)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Organizer"]
+environment = ExtResource("2_07a3g")
 
 [node name="Trigger" type="Node" parent="Organizer"]
 
@@ -28,15 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0498, 8.49678, 15.255)
 
 [node name="SP_From_Cave" type="Node3D" parent="Organizer/Trigger" groups=["spawnpoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09793, 6.841, 5.57644)
-
-[node name="Setup" type="Node" parent="Organizer"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Organizer/Setup"]
-transform = Transform3D(0.549695, -0.246298, 0.798231, 0, 0.955547, 0.294838, -0.835366, -0.162071, 0.525259, 57.8634, 31.4875, 76.4251)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Organizer/Setup"]
-environment = ExtResource("2_07a3g")
 
 [node name="Cliff" type="Node" parent="Organizer"]
 
@@ -132,9 +132,6 @@ transform = Transform3D(1.34654, 0, 0.582001, 0, 1.46693, 0, -0.582001, 0, 1.346
 [node name="PF_Tree_Pine_01" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
 transform = Transform3D(0.177612, -0.00618994, -0.568043, 0.0207305, 0.594834, 0, 0.567698, -0.0197848, 0.17772, 40.842, 2.70223, 22.381)
 
-[node name="PF_Tree_Pine_02" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
-transform = Transform3D(0.0304428, -0.0454739, 1.1487, -0.0812608, 1.14614, 0.0475263, -1.14672, -0.0824268, 0.0271274, 46.6067, 1.64726, 45.2403)
-
 [node name="PF_Tree_Pine_03" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
 transform = Transform3D(1.00207, 0, 0, 0, 1.00207, 0, 0, 0, 1.00207, 26.8254, 1.26974, 45.3592)
 
@@ -176,3 +173,11 @@ transform = Transform3D(2.90279, 0.221433, 1.40971, -0.135416, 3.22372, -0.22753
 
 [node name="PF_Tree_Pine_09" parent="Organizer/Vegetation" instance=ExtResource("6_05p52")]
 transform = Transform3D(0.545006, 0, -1.47366, 0, 1.57121, 0, 1.47366, 0, 0.545006, 32.5543, 2.07779, -9.94982)
+
+[node name="SmDemoGrassMDemoGrassLod0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7868, 3.35226, 20.5627)
+mesh = ExtResource("13_pedky")
+
+[node name="SmDemoGrassMDemoGrassLod1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6668, 3.25085, 19.4346)
+mesh = ExtResource("14_i7lqn")

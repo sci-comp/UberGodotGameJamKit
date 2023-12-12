@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlvy5dra0cuo3"
-path="res://.godot/imported/PF_Tree_Pine_old2.glb-9bcdf7bb950edb674c29e4631ecacdee.scn"
+uid="uid://bi1fhm5hbeg7o"
+path="res://.godot/imported/PF_Tree_Pine.glb-8cd0f668c9763451c59b1ff7561ea4bb.scn"
 
 [deps]
 
-source_file="res://Prefab/Vegetation/PF_Tree_Pine_old2.glb"
-dest_files=["res://.godot/imported/PF_Tree_Pine_old2.glb-9bcdf7bb950edb674c29e4631ecacdee.scn"]
+source_file="res://Prefab/Vegetation/PF_Tree_Pine.glb"
+dest_files=["res://.godot/imported/PF_Tree_Pine.glb-8cd0f668c9763451c59b1ff7561ea4bb.scn"]
 
 [params]
 
@@ -28,7 +28,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
-import_script/path="res://addons/EditorToolbox/Import/glb_post_import.gd"
+import_script/path=""
 _subresources={}
 gltf/naming_version=0
-gltf/embedded_image_handling=0
+gltf/embedded_image_handling=1

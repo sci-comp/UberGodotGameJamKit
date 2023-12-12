@@ -32,6 +32,17 @@ project/assembly_name="UberGodotGameJamKit"
 
 enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Level/": "green",
+"res://Material/": "orange",
+"res://Prefab/": "blue",
+"res://Todo/": "red",
+"res://addons/StandardAssets/Material/": "orange",
+"res://addons/StandardAssets/Prefab/": "blue"
+}
+
 [filesystem]
 
 import/blender/enabled=false
@@ -135,3 +146,10 @@ camera_right={
 [plugin]
 
 "Editor Toolbox/enabled"=true
+
+[shader_globals]
+
+time_scale={
+"type": "float",
+"value": 1.0
+}

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b51qceuivydbl"]
+
+[ext_resource type="Texture2D" uid="uid://dk6n51srfwkhl" path="res://Material/grass.png" id="1"]
+
+[resource]
+resource_name = "plant_grass"
+transparency = 2
+alpha_scissor_threshold = 0.8
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(0.309804, 0.694118, 0.298039, 1)
+albedo_texture = ExtResource("1")
+metallic_specular = 0.2
+roughness = 0.8
+backlight_enabled = true
+backlight = Color(0.309804, 0.694118, 0.298039, 1)
