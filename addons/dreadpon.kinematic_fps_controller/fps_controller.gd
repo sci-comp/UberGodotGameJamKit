@@ -1,25 +1,13 @@
 @tool
 extends CharacterBody3D
 
-
 const MovementMode = preload("movement_mode.gd")
 
-
-#export(Array, Resource) var movement_modes:Array = [] setget set_movement_modes
 @export var walk_mode: Resource = null: set = set_walk_mode
 @export var run_mode: Resource = null: set = set_run_mode
 @export var fall_mode: Resource = null: set = set_fall_mode
-# TODO add fly mode
-#export(Resource) var fly_mode = null setget set_fly_mode
 
-@export var config_path: String = ""
-# A config section + key ids
-# Dictionary key is the exported controller property, value is array
-# array[0] = section, array[1] = key, array[2] = mode (0 = substitute, 1 = multiply)
-@export var props_config: Dictionary = {}
-
-
-@export var gravity:float = 9.8
+@export var gravity:float = 9.81
 @export var weight:float = 5.0
 @export var jump_acceleration:float = 20.0
 @export var mouse_sensitivity:float = 0.2
@@ -39,37 +27,27 @@ var v_oscillator:Oscillator = Oscillator.new(0.075, 2.0)
 var r_z_oscillator:Oscillator = Oscillator.new(0.05, 1.0)
 var distance_fallen:float = 0.0
 
-
 @onready var camera_axis = $CameraAxis
 @onready var camera = $CameraAxis/Camera3D
-
-
-
 
 func set_walk_mode(val):
 	walk_mode = val
 	if !(walk_mode is MovementMode):
 		walk_mode = MovementMode.new(MovementMode.MovementType.WALK)
 
-
 func set_run_mode(val):
 	run_mode = val
 	if !(run_mode is MovementMode):
 		run_mode = MovementMode.new(MovementMode.MovementType.RUN)
-
 
 func set_fall_mode(val):
 	fall_mode = val
 	if !(fall_mode is MovementMode):
 		fall_mode = MovementMode.new(MovementMode.MovementType.FALL)
 
-
 func _set_allowed_slope(val):
 	allowed_slope = val
 	set_floor_max_angle(deg_to_rad(allowed_slope))
-
-
-
 
 func _ready():
 	if Engine.is_editor_hint(): return
@@ -84,7 +62,6 @@ func _ready():
 	set_floor_stop_on_slope_enabled(false)
 	set_max_slides(4)
 	set_floor_max_angle(deg_to_rad(allowed_slope))
-
 
 func _unhandled_input(event):
 	if Engine.is_editor_hint(): return
@@ -258,7 +235,6 @@ class Oscillator extends RefCounted:
 		amplitude = _amplitude
 		frequency = _frequency
 	
-	
 	func get_oscillation(delta:float, speed:float):
 		var last_duration = duration
 		duration += delta * speed
@@ -269,3 +245,5 @@ class Oscillator extends RefCounted:
 			reached_extremis = true
 		
 		return sin(duration * 2 * PI * frequency) * amplitude
+
+

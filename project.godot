@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="UberGodotGameJamKit"
+config/name="GodotBlenderRPGFramework"
 run/main_scene="res://Level/Splash.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
@@ -30,7 +30,7 @@ project/assembly_name="UberGodotGameJamKit"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
+enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons/dreadpon.spatial_gardener/plugin.cfg")
 
 [file_customization]
 
@@ -55,6 +55,26 @@ scene={
 
 [input]
 
+camera_up={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":-1.0,"script":null)
+]
+}
+camera_left={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
+]
+}
+camera_right={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
+]
+}
+camera_down={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
+]
+}
 move_forward={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
@@ -108,31 +128,46 @@ pause={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
-camera_up={
+Interact={
 "deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":-1.0,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
-camera_down={
+Exit={
 "deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":4,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
-camera_left={
+Debug={
 "deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
-]
-}
-camera_right={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":48,"key_label":0,"unicode":48,"echo":false,"script":null)
 ]
 }
 
 [layer_names]
 
-3d_physics/layer_1="gameplay"
-3d_physics/layer_2="painting"
+3d_physics/layer_1="Environment"
+3d_physics/layer_2="BaseGeometry"
+3d_physics/layer_3="Player"
+3d_physics/layer_4="PlayerProximity"
+3d_physics/layer_5="TriggerArea"
+3d_physics/layer_7="Walkable"
+3d_physics/layer_8="Obstacle"
+3d_physics/layer_9="Small"
+3d_physics/layer_10="Medium"
+3d_physics/layer_11="Large"
+3d_physics/layer_12="Fire"
+3d_physics/layer_13="Flammable"
+3d_physics/layer_14="Hurtbox"
+3d_physics/layer_15="HurtboxLauncher"
+3d_physics/layer_17="Enemy"
+3d_physics/layer_18="EnemyWithoutSelfCollision"
+3d_physics/layer_20="Camera"
+3d_physics/layer_21="DontBumpIntoCamera"
+3d_physics/layer_23="water"
 3d_physics/layer_24="cloth"
 3d_physics/layer_25="dirt"
 3d_physics/layer_26="glass"

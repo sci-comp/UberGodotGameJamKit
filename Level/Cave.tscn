@@ -14,6 +14,8 @@
 
 [node name="PF_Level_Portal" parent="Trigger" instance=ExtResource("1_k7wlx")]
 transform = Transform3D(6.12458, 0, 0, 0, 6.12458, 0, 0, 0, 6.12458, 5.88573, 1.57068, 15.6934)
+collision_layer = 16
+collision_mask = 4
 LevelToLoad = "Island"
 
 [node name="SP_From_Island" type="Node3D" parent="Trigger"]

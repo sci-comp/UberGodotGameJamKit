@@ -6,12 +6,12 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_2du4y")
-shader_parameter/albedo = Color(0.309804, 0.694118, 0.298039, 1)
+shader_parameter/albedo = Color(0.403922, 0.435294, 0.219608, 1)
 shader_parameter/specular = 0.2
 shader_parameter/metallic = null
 shader_parameter/roughness = 0.8
 shader_parameter/alpha_scissor_threshold = 0.8
-shader_parameter/backlight = Color(0.309804, 0.694118, 0.298039, 1)
+shader_parameter/backlight = Color(0.843137, 0.882353, 0.682353, 1)
 shader_parameter/sway1_speed = 5.0
 shader_parameter/sway1_strength = Vector3(0.1, 0.02, 0.1)
 shader_parameter/sway1_phase_len = 16.0
