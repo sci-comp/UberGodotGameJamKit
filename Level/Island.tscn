@@ -45,7 +45,7 @@ mesh = ExtResource("6_73f8g")
 cast_shadow = 1
 metadata/class = "Greenhouse_LODVariant"
 
-[sub_resource type="Resource" id="Resource_sdrsr"]
+[sub_resource type="Resource" id="Resource_evwse"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -66,7 +66,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_fp4tv"]
+[sub_resource type="Resource" id="Resource_esehs"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -87,7 +87,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D10"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_vtjkh"]
+[sub_resource type="Resource" id="Resource_r1pe5"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -108,7 +108,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D11"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_bml4g"]
+[sub_resource type="Resource" id="Resource_yh7tq"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -125,11 +125,11 @@ extent = 20.212
 bounds = AABB(-19.7354, -35.802, -9.26796, 40.424, 40.424, 40.424)
 max_bounds_to_center_dist = 35.0082
 min_bounds_to_center_dist = 20.212
-active_LOD_index = 0
+active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D12"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_qblh2"]
+[sub_resource type="Resource" id="Resource_qrkny"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -150,7 +150,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D13"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_wv35d"]
+[sub_resource type="Resource" id="Resource_dcglu"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -171,7 +171,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D14"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_7fa33"]
+[sub_resource type="Resource" id="Resource_kc7jn"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -192,7 +192,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D15"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_vdbyq"]
+[sub_resource type="Resource" id="Resource_d2f2l"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -209,18 +209,18 @@ extent = 20.212
 bounds = AABB(20.6886, -35.802, -9.26796, 40.424, 40.424, 40.424)
 max_bounds_to_center_dist = 35.0082
 min_bounds_to_center_dist = 20.212
-active_LOD_index = 2
+active_LOD_index = 1
 MMI_name = "MultiMeshInstance3D16"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_r05sb"]
+[sub_resource type="Resource" id="Resource_mxdyi"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_sdrsr"), SubResource("Resource_fp4tv"), SubResource("Resource_vtjkh"), SubResource("Resource_bml4g"), SubResource("Resource_qblh2"), SubResource("Resource_wv35d"), SubResource("Resource_7fa33"), SubResource("Resource_vdbyq")]
+child_nodes = [SubResource("Resource_evwse"), SubResource("Resource_esehs"), SubResource("Resource_r1pe5"), SubResource("Resource_yh7tq"), SubResource("Resource_qrkny"), SubResource("Resource_dcglu"), SubResource("Resource_kc7jn"), SubResource("Resource_d2f2l")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = 0
@@ -234,7 +234,7 @@ active_LOD_index = 0
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_qjvi2"]
+[sub_resource type="Resource" id="Resource_ce7fe"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -255,7 +255,7 @@ active_LOD_index = 0
 MMI_name = "MultiMeshInstance3D3"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_33ths"]
+[sub_resource type="Resource" id="Resource_m76ju"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -276,7 +276,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D2"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_ubfag"]
+[sub_resource type="Resource" id="Resource_bo0jo"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -293,11 +293,11 @@ extent = 20.212
 bounds = AABB(-19.7354, 4.62206, -9.26796, 40.424, 40.424, 40.424)
 max_bounds_to_center_dist = 35.0082
 min_bounds_to_center_dist = 20.212
-active_LOD_index = 0
+active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D17"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_uacw5"]
+[sub_resource type="Resource" id="Resource_y4re2"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -318,7 +318,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D18"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_ek1pt"]
+[sub_resource type="Resource" id="Resource_lmrp3"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -339,7 +339,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D19"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_t6214"]
+[sub_resource type="Resource" id="Resource_hb6rk"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -360,7 +360,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D20"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_fr531"]
+[sub_resource type="Resource" id="Resource_p3ta6"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -377,11 +377,11 @@ extent = 20.212
 bounds = AABB(20.6886, 4.62206, -9.26796, 40.424, 40.424, 40.424)
 max_bounds_to_center_dist = 35.0082
 min_bounds_to_center_dist = 20.212
-active_LOD_index = 1
+active_LOD_index = 0
 MMI_name = "MultiMeshInstance3D21"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_nh252"]
+[sub_resource type="Resource" id="Resource_ko0f0"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -402,7 +402,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D22"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_api8d"]
+[sub_resource type="Resource" id="Resource_vbn67"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -423,14 +423,14 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D23"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_hm0s3"]
+[sub_resource type="Resource" id="Resource_tr5s5"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_33ths"), SubResource("Resource_ubfag"), SubResource("Resource_uacw5"), SubResource("Resource_ek1pt"), SubResource("Resource_t6214"), SubResource("Resource_fr531"), SubResource("Resource_nh252"), SubResource("Resource_api8d")]
+child_nodes = [SubResource("Resource_m76ju"), SubResource("Resource_bo0jo"), SubResource("Resource_y4re2"), SubResource("Resource_lmrp3"), SubResource("Resource_hb6rk"), SubResource("Resource_p3ta6"), SubResource("Resource_ko0f0"), SubResource("Resource_vbn67")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = 2
@@ -444,7 +444,7 @@ active_LOD_index = 0
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_x2nrl"]
+[sub_resource type="Resource" id="Resource_q1wg7"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -465,7 +465,7 @@ active_LOD_index = 0
 MMI_name = "MultiMeshInstance3D5"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_l6pdr"]
+[sub_resource type="Resource" id="Resource_ko57x"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -486,7 +486,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D6"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_2tgwn"]
+[sub_resource type="Resource" id="Resource_g0wv8"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -507,7 +507,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D7"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_dxcji"]
+[sub_resource type="Resource" id="Resource_1ysml"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -528,7 +528,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D8"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_u82bq"]
+[sub_resource type="Resource" id="Resource_u3yjl"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -549,7 +549,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D9"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_u328a"]
+[sub_resource type="Resource" id="Resource_b3pfj"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -570,7 +570,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D31"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_ycj80"]
+[sub_resource type="Resource" id="Resource_ylkb2"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -591,7 +591,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D32"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_r4yoo"]
+[sub_resource type="Resource" id="Resource_k4yak"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -612,7 +612,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D33"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_xckc0"]
+[sub_resource type="Resource" id="Resource_4xix2"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -633,7 +633,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D34"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_dawx0"]
+[sub_resource type="Resource" id="Resource_wy68q"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -654,7 +654,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D35"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_xwjq5"]
+[sub_resource type="Resource" id="Resource_op3m1"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -675,7 +675,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D36"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_scnn7"]
+[sub_resource type="Resource" id="Resource_rffdr"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -696,14 +696,14 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D37"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_aqeee"]
+[sub_resource type="Resource" id="Resource_wm1bf"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_u82bq"), SubResource("Resource_u328a"), SubResource("Resource_ycj80"), SubResource("Resource_r4yoo"), SubResource("Resource_xckc0"), SubResource("Resource_dawx0"), SubResource("Resource_xwjq5"), SubResource("Resource_scnn7")]
+child_nodes = [SubResource("Resource_u3yjl"), SubResource("Resource_b3pfj"), SubResource("Resource_ylkb2"), SubResource("Resource_k4yak"), SubResource("Resource_4xix2"), SubResource("Resource_wy68q"), SubResource("Resource_op3m1"), SubResource("Resource_rffdr")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = 0
@@ -713,11 +713,11 @@ extent = 20.212
 bounds = AABB(61.1126, 4.62206, 31.1561, 40.424, 40.424, 40.424)
 max_bounds_to_center_dist = 35.0082
 min_bounds_to_center_dist = 20.212
-active_LOD_index = 2
+active_LOD_index = 1
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_lx6jy"]
+[sub_resource type="Resource" id="Resource_v5kkh"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -738,7 +738,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D24"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_c4lov"]
+[sub_resource type="Resource" id="Resource_rnaiy"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -759,7 +759,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D25"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_fcsmq"]
+[sub_resource type="Resource" id="Resource_5d1li"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -780,7 +780,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D26"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_08581"]
+[sub_resource type="Resource" id="Resource_8lqpq"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -801,7 +801,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D4"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_t755k"]
+[sub_resource type="Resource" id="Resource_ciptw"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -822,7 +822,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D38"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_wg5vr"]
+[sub_resource type="Resource" id="Resource_nse5t"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -843,7 +843,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D39"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_ugksy"]
+[sub_resource type="Resource" id="Resource_dcxoo"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -864,7 +864,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D40"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_o0yst"]
+[sub_resource type="Resource" id="Resource_npav2"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -885,7 +885,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D41"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_iciyj"]
+[sub_resource type="Resource" id="Resource_foccl"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -906,7 +906,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D42"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_ccawa"]
+[sub_resource type="Resource" id="Resource_v8x54"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -927,7 +927,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D43"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_bcrrk"]
+[sub_resource type="Resource" id="Resource_kj8b8"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -948,14 +948,14 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D44"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_4ovdi"]
+[sub_resource type="Resource" id="Resource_hfkxu"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_08581"), SubResource("Resource_t755k"), SubResource("Resource_wg5vr"), SubResource("Resource_ugksy"), SubResource("Resource_o0yst"), SubResource("Resource_iciyj"), SubResource("Resource_ccawa"), SubResource("Resource_bcrrk")]
+child_nodes = [SubResource("Resource_8lqpq"), SubResource("Resource_ciptw"), SubResource("Resource_nse5t"), SubResource("Resource_dcxoo"), SubResource("Resource_npav2"), SubResource("Resource_foccl"), SubResource("Resource_v8x54"), SubResource("Resource_kj8b8")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = 4
@@ -969,7 +969,7 @@ active_LOD_index = 2
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_g0lof"]
+[sub_resource type="Resource" id="Resource_k7sb4"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -990,7 +990,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D28"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_n6o2w"]
+[sub_resource type="Resource" id="Resource_soum8"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -1011,7 +1011,7 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D29"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_vc1xm"]
+[sub_resource type="Resource" id="Resource_lcgkx"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
@@ -1032,14 +1032,14 @@ active_LOD_index = 2
 MMI_name = "MultiMeshInstance3D30"
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_j2yqi"]
+[sub_resource type="Resource" id="Resource_wgunv"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_aqeee"), SubResource("Resource_lx6jy"), SubResource("Resource_c4lov"), SubResource("Resource_fcsmq"), SubResource("Resource_4ovdi"), SubResource("Resource_g0lof"), SubResource("Resource_n6o2w"), SubResource("Resource_vc1xm")]
+child_nodes = [SubResource("Resource_wm1bf"), SubResource("Resource_v5kkh"), SubResource("Resource_rnaiy"), SubResource("Resource_5d1li"), SubResource("Resource_hfkxu"), SubResource("Resource_k7sb4"), SubResource("Resource_soum8"), SubResource("Resource_lcgkx")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = 7
@@ -1049,18 +1049,18 @@ extent = 40.424
 bounds = AABB(61.1126, 4.62206, 31.1561, 80.848, 80.848, 80.848)
 max_bounds_to_center_dist = 70.0164
 min_bounds_to_center_dist = 40.424
-active_LOD_index = 2
+active_LOD_index = 1
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_pbdv4"]
+[sub_resource type="Resource" id="Resource_hcfk1"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource("7_nq3vv")
 member_origin_offsets = PackedFloat32Array()
 member_surface_normals = PackedVector3Array()
 member_octants = PackedByteArray()
-child_nodes = [SubResource("Resource_r05sb"), SubResource("Resource_qjvi2"), SubResource("Resource_hm0s3"), SubResource("Resource_x2nrl"), SubResource("Resource_l6pdr"), SubResource("Resource_2tgwn"), SubResource("Resource_dxcji"), SubResource("Resource_j2yqi")]
+child_nodes = [SubResource("Resource_mxdyi"), SubResource("Resource_ce7fe"), SubResource("Resource_tr5s5"), SubResource("Resource_q1wg7"), SubResource("Resource_ko57x"), SubResource("Resource_g0wv8"), SubResource("Resource_1ysml"), SubResource("Resource_wgunv")]
 max_members = 100
 min_leaf_extent = 1.0
 octant = -1
@@ -1074,11 +1074,11 @@ active_LOD_index = 0
 MMI_name = ""
 metadata/class = "MMIOctreeNode"
 
-[sub_resource type="Resource" id="Resource_1wtfg"]
+[sub_resource type="Resource" id="Resource_myuab"]
 resource_local_to_scene = true
 resource_name = "MMIOctreeManager"
 script = ExtResource("8_opmkk")
-root_octree_node = SubResource("Resource_pbdv4")
+root_octree_node = SubResource("Resource_hcfk1")
 LOD_variants = Array[ExtResource("4_xtvgn")]([SubResource("Resource_5pmvw"), SubResource("Resource_83ixs"), SubResource("Resource_tw05s")])
 LOD_max_distance = 10.0
 LOD_kill_distance = -1.0
@@ -1130,7 +1130,7 @@ buffer = PackedFloat32Array(-0.545796, 0.088738, 0.847835, 17.209, -0.539009, 0.
 resource_local_to_scene = true
 transform_format = 1
 instance_count = 88
-mesh = ExtResource("13_pedky")
+mesh = ExtResource("6_73f8g")
 buffer = PackedFloat32Array(-1.06863, 0.0558794, 0.83968, -8.86433, 0.0393598, 1.35904, -0.0403499, 3.8486, -0.840616, -0.00740295, -1.06933, 6.98157, -1.45249, 0.0570622, 0.160044, -9.98011, 0.0590965, 1.46112, 0.0153862, 3.88944, -0.159304, 0.0217495, -1.45353, 9.45591, -1.5214, 0.0643717, -0.369385, -6.22562, 0.0645672, 1.56558, 0.00689326, 3.72829, 0.369351, -0.00852802, -1.52274, 4.81369, -0.343426, 0.0443805, 1.0233, -5.72888, 0.00854149, 1.07937, -0.0439459, 3.71935, -1.02422, -0.00587956, -0.343482, 6.92253, 0.321082, 0.0561258, 0.969401, -6.76612, -0.0360199, 1.02101, -0.0471834, 3.73166, -0.970356, -0.0193286, 0.322518, 12.4787, -0.612546, 0.0682882, -1.08099, -10.4078, 0.0541515, 1.24226, 0.0477906, 3.91094, 1.08179, -0.023517, -0.614485, 11.3745, -1.00182, 0.0318197, 0.173563, -13.0618, 0.0305129, 1.01673, -0.0102766, 4.07579, -0.173797, -0.00491462, -1.00227, 13.1651, 1.23394, 0.0695329, 0.279211, -5.93567, -0.073099, 1.2649, 0.00804756, 3.7091, -0.278298, -0.0239457, 1.23587, 13.6985, -0.910956, 0.0426319, 0.495214, -3.67288, 0.0347549, 1.03684, -0.0253274, 3.6006, -0.495829, -0.00564791, -0.911602, 0.639939, -1.14088, 0.046909, 0.00393385, -1.27287, 0.0468866, 1.14087, -0.0063815, 3.52418, -0.00419263, -0.00621455, -1.14182, 4.7277, -1.47766, 0.0609784, 0.126596, -4.14667, 0.0600647, 1.48305, -0.0132609, 3.64202, -0.127032, -0.00807847, -1.47885, 4.6685, -1.11076, 0.0483018, 0.544264, -4.26311, 0.0514768, 1.2368, -0.0047058, 3.63758, -0.543972, 0.0184104, -1.1118, 11.3764, -0.184054, 0.0595394, 1.43633, -1.01984, -0.000262975, 1.44805, -0.0600591, 3.52647, -1.43756, -0.00788783, -0.183885, 7.05869, -1.48203, 0.0620226, 0.281157, -2.77111, 0.0594021, 1.50844, -0.0196396, 3.60638, -0.281722, -0.00821681, -1.4832, 8.50885, -0.795726, -0.0469329, 0.856534, -1.15361, -0.0630986, 1.16834, 0.00539902, 2.74132, -0.855495, -0.0425193, -0.797091, 24.3466, 0.0408464, 0.152105, -1.15003, -3.22094, -0.0447146, 1.15009, 0.150525, 3.42294, 1.15918, 0.0390042, 0.0463303, 18.1988, 0.0535531, 0.146671, 0.934232, -2.77855, 0.0232942, 0.93524, -0.148164, 3.20009, -0.945388, 0.0313526, 0.0492704, 22.9127, -1.02126, 0.141267, 0.315081, -4.99612, 0.145683, 1.06815, -0.00670682, 3.67512, -0.313064, 0.036225, -1.03096, 17.6855, 0.72546, 0.200402, -1.05284, -1.36785, -0.14935, 1.27786, 0.140325, 3.07712, 1.06128, 0.0428383, 0.739434, 19.9816, -0.249961, 0.0371998, 1.16208, -11.4163, 0.00220274, 1.18864, -0.0375764, 4.04464, -1.16267, -0.0057456, -0.249905, 17.3743, -0.459456, 0.126823, 0.842327, -3.66857, 0.0894938, 0.958936, -0.0955649, 3.55807, -0.847107, 0.0325213, -0.46696, 15.9597, -1.1827, 0.0753208, -0.692333, -7.29447, 0.0781147, 1.37019, 0.0156253, 3.89049, 0.692023, -0.0259389, -1.18499, 19.3343, 0.677841, -0.647027, -0.357129, -7.4376, 0.695999, 0.721848, 0.0132192, 3.9826, 0.248538, -0.256797, 0.936983, 16.4822, 1.51379, -0.0803751, -0.475878, 6.60849, -0.0262402, 1.55065, -0.345374, 4.5526, 0.481904, 0.336915, 1.47606, -8.55852, 0.377783, 0.0705356, -1.54224, 2.94395, -0.0889604, 1.5861, 0.0507501, 3.02291, 1.54129, 0.074258, 0.380946, -4.94809, -0.569631, -0.0523514, 0.862423, 0.914871, 0.155149, 1.01, 0.163786, 3.14494, -0.849967, 0.219446, -0.548082, -3.43804, 0.998497, 0.054101, 0.856937, -0.991263, -0.0457257, 1.31578, -0.0297901, 3.48327, -0.857425, -0.00716735, 0.999518, -0.656301, 0.869032, 0.156464, 0.691267, 0.637147, -0.167506, 1.10809, -0.0402285, 3.36146, -0.688675, -0.0720807, 0.882088, 0.623619, -0.729339, 0.144134, -0.71725, 4.6408, 0.149568, 1.02077, 0.0530392, 2.90607, 0.716137, -0.0664005, -0.74155, 2.31352, -1.41479, -0.285837, 0.458738, 4.56367, -0.230422, 1.48171, 0.212605, 2.84708, -0.488926, 0.128812, -1.42763, 0.819141, 1.18465, -0.0780201, 0.984492, 3.58172, 0.267931, 1.50522, -0.203119, 3.37999, -0.950539, 0.327043, 1.16972, -3.88367, 0.849104, 0.149257, -0.633333, 6.45172, -0.0778721, 1.05705, 0.144712, 2.97351, 0.646006, -0.0687605, 0.84989, 7.28122, 1.09172, 0.179989, -0.663229, 6.29236, -0.110026, 1.2747, 0.16482, 3.11264, 0.678353, -0.0829181, 1.09411, 9.07418, -0.98655, 0.047777, -0.613963, 0.496111, 0.0439099, 1.16198, 0.0198651, 3.44709, 0.614252, -0.00632954, -0.987507, 3.92842, -0.68564, 0.158793, -0.8944, 2.79994, 0.155036, 1.12459, 0.0808121, 3.34532, 0.895059, -0.0731538, -0.699134, 5.07029, -0.843799, 0.136912, -0.481816, 2.30451, 0.150228, 0.969621, 0.0124326, 3.29676, 0.477832, -0.0630732, -0.854743, 3.24827, -0.726066, -0.255588, -1.11422, 11.7034, -0.237281, 1.32491, -0.149297, 4.10125, 1.11826, 0.115181, -0.755121, 2.23565, 0.676729, -0.0626681, 0.69002, 14.0514, 0.0882045, 0.964487, 0.00108996, 4.58153, -0.687223, 0.06208, 0.679624, 0.128922, -1.01557, -0.197568, 0.159424, 7.95679, -0.180384, 1.02415, 0.12009, 3.65795, -0.178635, 0.0890339, -1.02762, -0.978869, 1.03844, -0.201611, 0.148791, 9.05702, 0.211946, 1.04511, -0.0630956, 4.0643, -0.13366, 0.0908561, 1.05595, -3.21159, 1.29694, -0.25075, 0.142396, 8.35802, 0.260873, 1.29983, -0.0871171, 3.77301, -0.12287, 0.113, 1.31808, -1.41202, 0.684732, -0.216155, 0.892273, 7.00292, 0.209793, 1.1205, 0.110448, 3.68101, -0.89379, 0.0974102, 0.709494, -3.36076, 0.257313, -0.0956415, 0.9863, 12.0691, 0.20484, 1.00213, 0.0437369, 3.35977, -0.969524, 0.186346, 0.271006, 9.42312, -1.03974, -0.106453, -0.454009, 13.8109, -0.179279, 1.11542, 0.149034, 3.91503, 0.430483, 0.207412, -1.03449, 7.33097, 1.53465, -0.143998, -0.00941871, 12.8974, 0.139839, 1.50882, -0.28266, 3.17133, 0.0356253, 0.280564, 1.51525, 10.8616, -0.883158, -0.0927144, -0.443177, 9.90801, -0.162845, 0.971464, 0.121282, 3.48451, 0.422473, 0.180643, -0.87969, 7.64311, -1.3193, -0.00721859, 0.469993, 19.0154, 0.0185333, 1.39848, 0.0735031, 4.09234, -0.469683, 0.0754591, -1.31727, 8.335, -1.24658, -0.0826455, -0.265699, 15.8264, -0.0977654, 1.27195, 0.0630466, 4.59364, 0.260515, 0.0818698, -1.24772, 1.73266, 0.663587, -0.00640571, 1.05081, 16.5511, 0.0600335, 1.241, -0.0303461, 4.12651, -1.04912, 0.0669617, 0.662924, 7.46588, -0.711194, -0.0903561, -0.709483, 12.9677, -0.181058, 0.990699, 0.0553247, 2.20168, 0.691917, 0.166369, -0.714773, 16.5179, -0.497726, 0.0186275, -1.16257, 14.4803, 0.0314484, 1.26436, 0.00679455, 3.42812, 1.16229, -0.0262333, -0.498028, 22.5811, -1.03743, 0.0159246, 0.304272, 12.9556, 0.00896512, 1.08089, -0.0260034, 3.44783, -0.304556, -0.0224268, -1.03722, 22.4484, -0.562868, 0.0157409, 0.908409, 12.2118, -0.0105569, 1.06843, -0.0250549, 3.52019, -0.908484, -0.0221681, -0.56253, 25.4075, 1.32125, 0.0299701, -0.626607, 14.0095, -0.0167655, 1.46211, 0.0345802, 3.5456, 0.627099, -0.0240554, 1.32114, 28.7494, 0.376545, 0.0280246, -1.31451, 12.0724, 0.0139124, 1.3672, 0.033133, 3.58116, 1.31474, -0.0224938, 0.37613, 28.4979, 0.880266, 0.0188403, 0.2649, 15.9085, -0.0223973, 0.919137, 0.00905524, 3.42717, -0.264623, -0.0151221, 0.880421, 23.9171, 0.942037, 0.0384666, -0.0314092, 19.4115, -0.03676, 0.941288, 0.0502642, 3.20206, 0.0333903, -0.0489706, 0.941481, 19.0816, 0.175219, 0.0185751, 0.889219, 19.6392, -0.0182216, 0.906195, -0.0153392, 3.35884, -0.889226, -0.0149092, 0.175532, 24.4123, -0.191505, 0.0258639, 1.24734, 19.8724, -0.016599, 1.26178, -0.0287119, 3.31586, -1.2475, -0.0207595, -0.191099, 22.0901, 0.984219, 0.0439809, 0.0143618, 15.7567, -0.0459755, 0.963963, 0.198718, 2.92309, -0.00518051, -0.199169, 0.964952, 17.689, 1.34593, -0.137425, -0.723117, 18.6422, -0.000852955, 1.50678, -0.287945, 2.6653, 0.736059, 0.253036, 1.32193, 16.8389, -0.00568482, -0.0835871, -0.929297, 19.797, -0.155029, 0.916482, -0.081486, 2.81519, 0.920079, 0.153906, -0.0194717, 16.5736, -1.05314, 0.0249018, 0.605943, 17.123, 0.0116112, 1.21485, -0.0297452, 3.44771, -0.606343, -0.0199873, -1.05301, 26.6786, -1.3773, 0.0300066, -0.496585, 16.7498, 0.0363947, 1.46389, -0.0124855, 3.46893, 0.496158, -0.0240846, -1.37757, 27.5036, 0.0490401, 0.0269998, 1.21474, 18.3276, -0.0155669, 1.21565, -0.0263914, 3.48328, -1.21494, -0.0144861, 0.0493702, 31.0801, 0.372848, -0.0970354, -1.01235, 12.3852, -0.135262, 1.06393, -0.151796, 2.72621, 1.00796, 0.178668, 0.354104, 13.0781, -0.108609, -0.128188, -1.36185, 17.3792, -0.260081, 1.34315, -0.105686, 3.50322, 1.34292, 0.249759, -0.130608, 11.377, -0.442673, 0.112011, -1.28357, 0.831936, -0.116852, 1.34813, 0.157944, 2.83798, 1.28314, 0.161413, -0.428439, 17.0896, 0.0192456, -0.134831, -1.49072, 5.81154, 0.27779, 1.46527, -0.128942, 2.64417, 1.4708, -0.27498, 0.0438594, 15.7372, -0.531946, 0.0438273, -0.824117, 9.27356, 0.190196, 0.960596, -0.0716811, 2.73159, 0.803066, -0.198474, -0.528913, 15.3305, -0.314066, -0.110973, -0.914268, 6.36419, 0.0624625, 0.961176, -0.138124, 3.16867, 0.918858, -0.10327, -0.303107, 20.8207, -0.784743, -0.0160383, 0.988608, 10.5173, -0.0991059, 1.25706, -0.0582754, 2.96413, -0.983758, -0.113845, -0.78274, 16.9679, -0.0473823, -0.0166848, -1.31223, 9.28557, 0.117767, 1.30773, -0.02088, 3.49031, 1.30704, -0.118435, -0.0456891, 22.9515, -1.11932, -0.148139, -0.642197, 5.25768, -0.0587031, 1.28308, -0.193657, 3.22461, 0.656442, -0.137855, -1.11235, 22.5304, 0.177709, 0.0211628, -1.42572, 9.02452, 0.0269612, 1.43644, 0.0246825, 3.56883, 1.42562, -0.0298038, 0.177254, 25.4886, 0.235929, -0.171576, 1.47589, 4.05609, -0.131771, 1.48607, 0.193825, 3.33575, -1.47997, -0.159666, 0.218021, 24.856, 1.01829, -0.122828, 0.996875, 6.09023, 0.0900652, 1.42501, 0.0835809, 3.52411, -1.00037, 0.00326808, 1.02226, 25.6925, 0.288776, -0.0455734, -1.09791, 1.0897, 0.0515466, 1.1345, -0.0335343, 2.73572, 1.09764, -0.0412876, 0.29042, 21.7166, -0.687084, -0.122076, 0.811651, 0.339103, -0.165698, 1.05733, 0.0187598, 2.99932, -0.803881, -0.113601, -0.697592, 25.719, 0.988444, 0.0148841, 0.209925, 9.39778, -0.0189114, 1.01027, 0.0174149, 3.61129, -0.209601, -0.0209615, 0.988403, 27.8005, 1.47792, 0.0227799, -0.455581, 8.27355, -0.0123129, 1.54621, 0.0373701, 3.68463, 0.455984, -0.0320813, 1.47762, 30.5369, 0.224866, -0.110491, -1.07508, 5.77857, -0.0122498, 1.09777, -0.115386, 3.47999, 1.08067, 0.0354346, 0.222394, 30.9935, -0.795214, -0.108283, -0.725438, 5.23896, -0.103478, 1.07583, -0.0471551, 3.42898, 0.726139, 0.0347266, -0.801166, 30.8913, 0.913633, -0.106584, 0.53649, 2.14867, 0.109258, 1.05895, 0.0243175, 3.16994, -0.535952, 0.0341817, 0.919508, 29.2804, -1.00831, -0.11282, 0.734494, 7.34017, -0.225653, 1.22607, -0.12145, 2.41496, -0.708018, -0.23009, -1.00731, 13.7663, -0.92704, -0.0842456, -0.133727, 8.34859, -0.104467, 0.923701, 0.142287, 2.53376, 0.118603, 0.155118, -0.919921, 12.0318, -1.0392, 0.0968846, 0.547081, 4.4554, 0.150381, 1.16608, 0.0791493, 3.26297, -0.534855, 0.139616, -1.0407, 11.0256, -0.612265, 0.0860024, -0.84376, 2.92953, -0.0504968, 1.0351, 0.142148, 3.19358, 0.846627, 0.123934, -0.601713, 12.664)
 
 [sub_resource type="MultiMesh" id="MultiMesh_oe0qp"]
@@ -1144,7 +1144,7 @@ buffer = PackedFloat32Array(-1.05664, 0.285472, -0.45502, 20.77, 0.44635, 1.0252
 resource_local_to_scene = true
 transform_format = 1
 instance_count = 91
-mesh = ExtResource("6_73f8g")
+mesh = ExtResource("14_i7lqn")
 buffer = PackedFloat32Array(-0.727214, -0.0167424, 0.672062, 30.9709, 0.0919636, 0.978256, 0.123881, 4.53722, -0.665951, 0.153374, -0.71678, 5.53237, 1.27951, -0.00659779, 0.0377249, 29.3183, 0.00861797, 1.27821, -0.0687464, 4.08677, -0.0373152, 0.0689696, 1.27768, 9.42387, -1.05067, -0.0200611, -0.551208, 25.2956, -0.10294, 1.17217, 0.153555, 4.33673, 0.541882, 0.183775, -1.03959, 6.19167, -0.0420161, -0.00734015, -1.42348, 21.3695, -0.0769137, 1.42203, -0.00506245, 4.14557, 1.42142, 0.0767298, -0.0423509, 7.57361, 0.480199, -0.00724715, 1.32151, 30.2116, 0.073675, 1.40401, -0.0190718, 4.02447, -1.31948, 0.0757577, 0.479875, 10.6638, 0.692316, -0.0312409, 1.31272, 30.9665, -0.00608698, 1.48391, 0.0385252, 4.16021, -1.31308, -0.0233506, 0.691949, 24.9591, 0.285636, -0.0876082, 1.41801, 27.2667, -0.0204354, 1.44599, 0.0934528, 3.97524, -1.42057, -0.0384166, 0.283778, 25.9795, -0.763417, 0.0538667, -1.07674, 21.1201, 0.0871021, 1.31813, 0.00418709, 3.12658, 1.07457, -0.0685761, -0.765304, 18.9729, 1.18647, -0.200393, -1.01925, 23.1009, -0.033938, 1.53901, -0.34209, 3.42645, 1.0382, 0.279321, 1.15362, 26.7213, -0.12353, 0.0493846, -1.20377, 23.3375, 0.0676281, 1.20845, 0.0426369, 3.18193, 1.20288, -0.06287, -0.126018, 21.7786, 0.150465, -0.112188, -1.23819, 22.0978, -0.19254, 1.23007, -0.13485, 3.00827, 1.22826, 0.206568, 0.130542, 16.6734, -1.14389, -0.104098, -0.175967, 27.07, -0.130726, 1.14137, 0.174599, 3.40428, 0.157198, 0.191671, -1.13527, 17.0157, -0.35758, -0.111635, 0.893101, 24.768, -0.258964, 0.933126, 0.0129545, 3.29367, -0.861991, -0.234025, -0.374377, 21.9511, -1.39842, -0.0939173, 0.670061, 26.9518, -0.102495, 1.55012, 0.0033606, 3.9129, -0.668802, -0.0411831, -1.40157, 24.3513, -0.992206, -0.238138, -0.285728, 29.3246, -0.244686, 1.03095, -0.00955366, 3.75923, 0.280141, 0.0570334, -1.02034, 19.8173, -1.27757, 0.0542413, 0.366476, 24.0164, 0.0330121, 1.3273, -0.0813671, 3.01953, -0.368994, -0.0690528, -1.27613, 19.1904, 1.10075, -0.00628387, 0.524125, 28.5612, 0.0339053, 1.21739, -0.0566113, 3.76014, -0.523064, 0.0656881, 1.09931, 15.4047, 1.05314, -0.0777833, 0.735032, 30.0183, 0.0442045, 1.28382, 0.0725229, 4.08357, -0.737813, -0.0341083, 1.05351, 23.7819, 1.10367, -0.142426, 0.536965, 28.0382, -0.00727542, 1.19049, 0.330721, 3.5326, -0.555485, -0.298571, 1.06254, 21.3439, -0.69823, -0.131377, -1.39016, 29.7853, -0.10771, 1.5547, -0.092828, 4.08273, 1.39219, 0.0543935, -0.704392, 29.8189, -1.00246, 0.0223757, -0.100796, 23.8, 0.0234632, 1.00745, -0.00970948, 3.33648, 0.100549, -0.0120052, -1.00267, 28.9607, 0.303044, 0.0215037, 0.919613, 21.0249, -0.0176901, 0.968189, -0.0168101, 3.38729, -0.919694, -0.0115373, 0.303341, 28.052, 0.137359, -0.121788, -1.29069, 23.6949, -0.224323, 1.2761, -0.144285, 3.82584, 1.27687, 0.237291, 0.113498, 12.8836, 0.884799, -0.109182, -0.755738, 24.9285, -0.0571465, 1.14401, -0.232181, 3.61882, 0.761442, 0.212728, 0.860745, 14.63, -0.898451, -0.00651437, 0.888924, 26.5331, 0.0432715, 1.26205, 0.0529839, 3.94477, -0.887894, 0.0680976, -0.896911, 11.7891, -0.313121, -0.00576245, -1.07326, 30.3388, -0.0594391, 1.11638, 0.0113473, 3.8233, 1.07163, 0.0602375, -0.312968, 14.4042, 0.568498, -0.00702669, 1.23909, 23.3588, 0.0696885, 1.3613, -0.0242536, 3.96956, -1.23715, 0.0734531, 0.568024, 11.0259, -1.17005, 0.111564, -0.564338, 46.6902, 0.0655895, 1.2966, 0.120336, 3.56964, 0.571508, 0.0796008, -1.16918, 5.16982, -1.45359, 0.124767, 0.0484835, 43.6997, 0.127416, 1.45173, 0.0842345, 3.62892, -0.0410177, 0.0881116, -1.4565, 8.40479, -0.974179, 0.0900069, -0.38645, 48.5109, 0.0597397, 1.04606, 0.0930409, 3.43024, 0.39227, 0.0642199, -0.973894, 4.88858, 0.68537, 0.276697, 1.18649, 49.1123, -0.257113, 1.36354, -0.169465, 2.67596, -1.19089, -0.135145, 0.719427, -7.57947, -0.965255, 0.253301, 0.801067, 52.332, 0.113365, 1.24825, -0.258101, 3.02304, -0.832477, -0.123718, -0.963983, 2.51458, 0.371011, 0.0992455, 1.09443, 43.1189, 0.0355065, 1.15343, -0.116633, 4.00984, -1.09834, 0.0708115, 0.365917, 3.00474, -0.0554992, 1.04935, -0.570894, 54.2078, 0.723491, 0.484299, 0.819845, 2.61612, 0.950585, -0.307335, -0.657316, 2.5077, 0.98207, 0.0912388, -0.40519, 49.218, -0.109104, 1.06038, -0.0256664, 3.44585, 0.400749, 0.0650988, 0.985965, 3.64339, 1.45194, 0.127988, -0.335865, 44.5358, -0.145118, 1.48748, -0.0605072, 4.03592, 0.328827, 0.0913196, 1.45632, 0.594097, -0.415172, 0.229118, -1.05592, 48.2795, 0.189677, 1.12907, 0.170413, 3.42, 1.06371, -0.111907, -0.442518, -1.77758, 1.37178, 0.284635, -0.323994, 51.7113, -0.243062, 1.40265, 0.203138, 2.79473, 0.356245, -0.139022, 1.3862, -1.05979, -0.517335, 0.251935, 1.13528, 47.3237, -0.0102742, 1.24151, -0.280192, 3.27393, -1.16285, -0.123051, -0.502593, -5.2082, -0.604972, 1.28044, 0.351957, 52.6257, 0.541303, 0.590954, -1.21949, 1.57269, -1.2126, -0.375018, -0.719973, -4.53838, 1.0308, 0.229457, 0.359792, 46.7472, -0.322801, 1.0345, 0.265067, 3.01747, -0.279107, -0.349013, 1.02222, -8.71404, -0.945562, 0.291882, 1.09323, 49.1113, 0.0800104, 1.43837, -0.314829, 3.44409, -1.12869, -0.142562, -0.938171, 0.168594, -0.260625, 0.100286, 1.1396, 51.567, 0.0916107, 1.16688, -0.0817346, 2.8244, -1.14033, 0.0708227, -0.267025, 10.5199, -0.61124, 0.114972, 1.19272, 45.0215, 0.124863, 1.33776, -0.0649637, 3.36052, -1.19173, 0.0811943, -0.618557, 10.9551, -0.992959, 0.29146, 1.04749, 47.192, 0.0941373, 1.43629, -0.310407, 3.64224, -1.0832, -0.142356, -0.9872, -1.7619, 1.00153, 0.13618, 1.23164, 41.7085, -0.0108689, 1.58453, -0.166361, 3.7379, -1.2391, 0.0961719, 0.99696, 9.4287, 1.23414, 0.250238, 0.111844, 42.5718, -0.259256, 1.23315, 0.101705, 4.10825, -0.0889647, -0.122222, 1.25514, -6.51956, 0.42358, 0.12991, -1.45215, 42.8191, -0.12562, 1.50982, 0.0984276, 3.93779, 1.45252, 0.0926909, 0.431982, 4.59851, -1.40554, 0.12789, -0.49192, 39.6891, 0.0902298, 1.48634, 0.128612, 4.4234, 0.5002, 0.0912496, -1.40548, 1.07533, 0.888874, 0.274139, -1.02609, 39.7568, -0.0753746, 1.35093, 0.295633, 4.43528, 1.0594, -0.133896, 0.881958, -8.98334, 0.503894, 0.0836498, 0.834814, 39.7794, 0.00761358, 0.973311, -0.102123, 3.92599, -0.83896, 0.0590743, 0.500477, 9.06128, -0.578823, -0.00665289, 1.1537, 35.1029, 0.0591827, 1.28888, 0.037125, 4.16571, -1.1522, 0.0695457, -0.577669, 8.5141, 1.39702, 0.120266, -0.09671, 38.5665, -0.125701, 1.39773, -0.0776297, 4.2401, 0.0895317, 0.0858095, 1.40003, 5.63446, -0.87106, -0.00540128, -0.582586, 32.7825, -0.0358731, 1.04641, 0.0439346, 4.08479, 0.581506, 0.056462, -0.869968, 9.79191, 1.2968, -0.0226227, -0.329393, 31.5766, -0.0293654, 1.32184, -0.206394, 4.19211, 0.328861, 0.207241, 1.28047, 7.79972, -1.36004, -0.0230504, -0.0939546, 32.2666, -0.0372728, 1.34683, 0.209118, 4.35036, 0.0892722, 0.211159, -1.34406, 6.86564, -0.785448, 0.0544207, 0.974773, 36.3554, 0.13912, 1.24455, 0.0426172, 3.98651, -0.966328, 0.13494, -0.786177, 10.6306, -0.0289136, 0.184592, 0.913652, 42.0173, -0.0861227, 0.909653, -0.186509, 4.4359, -0.928126, -0.090159, -0.0111561, -4.34893, 0.402243, 0.0800871, 0.841311, 41.4628, 0.017262, 0.930774, -0.0968565, 4.41494, -0.844938, 0.0571421, 0.398538, -1.27266, 1.36235, 0.118306, -0.20401, 45.6221, -0.129329, 1.37496, -0.0662999, 3.80384, 0.197207, 0.0844113, 1.36587, 2.852, 1.25162, 0.121653, 0.663281, 47.5928, -0.0664966, 1.41385, -0.133835, 3.70095, -0.671059, 0.0867991, 1.25038, 1.76574, 1.07093, 0.110621, -0.715677, 40.2135, -0.135817, 1.28564, -0.00451665, 4.33831, 0.711326, 0.0789279, 1.07662, 1.72637, 0.886696, -0.209677, 0.316265, 43.9223, 0.170839, 0.938371, 0.143146, 3.41034, -0.338824, -0.0755814, 0.899835, 19.4948, 1.09938, 0.109982, 0.659557, 48.98, -0.0540335, 1.2797, -0.123325, 2.7077, -0.666477, 0.0776702, 1.09797, 16.1059, 0.496394, -0.211006, 0.806919, 47.0163, 0.043832, 0.94432, 0.219971, 4.44698, -0.832899, -0.0760605, 0.492487, 23.7819, -1.15806, -0.258358, -0.0666564, 46.2914, -0.251616, 1.15624, -0.110052, 3.93397, 0.0887773, -0.0931294, -1.18142, 19.4237, -1.40148, -0.0520057, -0.330006, 47.0598, -0.0139893, 1.43107, -0.166113, 4.17726, 0.333786, -0.158381, -1.39258, 20.3892, 1.42193, 0.0144745, -0.361414, 52.9845, 0.0208297, 1.46033, 0.140437, 4.46272, 0.361103, -0.141234, 1.41505, 22.6206, 0.0982589, 0.0142439, -1.44042, 52.7584, 0.137703, 1.43706, 0.0236041, 4.29364, 1.43389, -0.138983, 0.0964393, 20.8491, -1.31969, 0.636901, 0.221693, 60.0517, 0.5594, 1.30594, -0.421848, 3.51376, -0.376645, -0.291962, -1.4033, 30.2035, 0.677581, -0.166115, -1.43293, 60.3894, 0.320298, 1.56094, -0.029498, 3.33236, 1.40652, -0.275439, 0.697022, 29.75, 1.34711, -0.149061, -0.456422, 60.7285, 0.218778, 1.4007, 0.188267, 3.38702, 0.427407, -0.247162, 1.3422, 29.8552, 0.426332, 0.0901229, 0.960165, 44.8748, 0.0218771, 1.04863, -0.10814, 3.14525, -0.964137, 0.0636458, 0.422122, 14.7097, 0.00742318, 0.124024, -1.44572, 49.3754, -0.088543, 1.44308, 0.123343, 2.90755, 1.44833, 0.0875868, 0.0149504, 12.2531, 1.19897, 0.0436583, 0.0922347, 42.6274, -0.0664664, 1.15938, 0.315225, 4.17849, -0.0774307, -0.319184, 1.15761, 23.163, 0.39713, -0.0387043, -0.998879, 41.013, 0.0696296, 1.07328, -0.013904, 4.52295, 0.9972, -0.059528, 0.398769, 24.5076, -0.211346, -0.0260382, 0.898637, 37.3821, -0.0725191, 0.92062, 0.00961971, 4.19704, -0.896084, -0.0683636, -0.212726, 20.7886, -1.31202, -0.0347013, 0.640069, 34.4016, -0.0369999, 1.45976, 0.00329827, 4.30628, -0.63994, -0.0132548, -1.31247, 29.8918, 1.54497, -0.0368283, 0.115827, 35.6843, 0.0356718, 1.54924, 0.016785, 4.34394, -0.116189, -0.0140672, 1.54531, 30.6806, -0.557869, 0.0897452, 0.935865, 38.9021, 0.0315368, 1.08939, -0.0856689, 4.12864, -0.939629, -0.0167194, -0.55851, 21.9446, 0.193885, -0.0313731, 1.09527, 35.4674, -0.0756882, 1.10925, 0.0451717, 3.96988, -1.0931, -0.0823706, 0.191142, 18.4589, -0.108289, 0.0295984, 1.33994, 40.2986, 0.364774, 1.29421, 0.000891342, 2.99014, -1.28967, 0.363572, -0.112257, 17.7491, -0.297077, 0.052385, -1.16782, 38.319, -0.113163, 1.19799, 0.0825255, 3.40876, 1.1635, 0.129893, -0.290153, 15.1672, -0.229357, -0.0523279, -1.14972, 31.2124, 0.088733, 1.16804, -0.0708627, 3.93832, 1.14749, -0.100781, -0.224324, 20.0378, -0.211337, -0.0268492, 1.55714, 35.1298, -0.0324594, 1.57115, 0.0226853, 4.18611, -1.55704, -0.0291094, -0.211824, 21.9799, -1.13743, 0.00557634, 0.373258, 31.762, -0.134962, 1.10988, -0.427853, 3.63264, -0.348048, -0.4486, -1.05391, 16.2535, 0.854091, 0.0294416, -1.02889, 38.3895, -0.296437, 1.28736, -0.209238, 3.13591, 0.985698, 0.361647, 0.828588, 17.3857, -1.13002, -0.0506508, -0.104098, 33.4245, -0.041293, 1.1306, -0.101866, 3.82308, 0.108151, -0.0975513, -1.12655, 17.5536, -0.382844, 0.0537344, -1.17527, 42.247, -0.11026, 1.22885, 0.0921014, 3.31988, 1.17132, 0.133239, -0.375466, 14.4028, 0.965122, 0.0982837, -0.617368, 41.8232, -0.120181, 1.14359, -0.00582042, 3.57639, 0.613482, 0.069409, 0.970096, 11.9273, -1.16978, 0.0582059, -0.651392, 34.4509, -0.0197252, 1.33111, 0.154366, 3.68825, 0.65369, 0.144326, -1.16101, 14.1495)
 
 [sub_resource type="MultiMesh" id="MultiMesh_wxvuf"]
@@ -1158,7 +1158,7 @@ buffer = PackedFloat32Array(-0.809895, -0.0516208, -0.501399, 19.0429, -0.014726
 resource_local_to_scene = true
 transform_format = 1
 instance_count = 14
-mesh = ExtResource("13_pedky")
+mesh = ExtResource("6_73f8g")
 buffer = PackedFloat32Array(-0.293099, 0.929466, -0.00186102, -12.4591, 0.722996, 0.229216, 0.612008, 4.86606, 0.584112, 0.182676, -0.758459, 15.8762, 1.15649, -0.0872498, 0.687854, 13.7604, 0.119109, 1.34281, -0.0299311, 5.04109, -0.683059, 0.086431, 1.15939, -7.30469, 1.07644, -0.24289, -0.662234, 11.7378, 0.147694, 1.25909, -0.221728, 4.70237, 0.689737, 0.109458, 1.081, -4.60256, -0.874493, -0.0655042, -0.505775, 12.4238, -0.0891419, 1.00813, 0.0235617, 4.79006, 0.502148, 0.0648894, -0.876626, -4.75386, -0.207726, -0.0865406, -1.31839, 12.9722, -0.0983029, 1.33189, -0.0719386, 4.7994, 1.31756, 0.0857284, -0.213224, -4.34528, -0.541594, -0.102693, -1.48827, 15.8621, -0.130842, 1.58049, -0.0614413, 5.0578, 1.48606, 0.101729, -0.547809, -5.44261, 0.282175, -0.0303738, -1.16011, 20.6064, 0.00649124, 1.19393, -0.0296805, 5.2577, 1.16049, 0.000707154, 0.282249, -5.47195, -0.0917891, -0.0245189, -0.959408, 20.5814, -0.00290356, 0.963789, -0.0243531, 5.25758, 0.959717, 0.000570842, -0.0918333, -6.34293, -1.07693, -0.0316336, 0.621602, 18.9187, -0.027029, 1.24345, 0.0164517, 5.21482, -0.621819, 0.000736484, -1.07727, -5.56413, -1.37266, -0.103073, -0.801662, 19.2169, -0.140423, 1.58633, 0.0364815, 5.06897, 0.79597, 0.102105, -1.37604, -2.22963, 1.20411, -0.0998812, 0.960688, 17.671, 0.139752, 1.53721, -0.0153423, 4.72474, -0.955702, 0.0989438, 1.20815, 1.55793, 0.664224, -0.0762112, 0.969665, 16.3968, 0.105395, 1.17292, 0.01999, 4.91564, -0.966928, 0.075496, 0.668283, -2.69418, -1.06667, -0.0691707, 0.0140122, 20.2405, -0.0681199, 1.06456, 0.0695661, 4.84619, -0.0184552, 0.0685215, -1.06665, 2.26494, -0.638267, -0.102122, 1.43982, 19.6816, 0.0513773, 1.5717, 0.134251, 4.94519, -1.44252, 0.101163, -0.632289, 0.162692)
 
 [sub_resource type="MultiMesh" id="MultiMesh_qpdy0"]
@@ -1172,7 +1172,7 @@ buffer = PackedFloat32Array(1.23382, 0.0936683, 0.499398, 30.5353, -0.109434, 1.
 resource_local_to_scene = true
 transform_format = 1
 instance_count = 34
-mesh = ExtResource("14_i7lqn")
+mesh = ExtResource("13_pedky")
 buffer = PackedFloat32Array(0.0321617, -0.0357229, -1.40383, 23.8721, -1.35421e-05, 1.40419, -0.0357326, 5.34065, 1.40428, 0.00083169, 0.032151, -5.25382, 1.23999, -0.0326829, 0.335957, 26.8857, 0.0317447, 1.2847, 0.00781212, 5.41955, -0.336047, 0.000760914, 1.2404, -9.02004, 0.929821, 0.0645922, -0.779261, 30.8344, -0.102124, 1.21041, -0.0215253, 5.46513, 0.775235, 0.0819785, 0.931813, -5.45462, -0.472183, -0.0374547, -1.39449, 25.6383, -0.0128386, 1.47227, -0.0351964, 5.38594, 1.39494, 0.00087201, -0.472357, -5.8476, -0.359305, -0.0304296, 1.14088, 22.5501, -0.00846481, 1.19613, 0.0292371, 5.30742, -1.14126, 0.000708453, -0.359404, -5.92478, -0.184655, -0.0247172, 0.953873, 20.9228, -0.00413249, 0.971581, 0.0243761, 5.26766, -0.954184, 0.000575457, -0.1847, -8.70137, 1.06422, -0.0999496, -1.11512, 22.7455, -0.00291418, 1.53826, -0.140658, 5.25664, 1.11958, 0.0990115, 1.05961, -1.58317, 0.112977, -0.0199296, 1.17328, 22.7367, 0.183643, 1.16448, 0.00209684, 4.65974, -1.15899, 0.18257, 0.114702, 3.85208, 0.0164361, -0.0834386, 1.28671, 25.0856, 0.0838859, 1.28415, 0.0822016, 5.32678, -1.28668, 0.0826555, 0.0217957, -0.310678, 0.912178, -0.0204137, -0.790944, 26.4091, -0.10729, 1.19277, -0.15452, 4.88695, 0.7839, 0.187005, 0.899227, 2.80375, 0.236748, -0.0193132, -1.11744, 27.4193, -0.169152, 1.12846, -0.055341, 4.62958, 1.10474, 0.176923, 0.230998, 4.55558, -1.19532, 0.0801844, -0.916175, 30.6079, 0.00149904, 1.5026, 0.129553, 5.05747, 0.919675, 0.101768, -1.19098, 0.742964, -0.170925, 0.0747941, -1.39436, 29.3773, -0.0852752, 1.40159, 0.085635, 5.35712, 1.39376, 0.0949266, -0.165759, -2.71185, 0.867357, 0.077161, 1.16105, 28.9653, 0.0324924, 1.44594, -0.120368, 5.20813, -1.16315, 0.0979305, 0.862423, -0.187284, -1.11469, 0.120711, -0.856172, 36.5744, 0.042895, 1.4029, 0.141947, 4.86271, 0.863575, 0.0861271, -1.11218, -1.715, 1.47669, 0.0846295, -0.588217, 34.7423, -0.118246, 1.5859, -0.0686794, 4.76555, 0.582391, 0.107409, 1.47751, 1.7955, -0.232852, 0.101022, 1.15301, 34.2851, 0.0908729, 1.17408, -0.0845156, 5.43223, -1.15385, 0.0720789, -0.239338, -7.78323, 1.15686, 0.121916, 0.822722, 39.5993, -0.0485672, 1.41691, -0.141674, 4.79093, -0.830287, 0.0869868, 1.1546, -4.78528, -0.579006, 0.106287, -1.09379, 34.7497, -0.017638, 1.23527, 0.129371, 5.21407, 1.0988, 0.0758354, -0.574289, -4.88083, -0.228341, 0.108954, 1.24793, 38.7188, 0.0963242, 1.26627, -0.09293, 4.66188, -1.24897, 0.0777388, -0.235318, -1.44915, 0.0999623, 0.0739806, -1.38592, 32.1033, -0.0990934, 1.38634, 0.0668559, 5.27821, 1.38435, 0.093894, 0.104861, -3.69452, -1.25366, 0.125274, 0.745717, 34.3054, 0.153327, 1.45594, 0.0131793, 5.50923, -0.740458, 0.0893831, -1.25983, -9.06585, -1.44891, 0.0148803, -0.418985, 50.9222, 0.0545635, 1.50127, -0.135371, 4.72883, 0.415683, -0.145193, -1.44265, 25.1607, -1.4814, -0.0138966, 0.460363, 46.1712, -0.0246388, 1.55081, -0.0324719, 4.9209, -0.459913, -0.0383195, -1.48111, 28.6466, 0.0316744, -0.0494601, -1.37328, 44.4634, 0.0772384, 1.37154, -0.0476158, 4.75433, 1.372, -0.0760706, 0.0343846, 26.4358, -0.629625, 0.0199585, -0.985492, 54.8923, 0.0869659, 1.16595, -0.0319489, 4.65948, 0.98185, -0.0904736, -0.62913, 25.0941, 1.11921, -0.0405391, 0.122461, 46.6176, 0.0334507, 1.12416, 0.0664229, 4.86322, -0.124584, -0.06235, 1.11797, 26.9985, -0.683982, -0.00916946, 0.761509, 46.9509, -0.0249368, 1.02327, -0.0100767, 4.91429, -0.761156, -0.0252845, -0.68397, 28.0964, -1.29308, -0.0546931, 0.787897, 48.0608, -0.133148, 1.50502, -0.114047, 4.84922, -0.778489, -0.166565, -1.2892, 26.1321, -0.824921, 0.602348, -0.641832, 57.0384, 0.517901, 1.04341, 0.313586, 4.82107, 0.711723, -0.0611123, -0.972102, 28.0687, 0.285589, -0.0096303, -1.0364, 48.0334, 0.0281596, 1.0747, -0.00222657, 4.97958, 1.03606, -0.0265552, 0.285742, 30.3462, 0.25084, -0.0494803, 1.35112, 44.5452, -0.0658538, 1.3721, 0.0624745, 4.90365, -1.35042, -0.0761018, 0.247923, 29.0749, 0.924648, 0.0272483, -1.3016, 55.9965, 0.0849781, 1.59181, 0.093692, 4.96155, 1.2991, -0.123519, 0.920293, 29.2306, -1.20332, -0.0506503, 0.728592, 42.3407, -0.0836351, 1.40454, -0.0404874, 4.74455, -0.725546, -0.0779012, -1.2037, 27.6397)
 
 [sub_resource type="MultiMesh" id="MultiMesh_ljtcl"]
@@ -1261,7 +1261,7 @@ metadata/class = "Gardener"
 
 [node name="Arborist" type="Node3D" parent="Gardener"]
 script = ExtResource("2_xxa5e")
-octree_managers = [SubResource("Resource_1wtfg")]
+octree_managers = [SubResource("Resource_myuab")]
 metadata/class = "Arborist"
 
 [node name="MMI_container" type="Node3D" parent="Gardener/Arborist"]
