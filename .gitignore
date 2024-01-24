@@ -9,6 +9,8 @@
 *.csproj.*
 *.sln
 *.tmp
+*.old
+*.old*
 
 addons/boujie_water_shader
 addons/dreadpon.spatial_gardener

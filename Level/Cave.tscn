@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://btl6rhjf4mykn"]
 
-[ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_k7wlx"]
+[ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_k7wlx"]
 [ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Prefab/Rocks/PF_Rock_Plate.glb" id="2_i2c66"]
 [ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Demo/Prefab/Rocks/PF_Rock_Cave.glb" id="3_y30aa"]
 [ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Demo/Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]

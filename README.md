@@ -1,4 +1,4 @@
-# Uber Godot Game Jam Kit
+# Godot-Blender RPG Framework
 
 ## Welcome early visitor
 
@@ -10,26 +10,28 @@ This project has just been started! Come back soon!
 
 This repository is a collection of freely usable art, scripts, and sounds that hopes to benefit many projects.
 
-Please see the ./Game/Scene/ folder for example scenes. Hitting "Play" will start the Splash sceen, which will transition to the first main scene, "Sandbox."
-
 ### Purpose and structure
 
-The primary goal of the UGGJK is to serve as a way to test the contents of the StandardAssets repository. We will do this by creating a small mini-game, a single quest for the player to accomplish.
+The primary goal of the Godot-Blender RPG Framework is to serve as a way to test the contents of the StandardAssets repository. We will do this by creating a small mini-game, a single quest for the player to accomplish.
 
+#### Standard Assets
 The StandardAssets repository is a submodule that aims to be a lightweight and reusable collection of scripts, textures, materials, and so on. Since I use this submodule for my owns games, any form of feedback or collaboration is greatly appreciated.
+
+#### Editor Toolbox
+
+Also included here is the EditorToolbox submodule, which is a collection of editor-time utilities. In addition to being a sort of grab-bag full of productivity tools, there are scripts included that suggest a workflow for mesh and materials between Blender and Godot. Please see [glb_post_import.gd](https://github.com/sci-comp/EditorToolbox/blob/main/Import/glb_post_import.gd) for more information.
 
 ## Dependency
 
 This project assumes that the following have already been added to your project,
 
-- [Phantom Camera](https://github.com/ramokz/phantom-camera)
-- [Boujie Water Shader](https://github.com/Chrisknyfe/boujie_water_shader)
+- [Godot Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager)
 
 ## Installation
 
 Simply type,
 
-`git clone https://github.com/sci-comp/UberGodotGameJamKit`
+`git clone https://github.com/sci-comp/GodotBlenderRPGFramework
 
 or use Github Desktop. By cloning, submodules will automatically be included.
 
@@ -42,7 +44,7 @@ Links to submobule repositories,
 
 ### Adding and Removing Submodules
 
-Although the Uber Godot Game Jam Kit already has submodules added, you will need to add them yourself if you start from a new project. The following commands serve as helpful reminders.
+Although the Godot-Blender RPG Framework already has submodules added, you will need to add them yourself if you start from a new project. The following commands serve as helpful reminders.
 
 Note for Github Desktop users: Github Desktop cannot add or remove submodules. However, once a submodule has been added through the console, we can manage it from within the Github Desktop UI.
 
@@ -65,24 +67,18 @@ If you delete a submodule without first calling submodule deinit, which is an ea
 
 ## License
 
-Most content is either MIT or cc0. Please see license.txt files in their respective folders for more information. 
+All included or references content was originally licensed as MIT or cc0. Please see license.txt files in their respective folders for more information. A summary of imported and referenced content is also below,
 
-A summary of all content is included below,
+### Standard Assets
 
-#### CC0 content
+- The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
+- The saver was forked from: https://github.com/Ardot66/SaveAccess/tree/main
+- The scene manager used the following repository for guidance: https://github.com/glass-brick/Scene-Manager
+- Nathan Hoad's Godot Dialogue Manager: https://github.com/nathanhoad/godot_dialogue_manager
+
+### Demo content
 
 - FlynnCat: https://flynncat.itch.io/mrd-terrain
 - Kenney: https://kenney.itch.io/
 - Sound files by FilmCow
 
-#### CC-BY content
-
-The water shader is originally by Polyflare
-- License: CC-BY 4.0
-- URL: https://creativecommons.org/licenses/by/4.0/
-
-#### MIT content
-
-- The camera system is by ramokz: https://github.com/ramokz/phantom-camera
-- The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
-- The scene manager used the following repository for guidance: https://github.com/glass-brick/Scene-Manager

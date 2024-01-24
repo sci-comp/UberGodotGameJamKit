@@ -1,6 +1,6 @@
-[gd_scene load_steps=42 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=38 format=3 uid="uid://y0wbbfugjd8s"]
 
-[ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/Level_Portal.tscn" id="1_8qcsf"]
+[ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_8qcsf"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_07a3g"]
 [ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Prefab/Rocks/PF_Rock_Plate.glb" id="3_gu3vi"]
 [ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Demo/Prefab/Rocks/PF_Rock_Cave.glb" id="6_5p8te"]
@@ -14,8 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Demo/Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
 [ext_resource type="PackedScene" uid="uid://clrroqgutxg5x" path="res://Demo/Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
 [ext_resource type="PackedScene" uid="uid://bn2jitchybu3e" path="res://Demo/Prefab/pf_sign_post.tscn" id="22_pitnc"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/MovableRock.cs" id="22_wqcsc"]
-[ext_resource type="Material" uid="uid://d2nfy850cxg6s" path="res://addons/StandardAssets/Material/Nature/MI_Stump.tres" id="23_2ggqc"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_fdrny"]
 resource_local_to_scene = true
@@ -177,10 +175,6 @@ transform_format = 1
 instance_count = 7
 mesh = ExtResource("6_73f8g")
 buffer = PackedFloat32Array(0.137845, 0.111473, -1.40489, 125.652, 0.00155592, 1.41158, 0.112156, 6.80583, 1.4093, -0.0124617, 0.137289, 70.7598, 1.03442, 0.108145, 0.53651, 124.314, -0.133443, 1.16242, 0.022975, 6.60629, -0.530783, -0.0814839, 1.0398, 52.3525, 0.0943359, 0.102249, -1.07538, 122.61, 0.0146264, 1.07925, 0.103901, 6.88485, 1.08013, -0.0235447, 0.092514, 54.818, -0.0490145, 0.118429, 1.24937, 125.13, -0.02273, 1.25004, -0.119384, 6.63441, -1.25477, -0.0272704, -0.0466412, 54.2824, 1.09359, 0.120789, -0.655964, 124.448, -0.0891878, 1.27494, 0.0860756, 6.74359, 0.661002, -0.0278137, 1.09687, 56.3238, -0.558165, 0.0788385, 0.827766, 124.711, 0.0367449, 0.998332, -0.0703065, 6.78234, -0.8307, -0.00881345, -0.559304, 59.6863, -1.10828, 0.132732, 0.903991, 132.657, 0.0391188, 1.42671, -0.161522, 5.76228, -0.912846, -0.10001, -1.10445, 51.3853)
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_i1rsn"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_xxnub"]
 
 [node name="Island" type="Node3D"]
 
@@ -409,22 +403,6 @@ shadow_enabled = true
 environment = ExtResource("2_07a3g")
 
 [node name="Interact" type="Node" parent="."]
-
-[node name="Movable_Rock" type="RigidBody3D" parent="Interact"]
-transform = Transform3D(-0.127704, 0.0856559, -0.988107, 0, 0.996264, 0.086363, 0.991812, 0.0110289, -0.127227, 7.55927, 9.29947, 32.4359)
-collision_layer = 17
-collision_mask = 9
-freeze = true
-script = ExtResource("22_wqcsc")
-details = "Push me"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Movable_Rock"]
-shape = SubResource("SphereShape3D_i1rsn")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/Movable_Rock"]
-transform = Transform3D(1, -4.65661e-09, 0, -3.72529e-09, 1, 1.74623e-09, 0, -4.16767e-08, 1, 0.000917435, 0.00328827, -0.000349998)
-material_override = ExtResource("23_2ggqc")
-mesh = SubResource("SphereMesh_xxnub")
 
 [node name="PF_Sign_Post" parent="Interact" instance=ExtResource("22_pitnc")]
 transform = Transform3D(-0.421981, 0, -0.0792765, 0, 0.429363, 0, 0.0792765, 0, -0.421981, 0.588136, 2.17383, -1.02462)
