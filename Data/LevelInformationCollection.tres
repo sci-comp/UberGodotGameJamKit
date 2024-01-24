@@ -1,10 +1,9 @@
-[gd_resource type="Resource" load_steps=5 format=3 uid="uid://4e7i1c68y158"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cld0k6tas5xah"]
 
-[ext_resource type="Resource" uid="uid://dmun2byjeapoi" path="res://Data/LevelInformation_Cave.tres" id="1_di8fr"]
-[ext_resource type="Resource" uid="uid://bkg83ic34tg65" path="res://Data/LevelInformation_Island.tres" id="2_mcdt7"]
-[ext_resource type="Resource" uid="uid://cqo44jlv6yoh" path="res://Data/LevelInformation_Splash.tres" id="3_ajvx4"]
+[ext_resource type="Resource" uid="uid://dmun2byjeapoi" path="res://Data/LevelInformation_Cave.tres" id="1_na4wd"]
+[ext_resource type="Resource" uid="uid://bkg83ic34tg65" path="res://Data/LevelInformation_Island.tres" id="2_g3odj"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelInfoCollection.cs" id="4_sdeyj"]
 
 [resource]
 script = ExtResource("4_sdeyj")
-LevelInfoList = [ExtResource("3_ajvx4"), ExtResource("2_mcdt7"), ExtResource("1_di8fr")]
+LevelInfoList = [ExtResource("1_na4wd"), ExtResource("2_g3odj")]
