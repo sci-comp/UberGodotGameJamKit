@@ -23,6 +23,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 [autoload]
 
 Demo_Game_Manager="*res://Demo/Prefab/Demo_Game_Manager.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dotnet]
 
@@ -30,7 +31,7 @@ project/assembly_name="UberGodotGameJamKit"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
+enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [file_customization]
 
@@ -146,6 +147,10 @@ Debug={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":48,"key_label":0,"unicode":48,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Data/Dialogue/demo.dialogue")
 
 [layer_names]
 

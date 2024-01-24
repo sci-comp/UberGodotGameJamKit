@@ -1,0 +1,19 @@
+~ demo_node_title
+
+Demo NPC: [[Hi|Hello|Howdy]], this is the demo conversation.
+
+Demo NPC: What do you think about whether?
+
+- It's rather cold and foggy today.
+	Demo NPC: It sure is.
+- The heat is unbearable and there's not a cloud in the sky.
+	Demo NPC: [[What|Huh|Right]]
+- I flunked functors, it was too ambiguous for me.
+	Demo NPC: [[What|Huh|Right]]
+- Could you repeat that? => demo_node_title
+- <End> => END
+
+Demo NPC: This is the last message of the demo conversation
+
+=> END
+

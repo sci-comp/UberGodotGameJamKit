@@ -29,7 +29,6 @@ far = 1000.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
 
 [node name="Proximity" type="Area3D" parent="." node_paths=PackedStringArray("labelTitle", "labelDetails")]
-visible = false
 collision_layer = 8
 collision_mask = 16
 script = ExtResource("2_t146w")

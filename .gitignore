@@ -12,14 +12,7 @@
 *.old
 *.old*
 
-addons/boujie_water_shader
-addons/dreadpon.spatial_gardener
-addons/phantom_camera
-
-testing/
-
-# Used by Spatial Gardener
-file_format.sh
+addons/dialogue_manager
 
 # Necessary when building Godot to Windows
 rcedit-x86.exe
