@@ -15,17 +15,11 @@ This repository is a collection of freely usable art, scripts, and sounds that h
 The primary goal of the Godot-Blender RPG Framework is to serve as a way to test the contents of the StandardAssets repository. We will do this by creating a small mini-game, a single quest for the player to accomplish.
 
 #### Standard Assets
-The StandardAssets repository is a submodule that aims to be a lightweight and reusable collection of scripts, textures, materials, and so on. Since I use this submodule for my owns games, any form of feedback or collaboration is greatly appreciated.
+The StandardAssets repository is a submodule that aims to be a lightweight and reusable collection of scripts, textures, materials, and so on. Since I use this submodule for my own games, any form of feedback or collaboration is greatly appreciated.
 
 #### Editor Toolbox
 
 Also included here is the EditorToolbox submodule, which is a collection of editor-time utilities. In addition to being a sort of grab-bag full of productivity tools, there are scripts included that suggest a workflow for mesh and materials between Blender and Godot. Please see [glb_post_import.gd](https://github.com/sci-comp/EditorToolbox/blob/main/Import/glb_post_import.gd) for more information.
-
-## Dependency
-
-This project assumes that the following have already been added to your project,
-
-- [Godot Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager)
 
 ## Installation
 
@@ -74,7 +68,6 @@ All included or references content was originally licensed as MIT or cc0. Please
 - The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
 - The saver was forked from: https://github.com/Ardot66/SaveAccess/tree/main
 - The scene manager used the following repository for guidance: https://github.com/glass-brick/Scene-Manager
-- Nathan Hoad's Godot Dialogue Manager: https://github.com/nathanhoad/godot_dialogue_manager
 
 ### Demo content
 
