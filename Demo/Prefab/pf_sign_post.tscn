@@ -8,9 +8,5 @@
 [node name="SM_Rock_Riser_Henge" parent="." index="0"]
 script = ExtResource("2_os0ka")
 
-[node name="SB_Rock_Riser_Henge-gcc-stone" parent="." index="1"]
-collision_layer = 1073741843
-collision_mask = 9
-script = ExtResource("2_os0ka")
-name = "Cave"
-details = "Beware toads"
+[node name="SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone" parent="." index="1"]
+collision_layer = 1073741841

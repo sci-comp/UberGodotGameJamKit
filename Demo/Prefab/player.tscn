@@ -10,8 +10,8 @@ height = 1.8
 [sub_resource type="SphereShape3D" id="SphereShape3D_o21qe"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 12
-collision_mask = 17
+collision_layer = 4
+collision_mask = 33
 floor_max_angle = 0.959931
 floor_snap_length = 0.2
 script = ExtResource("1_f5qgk")
@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
 
 [node name="Proximity" type="Area3D" parent="." node_paths=PackedStringArray("labelTitle", "labelDetails")]
 collision_layer = 8
-collision_mask = 16
+collision_mask = 48
 script = ExtResource("2_t146w")
 labelTitle = NodePath("Node2D/Title")
 labelDetails = NodePath("Node2D/Details")
