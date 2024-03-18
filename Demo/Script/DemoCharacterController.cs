@@ -2,10 +2,10 @@ using Godot;
 
 public partial class DemoCharacterController : CharacterBody3D
 {
-    private float maxSpeed = 5.0f;
-    private float acceleration = 15.0f;
-    private float commonGroundFriction = 0.02f;
-    private float jumpImpulse = 10.0f;
+    private float maxSpeed = 4.0f;
+    private float acceleration = 12.0f;
+    private float commonGroundFriction = 0.03f;
+    private float jumpImpulse = 6.5f;
     private float mouseSensitivity = 0.2f;
     private float controllerSensitivity = 200.0f;
     private Vector3 inputDir;

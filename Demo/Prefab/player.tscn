@@ -28,45 +28,39 @@ far = 1000.0
 [node name="Feet" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
 
-[node name="Proximity" type="Area3D" parent="." node_paths=PackedStringArray("labelTitle", "labelDetails")]
+[node name="Proximity" type="Area3D" parent="."]
 collision_layer = 8
 collision_mask = 48
 script = ExtResource("2_t146w")
-labelTitle = NodePath("Node2D/Title")
-labelDetails = NodePath("Node2D/Details")
 
-[node name="Node2D" type="Node2D" parent="Proximity"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Proximity"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("SphereShape3D_o21qe")
 
-[node name="Title" type="Label" parent="Proximity/Node2D"]
-visible = false
+[node name="Title" type="Label" parent="Proximity"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 516.0
+offset_left = -60.0
 offset_top = 16.0
-offset_right = 636.0
-offset_bottom = 58.0
+offset_right = 60.0
+offset_bottom = 66.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 36
 text = "Title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Details" type="Label" parent="Proximity/Node2D"]
-visible = false
+[node name="Details" type="Label" parent="Proximity"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 456.0
+offset_left = -120.0
 offset_top = 64.0
-offset_right = 696.0
-offset_bottom = 88.0
+offset_right = 120.0
+offset_bottom = 98.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
 text = "Example Details"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Proximity"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-shape = SubResource("SphereShape3D_o21qe")

@@ -22,8 +22,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 
 [autoload]
 
-Demo_Game_Manager="*res://Demo/Prefab/Demo_Game_Manager.tscn"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+LevelManager="*res://Demo/Prefab/LevelManager.tscn"
 
 [dotnet]
 
@@ -31,11 +30,12 @@ project/assembly_name="UberGodotGameJamKit"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
+"res://Demo/": "teal",
 "res://Demo/Material/": "orange",
 "res://Demo/Prefab/": "blue",
 "res://Level/": "green",

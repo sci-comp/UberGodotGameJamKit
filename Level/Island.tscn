@@ -410,7 +410,7 @@ transform = Transform3D(-0.421981, 0, -0.0792765, 0, 0.429363, 0, 0.0792765, 0, 
 [node name="Portal" type="Node" parent="."]
 
 [node name="PF_Portal_To_Cave" parent="Portal" instance=ExtResource("1_8qcsf")]
-transform = Transform3D(2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, -9.12501, 5.96211, -5.6489)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.19786, 4.5803, -2.63822)
 collision_layer = 16
 collision_mask = 4
 LevelToLoad = "Cave"

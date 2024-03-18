@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn2jitchybu3e"]
+[gd_scene load_steps=4 format=3 uid="uid://bn2jitchybu3e"]
 
 [ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Demo/Prefab/Rocks/PF_Rock_Riser_Henge.glb" id="1_0jp3e"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/SignPost.cs" id="2_os0ka"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/SignpostOverwrite.cs" id="2_8t1hx"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/Signpost.cs" id="2_os0ka"]
 
 [node name="PF_Sign_Post" instance=ExtResource("1_0jp3e")]
-
-[node name="SM_Rock_Riser_Henge" parent="." index="0"]
-script = ExtResource("2_os0ka")
+script = ExtResource("2_8t1hx")
+Title = "Cave"
+Details = "Beware the toad"
 
 [node name="SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone" parent="." index="1"]
 collision_layer = 1073741841
+script = ExtResource("2_os0ka")
