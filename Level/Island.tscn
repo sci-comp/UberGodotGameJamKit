@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=46 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_8qcsf"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://addons/StandardAssets/Default/default_environment.tres" id="2_07a3g"]
@@ -13,7 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://bh31t7rauktqm" path="res://Demo/Prefab/Rocks/PF_Rock_Rubble.glb" id="11_7ykad"]
 [ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Demo/Prefab/Rocks/PF_Rock_Riser_Tall.glb" id="12_m4dxn"]
 [ext_resource type="PackedScene" uid="uid://clrroqgutxg5x" path="res://Demo/Prefab/Rocks/PF_Rock_Arch.glb" id="13_36rtp"]
-[ext_resource type="PackedScene" uid="uid://bn2jitchybu3e" path="res://Demo/Prefab/pf_sign_post.tscn" id="22_pitnc"]
+[ext_resource type="PackedScene" path="res://addons/StandardAssets/Script/Platform/PF_Demo_Platform.tscn" id="15_jw1sv"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/PeriodicPlatform.cs" id="16_y3ah0"]
+[ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="17_qircf"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/PlatformLever.cs" id="17_wicw7"]
+[ext_resource type="PackedScene" uid="uid://cmlnek1qdbjmq" path="res://Demo/Prefab/Platform/PF_Demo_Gateway.tscn" id="19_0wj8r"]
+[ext_resource type="PackedScene" uid="uid://bn2jitchybu3e" path="res://Demo/Prefab/Interactable/PF_Sign_Post.tscn" id="22_pitnc"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_fdrny"]
 resource_local_to_scene = true
@@ -175,6 +180,12 @@ transform_format = 1
 instance_count = 7
 mesh = ExtResource("6_73f8g")
 buffer = PackedFloat32Array(0.137845, 0.111473, -1.40489, 125.652, 0.00155592, 1.41158, 0.112156, 6.80583, 1.4093, -0.0124617, 0.137289, 70.7598, 1.03442, 0.108145, 0.53651, 124.314, -0.133443, 1.16242, 0.022975, 6.60629, -0.530783, -0.0814839, 1.0398, 52.3525, 0.0943359, 0.102249, -1.07538, 122.61, 0.0146264, 1.07925, 0.103901, 6.88485, 1.08013, -0.0235447, 0.092514, 54.818, -0.0490145, 0.118429, 1.24937, 125.13, -0.02273, 1.25004, -0.119384, 6.63441, -1.25477, -0.0272704, -0.0466412, 54.2824, 1.09359, 0.120789, -0.655964, 124.448, -0.0891878, 1.27494, 0.0860756, 6.74359, 0.661002, -0.0278137, 1.09687, 56.3238, -0.558165, 0.0788385, 0.827766, 124.711, 0.0367449, 0.998332, -0.0703065, 6.78234, -0.8307, -0.00881345, -0.559304, 59.6863, -1.10828, 0.132732, 0.903991, 132.657, 0.0391188, 1.42671, -0.161522, 5.76228, -0.912846, -0.10001, -1.10445, 51.3853)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hpc6v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5gxqj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfekh"]
 
 [node name="Island" type="Node3D"]
 
@@ -407,16 +418,58 @@ environment = ExtResource("2_07a3g")
 [node name="PF_Sign_Post" parent="Interact" instance=ExtResource("22_pitnc")]
 transform = Transform3D(-0.421981, 0, -0.0792765, 0, 0.429363, 0, 0.0792765, 0, -0.421981, 0.588136, 2.17383, -1.02462)
 
-[node name="Portal" type="Node" parent="."]
+[node name="Lever_01" type="Node3D" parent="Interact"]
 
-[node name="PF_Portal_To_Cave" parent="Portal" instance=ExtResource("1_8qcsf")]
+[node name="Cube" type="AnimatableBody3D" parent="Interact/Lever_01"]
+transform = Transform3D(0.886058, 0, -0.463574, 0, 1, 0, 0.463574, 0, 0.886058, -4.07482, 3.53091, 21.0909)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/Lever_01/Cube"]
+material_override = ExtResource("17_qircf")
+mesh = SubResource("BoxMesh_hpc6v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Lever_01/Cube"]
+shape = SubResource("BoxShape3D_5gxqj")
+
+[node name="Lever" type="AnimatableBody3D" parent="Interact/Lever_01" node_paths=PackedStringArray("platforms")]
+transform = Transform3D(0.118964, 0.248354, -0.0532325, -8.88178e-16, 0.88426, 0.0695713, 0.0622403, -0.474695, 0.101747, -4.07482, 3.99242, 21.0909)
+collision_layer = 17
+script = ExtResource("17_wicw7")
+platforms = []
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Lever_01/Lever"]
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_cfekh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/Lever_01/Lever"]
+material_override = ExtResource("17_qircf")
+mesh = SubResource("BoxMesh_hpc6v")
+
+[node name="PF_Rock_Plate-n1" parent="Interact/Lever_01" instance=ExtResource("3_gu3vi")]
+transform = Transform3D(0.163346, 0, -0.116548, 0, 0.200662, 0, 0.116548, 0, 0.163346, -5.33754, 3.16133, 19.5518)
+
+[node name="Gateway_01" type="Node3D" parent="Interact"]
+
+[node name="PF_Demo_Gateway-n1" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
+transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 14.3375, 2.93682, 31.1028)
+
+[node name="PF_Demo_Gateway-n2" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
+transform = Transform3D(-0.885572, 0, -0.464502, 0, 1, 0, 0.464502, 0, -0.885572, 119.882, 6.5248, 70.665)
+
+[node name="Level_Portal" type="Node" parent="."]
+
+[node name="PF_Portal_To_Cave" parent="Level_Portal" instance=ExtResource("1_8qcsf")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.19786, 4.5803, -2.63822)
 collision_layer = 16
 collision_mask = 4
 LevelToLoad = "Cave"
 
-[node name="SP_Island" type="Node3D" parent="Portal" groups=["spawnpoint"]]
+[node name="SP_Island" type="Node3D" parent="Level_Portal" groups=["spawnpoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0498, 8.49678, 15.255)
 
-[node name="SP_From_Cave" type="Node3D" parent="Portal" groups=["spawnpoint"]]
+[node name="SP_From_Cave" type="Node3D" parent="Level_Portal" groups=["spawnpoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09793, 6.841, 5.57644)
+
+[node name="PF_Demo_Platform" parent="." instance=ExtResource("15_jw1sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4666, 4.95745, -2.38419e-07)
+script = ExtResource("16_y3ah0")
+moveDistance = Vector3(2, 8, 4)

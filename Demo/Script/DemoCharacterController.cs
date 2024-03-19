@@ -5,7 +5,7 @@ public partial class DemoCharacterController : CharacterBody3D
     private float maxSpeed = 4.0f;
     private float acceleration = 12.0f;
     private float commonGroundFriction = 0.03f;
-    private float jumpImpulse = 6.5f;
+    private float jumpImpulse = 4.7f;
     private float mouseSensitivity = 0.2f;
     private float controllerSensitivity = 200.0f;
     private Vector3 inputDir;
@@ -15,10 +15,13 @@ public partial class DemoCharacterController : CharacterBody3D
 
     private float G = 9.81f;
 
+    private ProximityDetector proximityDetector;
+
     public override void _Ready()
     {
         cameraAxis = GetNode<Node3D>("CameraAxis");
         camera = GetNode<Camera3D>("CameraAxis/Camera3D");
+        proximityDetector = GetNode<ProximityDetector>("ProximityDetector");
 
         Input.MouseMode = Input.MouseModeEnum.Captured;
     }
@@ -95,7 +98,7 @@ public partial class DemoCharacterController : CharacterBody3D
                 Velocity = Velocity.Normalized() * Mathf.Clamp(Velocity.Length() - 3.0f * acceleration * dt, 0.0f, maxSpeed);
             }
 
-            if (Input.IsActionJustPressed("jump"))
+            if (Input.IsActionJustPressed("jump") && !proximityDetector.SelectionExists)
             {
                 Velocity += Vector3.Up * jumpImpulse;
             }

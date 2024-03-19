@@ -26,7 +26,7 @@ LevelManager="*res://Demo/Prefab/LevelManager.tscn"
 
 [dotnet]
 
-project/assembly_name="UberGodotGameJamKit"
+project/assembly_name="GodotBlenderRPGFramework"
 
 [editor_plugins]
 

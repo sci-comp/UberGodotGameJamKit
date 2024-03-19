@@ -28,16 +28,16 @@ far = 1000.0
 [node name="Feet" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
 
-[node name="Proximity" type="Area3D" parent="."]
+[node name="ProximityDetector" type="Area3D" parent="."]
 collision_layer = 8
 collision_mask = 48
 script = ExtResource("2_t146w")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Proximity"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityDetector"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 shape = SubResource("SphereShape3D_o21qe")
 
-[node name="Title" type="Label" parent="Proximity"]
+[node name="Title" type="Label" parent="ProximityDetector"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -51,7 +51,7 @@ text = "Title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Details" type="Label" parent="Proximity"]
+[node name="Details" type="Label" parent="ProximityDetector"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
