@@ -1,11 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckjlrtqfrkd55"]
+[gd_scene load_steps=12 format=3 uid="uid://ckjlrtqfrkd55"]
 
 [ext_resource type="Script" path="res://Demo/Script/DemoCharacterController.cs" id="1_f5qgk"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/ProximityDetector.cs" id="2_t146w"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Compass/Compass.cs" id="2_w40du"]
+[ext_resource type="Texture2D" uid="uid://huao3butpx4q" path="res://addons/StandardAssets/Texture/Common/T_Solid_Black.png" id="3_mowg4"]
+[ext_resource type="Texture2D" uid="uid://crx4465wwlwh3" path="res://addons/StandardAssets/Texture/UI/keyboard/kb_n.png" id="4_p4gdq"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.35
 height = 1.8
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2k8bn"]
+load_path = "res://.godot/imported/kb_e.png-408c50e3b11938ea1d82e220d0f75719.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhv76"]
+load_path = "res://.godot/imported/kb_s.png-3739c4e4094bfc372b0adc6fdab1c20a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b2w4x"]
+load_path = "res://.godot/imported/kb_w.png-7c6d96b600333b3e28a956804eed9841.ctex"
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_24828"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_o21qe"]
 
@@ -24,6 +38,65 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.941491, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraAxis"]
 far = 1000.0
+script = ExtResource("2_w40du")
+
+[node name="Compass" type="Control" parent="CameraAxis/Camera3D"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 16.0
+offset_bottom = 48.0
+grow_horizontal = 0
+
+[node name="LineContainer" type="TextureRect" parent="CameraAxis/Camera3D/Compass"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mowg4")
+expand_mode = 2
+
+[node name="NorthIndicator" type="TextureRect" parent="CameraAxis/Camera3D/Compass/LineContainer"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("4_p4gdq")
+stretch_mode = 4
+
+[node name="EastIndicator" type="TextureRect" parent="CameraAxis/Camera3D/Compass/LineContainer"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = SubResource("CompressedTexture2D_2k8bn")
+stretch_mode = 4
+
+[node name="SouthIndicator" type="TextureRect" parent="CameraAxis/Camera3D/Compass/LineContainer"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = SubResource("CompressedTexture2D_hhv76")
+stretch_mode = 4
+
+[node name="WestIndicator" type="TextureRect" parent="CameraAxis/Camera3D/Compass/LineContainer"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = SubResource("CompressedTexture2D_b2w4x")
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="CameraAxis/Camera3D/Compass/LineContainer"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = -4.0
+offset_right = 154.0
+offset_bottom = 37.0
+texture = SubResource("CanvasTexture_24828")
 
 [node name="Feet" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)

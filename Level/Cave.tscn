@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://btl6rhjf4mykn"]
+[gd_scene load_steps=9 format=3 uid="uid://btl6rhjf4mykn"]
 
+[ext_resource type="Environment" uid="uid://dwie2bscwqilh" path="res://Demo/demo_environment_cave.tres" id="1_5mu74"]
 [ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_k7wlx"]
 [ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Prefab/Rocks/PF_Rock_Plate.glb" id="2_i2c66"]
 [ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Demo/Prefab/Rocks/PF_Rock_Cave.glb" id="3_y30aa"]
@@ -9,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://c5gec85a0kuek" path="res://Demo/Prefab/Rocks/PF_Rock_Overhang.glb" id="7_rdjie"]
 
 [node name="Cave" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_5mu74")
 
 [node name="Trigger" type="Node" parent="."]
 
@@ -23,6 +27,12 @@ transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 
 
 [node name="SP_Cave" type="Node3D" parent="Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.967, 4.26007, -13.5516)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1184, 2.92989, 10.7818)
+light_color = Color(0.639216, 0.74902, 0.878431, 1)
+light_energy = 0.3
+omni_range = 8.0
 
 [node name="Geometry" type="Node" parent="."]
 
@@ -74,7 +84,7 @@ transform = Transform3D(-0.489008, 0, 2.96994, 0, 3.00993, 0, -2.96994, 0, -0.48
 [node name="Light" type="Node" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light"]
-transform = Transform3D(0.999296, -0.0309913, 0.0211373, 0.00661789, 0.700266, 0.713851, -0.0369249, -0.713209, 0.699978, 7.03028, 36.2807, 17.8168)
+transform = Transform3D(0.997838, 0.0420501, -0.0505005, 0.00661789, 0.700266, 0.713851, 0.0653814, -0.712642, 0.698474, 16.0116, 10.1786, 2.54847)
 light_energy = 16.0
 shadow_enabled = true
 spot_range = 77.7767

@@ -6,8 +6,8 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_idgt8")
-shader_parameter/TopColor = Color(0.67451, 0.603922, 0.454902, 1)
-shader_parameter/BottomColor = Color(0.431373, 0.427451, 0.376471, 1)
+shader_parameter/TopColor = Color(0.262745, 0.392157, 0.443137, 1)
+shader_parameter/BottomColor = Color(0.45098, 0.458824, 0.329412, 1)
 shader_parameter/FresnelColor = Color(0.58, 0.65, 0.33, 1)
 shader_parameter/WindScale = 1.0
 shader_parameter/WindStrength = 1.0
@@ -18,7 +18,7 @@ shader_parameter/ColorRamp = 0.3
 shader_parameter/FresnelStrength = 0.5
 shader_parameter/FresnelBlend = 1.0
 shader_parameter/DeactivateGlobalVariation = false
-shader_parameter/backlight = Color(0, 0, 0, 1)
+shader_parameter/backlight = Color(0.160784, 0.235294, 0.235294, 1)
 shader_parameter/WiggleFrequency = 3.0
 shader_parameter/WiggleStrength = 0.1
 shader_parameter/WiggleSpeed = 1.0
