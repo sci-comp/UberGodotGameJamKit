@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://blxngopptepmp"
-path="res://.godot/imported/PF_Rock_Cave.glb-abf96cc1b401e001b8b2067ce7c31bb9.scn"
+uid="uid://c5gec85a0kuek"
+path="res://.godot/imported/PF_Rock_Overhang.glb-e0e46a8f41990cebf49b26e055362122.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Rocks/PF_Rock_Cave.glb"
-dest_files=["res://.godot/imported/PF_Rock_Cave.glb-abf96cc1b401e001b8b2067ce7c31bb9.scn"]
+source_file="res://Demo/Prefab/Stone/PF_Rock_Overhang.glb"
+dest_files=["res://.godot/imported/PF_Rock_Overhang.glb-e0e46a8f41990cebf49b26e055362122.scn"]
 
 [params]
 

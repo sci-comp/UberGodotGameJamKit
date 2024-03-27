@@ -30,7 +30,7 @@ project/assembly_name="GodotBlenderRPGFramework"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
+enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons/SceneBuilder/plugin.cfg")
 
 [file_customization]
 

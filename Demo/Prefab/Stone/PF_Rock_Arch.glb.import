@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcdixo0uw7igd"
-path="res://.godot/imported/PF_Rock_Boulder.glb-873760a0a0e7c5ecb6662cc29cfcdb69.scn"
+uid="uid://clrroqgutxg5x"
+path="res://.godot/imported/PF_Rock_Arch.glb-8631c80074e0c5418548aa5ce1f72828.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Rocks/PF_Rock_Boulder.glb"
-dest_files=["res://.godot/imported/PF_Rock_Boulder.glb-873760a0a0e7c5ecb6662cc29cfcdb69.scn"]
+source_file="res://Demo/Prefab/Stone/PF_Rock_Arch.glb"
+dest_files=["res://.godot/imported/PF_Rock_Arch.glb-8631c80074e0c5418548aa5ce1f72828.scn"]
 
 [params]
 

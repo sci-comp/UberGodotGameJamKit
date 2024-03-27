@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5dhrk8y5kro2"
-path="res://.godot/imported/PF_Rock_Riser_Tall.glb-cc2ee37764dd19428d49894f5ac9d5b7.scn"
+uid="uid://dcf27axl81pxk"
+path="res://.godot/imported/PF_Rock_Riser_Henge.glb-ea36db1e916a77900c74af050fd06a7e.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Rocks/PF_Rock_Riser_Tall.glb"
-dest_files=["res://.godot/imported/PF_Rock_Riser_Tall.glb-cc2ee37764dd19428d49894f5ac9d5b7.scn"]
+source_file="res://Demo/Prefab/Stone/PF_Rock_Riser_Henge.glb"
+dest_files=["res://.godot/imported/PF_Rock_Riser_Henge.glb-ea36db1e916a77900c74af050fd06a7e.scn"]
 
 [params]
 

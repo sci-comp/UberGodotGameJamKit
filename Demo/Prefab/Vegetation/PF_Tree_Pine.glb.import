@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bi1fhm5hbeg7o"
+uid="uid://c5d5e2op3g71b"
 path="res://.godot/imported/PF_Tree_Pine.glb-9fb102fa91c0476ac58cda1670b3902b.scn"
 
 [deps]
@@ -28,7 +28,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
-import_script/path=""
+import_script/path="res://addons/EditorToolbox/Import/glb_post_import.gd"
 _subresources={}
-gltf/naming_version=0
+gltf/naming_version=1
 gltf/embedded_image_handling=1

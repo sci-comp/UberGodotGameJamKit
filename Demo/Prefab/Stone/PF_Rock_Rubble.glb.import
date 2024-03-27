@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bh31t7rauktqm"
-path="res://.godot/imported/PF_Rock_Rubble.glb-fe9d89b14a76c3b34167dee13f720863.scn"
+path="res://.godot/imported/PF_Rock_Rubble.glb-ba4a48d656437a541c2675ad12498ed6.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Rocks/PF_Rock_Rubble.glb"
-dest_files=["res://.godot/imported/PF_Rock_Rubble.glb-fe9d89b14a76c3b34167dee13f720863.scn"]
+source_file="res://Demo/Prefab/Stone/PF_Rock_Rubble.glb"
+dest_files=["res://.godot/imported/PF_Rock_Rubble.glb-ba4a48d656437a541c2675ad12498ed6.scn"]
 
 [params]
 

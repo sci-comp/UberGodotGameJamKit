@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8h3n1lu0cty5"
-path="res://.godot/imported/PF_Rock_Riser_Slant.glb-5ad9a9b461d90bb3cf3801d6c93b44df.scn"
+uid="uid://rva731ydt5wo"
+path="res://.godot/imported/PF_Rock_Plate.glb-29763dd5c0672e4baf5b06b23dd5b8ac.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Rocks/PF_Rock_Riser_Slant.glb"
-dest_files=["res://.godot/imported/PF_Rock_Riser_Slant.glb-5ad9a9b461d90bb3cf3801d6c93b44df.scn"]
+source_file="res://Demo/Prefab/Stone/PF_Rock_Plate.glb"
+dest_files=["res://.godot/imported/PF_Rock_Plate.glb-29763dd5c0672e4baf5b06b23dd5b8ac.scn"]
 
 [params]
 
