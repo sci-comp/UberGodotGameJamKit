@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://y0wbbfugjd8s"]
+[gd_scene load_steps=63 format=3 uid="uid://y0wbbfugjd8s"]
 
 [ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_8qcsf"]
 [ext_resource type="Environment" uid="uid://e6ygi335shhf" path="res://Demo/demo_environment_fog.tres" id="2_07a3g"]
@@ -18,12 +18,15 @@
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/GatewayHub.cs" id="16_va1ck"]
 [ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="17_qircf"]
 [ext_resource type="PackedScene" uid="uid://cmlnek1qdbjmq" path="res://Demo/Prefab/Platform/PF_Demo_Gateway_Platform.tscn" id="19_0wj8r"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/ThereAndBack.cs" id="20_saexe"]
+[ext_resource type="PackedScene" uid="uid://fbtwdx1e3358" path="res://Demo/VFX/vfx_confetti.tscn" id="20_tggve"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/OutOfBounds.cs" id="21_6dln4"]
 [ext_resource type="PackedScene" uid="uid://bxep3pm4ggp5a" path="res://Demo/Prefab/PF_Demo_Lever.tscn" id="21_6go27"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Compass/PointOfInterest.cs" id="22_f2wgd"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Particle/PlayParticlesOnEnter.cs" id="22_agvoy"]
 [ext_resource type="PackedScene" uid="uid://bn2jitchybu3e" path="res://Demo/Prefab/Interactable/PF_Sign_Post.tscn" id="22_pitnc"]
 [ext_resource type="PhysicsMaterial" uid="uid://d3l23g4fpbanh" path="res://addons/StandardAssets/PhysicsMaterial/phys_stone.tres" id="23_j6ebb"]
-[ext_resource type="Texture2D" uid="uid://tpjhl65if4bd" path="res://addons/StandardAssets/Texture/UI/keyboard/kb_slash.png" id="23_xv7xk"]
+[ext_resource type="PackedScene" uid="uid://h35r37v43e2p" path="res://addons/StandardAssets/Prefab/PF_POI.tscn" id="23_p1cgf"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/PlatformLeverOverride.cs" id="27_cprpn"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_fdrny"]
 resource_local_to_scene = true
@@ -189,12 +192,10 @@ buffer = PackedFloat32Array(0.137845, 0.111473, -1.40489, 125.652, 0.00155592, 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_mbon0"]
 size = Vector3(400, 40, 400)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_gxuhx"]
-radius = 0.6
+[sub_resource type="BoxMesh" id="BoxMesh_k8t1o"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_vfh44"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_quihk"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1nno"]
+size = Vector3(2, 0.5, 3)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hmhub"]
 _surfaces = [{
@@ -231,10 +232,35 @@ shadow_mesh = SubResource("ArrayMesh_hmhub")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6ho4e"]
 data = PackedVector3Array(-2.44739, 6.92981, 0.713661, -2.54549, 10.7111, 0.997611, -2.18053, 9.13332, 1.43258, -2.37299, 3.19002, 0.953281, -2.36016, 4.46286, -1.20436, -1.93426, 5.11386, 1.50674, -2.36016, 4.46286, -1.20436, -2.44739, 6.92981, 0.713661, -1.93426, 5.11386, 1.50674, -2.48544, -0.495119, -0.395718, -2.51947, 1.21032, -1.49256, -2.69776, -0.133046, 1.47506, -2.51947, 1.21032, -1.49256, -2.42307, 2.97163, -1.54579, -2.37299, 3.19002, 0.953281, -2.19292, 6.68331, -1.60764, -2.75559, 10.8807, -1.42534, -2.44739, 6.92981, 0.713661, -2.42307, 2.97163, -1.54579, -2.51947, 1.21032, -1.49256, -0.571464, 1.04954, -1.78311, -2.42307, 2.97163, -1.54579, -2.36016, 4.46286, -1.20436, -2.37299, 3.19002, 0.953281, -0.0149412, 4.10324, -1.8481, -2.36016, 4.46286, -1.20436, -2.42307, 2.97163, -1.54579, -2.19292, 6.68331, -1.60764, -2.44739, 6.92981, 0.713661, -2.36016, 4.46286, -1.20436, -2.75559, 10.8807, -1.42534, -1.21513, 10.9458, -1.49189, -0.538764, 10.8747, 1.12036, 1.8895, -0.401022, 1.39681, -2.48544, -0.495119, -0.395718, -2.69776, -0.133046, 1.47506, -1.17004, 1.5202, 1.72016, 2.04694, 1.48249, 1.67242, 1.8895, -0.401022, 1.39681, 1.28869, 4.50598, 1.52868, 2.04694, 1.48249, 1.67242, -0.645061, 3.19491, 1.7383, 1.2657, 5.93769, 1.53512, 1.28869, 4.50598, 1.52868, -1.93426, 5.11386, 1.50674, -0.565049, 7.26063, 1.60335, 2.23752, 7.51639, 1.44746, 1.2657, 5.93769, 1.53512, 1.57845, 10.5394, -1.84866, 1.30339, 10.4138, 1.31179, -0.538764, 10.8747, 1.12036, 2.48665, 3.19805, 1.08543, 2.92494, 0.0703357, 1.4806, 2.04694, 1.48249, 1.67242, 2.52879, 5.14476, 0.644143, 1.2657, 5.93769, 1.53512, 2.23752, 7.51639, 1.44746, 2.8157, -0.386706, -0.998376, 1.26463, -0.334683, -1.06023, 1.8895, -0.401022, 1.39681, -0.571464, 1.04954, -1.78311, -1.59006, -0.348823, -1.16736, 1.26463, -0.334683, -1.06023, 1.87462, 5.00405, -1.82711, 0.183842, 6.20235, -1.85733, -0.0149412, 4.10324, -1.8481, 0.183842, 6.20235, -1.85733, 1.87462, 5.00405, -1.82711, 2.5279, 6.03825, -1.42354, -1.21513, 10.9458, -1.49189, -1.35582, 9.37842, -1.83981, 1.57845, 10.5394, -1.84866, 1.57845, 10.5394, -1.84866, 2.94391, 10.2466, -1.6855, 3.05449, 10.4386, 0.320117, 1.22133, 2.19092, -1.87222, 1.26463, -0.334683, -1.06023, 2.79904, 0.415125, -1.45327, 2.50616, 3.77171, -1.34177, 2.79904, 0.415125, -1.45327, 2.48665, 3.19805, 1.08543, 2.5279, 6.03825, -1.42354, 2.52879, 5.14476, 0.644143, 2.83886, 6.89507, 0.766332, 3.03595, 8.9858, -1.53426, 2.5279, 6.03825, -1.42354, 3.08362, 8.89223, 1.08163, 3.05449, 10.4386, 0.320117, 3.03595, 8.9858, -1.53426, 3.08362, 8.89223, 1.08163, -2.69776, -0.133046, 1.47506, -1.17004, 1.5202, 1.72016, 1.8895, -0.401022, 1.39681, -2.37299, 3.19002, 0.953281, -0.645061, 3.19491, 1.7383, -1.17004, 1.5202, 1.72016, -2.44739, 6.92981, 0.713661, -2.18053, 9.13332, 1.43258, -0.565049, 7.26063, 1.60335, -2.54549, 10.7111, 0.997611, -0.538764, 10.8747, 1.12036, -2.18053, 9.13332, 1.43258, -2.44739, 6.92981, 0.713661, -2.75559, 10.8807, -1.42534, -2.54549, 10.7111, 0.997611, -0.571464, 1.04954, -1.78311, -2.51947, 1.21032, -1.49256, -1.59006, -0.348823, -1.16736, -0.0149412, 4.10324, -1.8481, -2.19292, 6.68331, -1.60764, -2.36016, 4.46286, -1.20436, -1.35582, 9.37842, -1.83981, -2.19292, 6.68331, -1.60764, 0.595844, 8.33026, -1.92987, -1.21513, 10.9458, -1.49189, -2.75559, 10.8807, -1.42534, -1.35582, 9.37842, -1.83981, -2.18053, 9.13332, 1.43258, 1.30339, 10.4138, 1.31179, 2.23752, 7.51639, 1.44746, 1.57845, 10.5394, -1.84866, 3.05449, 10.4386, 0.320117, 1.30339, 10.4138, 1.31179, 3.08362, 8.89223, 1.08163, 2.83886, 6.89507, 0.766332, 2.23752, 7.51639, 1.44746, 1.26463, -0.334683, -1.06023, -2.48544, -0.495119, -0.395718, 1.8895, -0.401022, 1.39681, 2.79904, 0.415125, -1.45327, 1.26463, -0.334683, -1.06023, 2.8157, -0.386706, -0.998376, 1.22133, 2.19092, -1.87222, -0.0149412, 4.10324, -1.8481, -0.571464, 1.04954, -1.78311, 2.50616, 3.77171, -1.34177, -0.0149412, 4.10324, -1.8481, 1.22133, 2.19092, -1.87222, 1.87462, 5.00405, -1.82711, -0.0149412, 4.10324, -1.8481, 2.50616, 3.77171, -1.34177, 2.04177, 8.04082, -1.88006, 0.183842, 6.20235, -1.85733, 2.5279, 6.03825, -1.42354, 1.57845, 10.5394, -1.84866, -1.35582, 9.37842, -1.83981, 0.595844, 8.33026, -1.92987, 2.94391, 10.2466, -1.6855, 1.57845, 10.5394, -1.84866, 2.04177, 8.04082, -1.88006, 2.79904, 0.415125, -1.45327, 2.92494, 0.0703357, 1.4806, 2.48665, 3.19805, 1.08543, 2.5279, 6.03825, -1.42354, 2.83886, 6.89507, 0.766332, 3.08362, 8.89223, 1.08163, 2.94391, 10.2466, -1.6855, 2.04177, 8.04082, -1.88006, 3.03595, 8.9858, -1.53426, 2.94391, 10.2466, -1.6855, 3.03595, 8.9858, -1.53426, 3.05449, 10.4386, 0.320117, -2.37299, 3.19002, 0.953281, -1.17004, 1.5202, 1.72016, -2.69776, -0.133046, 1.47506, -1.93426, 5.11386, 1.50674, -0.645061, 3.19491, 1.7383, -2.37299, 3.19002, 0.953281, -0.565049, 7.26063, 1.60335, -1.93426, 5.11386, 1.50674, -2.44739, 6.92981, 0.713661, -2.51947, 1.21032, -1.49256, -2.37299, 3.19002, 0.953281, -2.69776, -0.133046, 1.47506, -2.51947, 1.21032, -1.49256, -2.48544, -0.495119, -0.395718, -1.59006, -0.348823, -1.16736, -2.42307, 2.97163, -1.54579, -0.571464, 1.04954, -1.78311, -0.0149412, 4.10324, -1.8481, -2.19292, 6.68331, -1.60764, -0.0149412, 4.10324, -1.8481, 0.183842, 6.20235, -1.85733, -2.19292, 6.68331, -1.60764, 0.183842, 6.20235, -1.85733, 0.595844, 8.33026, -1.92987, -2.75559, 10.8807, -1.42534, -2.19292, 6.68331, -1.60764, -1.35582, 9.37842, -1.83981, -2.75559, 10.8807, -1.42534, -0.538764, 10.8747, 1.12036, -2.54549, 10.7111, 0.997611, 2.8157, -0.386706, -0.998376, 1.8895, -0.401022, 1.39681, 2.92494, 0.0703357, 1.4806, -0.645061, 3.19491, 1.7383, 2.04694, 1.48249, 1.67242, -1.17004, 1.5202, 1.72016, 1.28869, 4.50598, 1.52868, -0.645061, 3.19491, 1.7383, -1.93426, 5.11386, 1.50674, 1.28869, 4.50598, 1.52868, 2.48665, 3.19805, 1.08543, 2.04694, 1.48249, 1.67242, 2.48665, 3.19805, 1.08543, 1.28869, 4.50598, 1.52868, 2.52879, 5.14476, 0.644143, -0.565049, 7.26063, 1.60335, 1.2657, 5.93769, 1.53512, -1.93426, 5.11386, 1.50674, 2.52879, 5.14476, 0.644143, 1.28869, 4.50598, 1.52868, 1.2657, 5.93769, 1.53512, 2.23752, 7.51639, 1.44746, -0.565049, 7.26063, 1.60335, -2.18053, 9.13332, 1.43258, -0.538764, 10.8747, 1.12036, 1.30339, 10.4138, 1.31179, -2.18053, 9.13332, 1.43258, 2.92494, 0.0703357, 1.4806, 1.8895, -0.401022, 1.39681, 2.04694, 1.48249, 1.67242, 2.52879, 5.14476, 0.644143, 2.23752, 7.51639, 1.44746, 2.83886, 6.89507, 0.766332, 1.30339, 10.4138, 1.31179, 3.08362, 8.89223, 1.08163, 2.23752, 7.51639, 1.44746, 3.05449, 10.4386, 0.320117, 3.08362, 8.89223, 1.08163, 1.30339, 10.4138, 1.31179, -1.59006, -0.348823, -1.16736, -2.48544, -0.495119, -0.395718, 1.26463, -0.334683, -1.06023, -0.571464, 1.04954, -1.78311, 1.26463, -0.334683, -1.06023, 1.22133, 2.19092, -1.87222, 2.50616, 3.77171, -1.34177, 2.48665, 3.19805, 1.08543, 2.52879, 5.14476, 0.644143, 1.87462, 5.00405, -1.82711, 2.50616, 3.77171, -1.34177, 2.5279, 6.03825, -1.42354, 0.595844, 8.33026, -1.92987, 0.183842, 6.20235, -1.85733, 2.04177, 8.04082, -1.88006, 2.50616, 3.77171, -1.34177, 2.52879, 5.14476, 0.644143, 2.5279, 6.03825, -1.42354, 1.57845, 10.5394, -1.84866, 0.595844, 8.33026, -1.92987, 2.04177, 8.04082, -1.88006, -1.21513, 10.9458, -1.49189, 1.57845, 10.5394, -1.84866, -0.538764, 10.8747, 1.12036, 2.8157, -0.386706, -0.998376, 2.92494, 0.0703357, 1.4806, 2.79904, 0.415125, -1.45327, 1.22133, 2.19092, -1.87222, 2.79904, 0.415125, -1.45327, 2.50616, 3.77171, -1.34177, 3.03595, 8.9858, -1.53426, 2.04177, 8.04082, -1.88006, 2.5279, 6.03825, -1.42354)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_gqtt8"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_tfabf"]
 radius = 3.0
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_gxuhx"]
+radius = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_vfh44"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_quihk"]
+size = Vector3(2, 0.5, 3)
+
+[sub_resource type="Curve3D" id="Curve3D_o1edb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 16.2601, 1.52834, 4.41692, -1.71916, 1.71913, -4.47738, 9.33609, -0.539816, -7.99098, -9.33609, 0.539816, 7.99098, -5.70934, 11.4064, 12.0257, -3.96401, -0.296995, -11.8314, 0, 0, 0, -16.9342, 5.94761, 32.2757),
+"tilts": PackedFloat32Array(0, 1.585, 1.485)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_hbo8a"]
+_data = {
+"points": PackedVector3Array(1.66776, 1.68422, -8.10208, -0.527908, 0.0228405, -4.7021, 0, 0, 0, 1.668, 0.924, -8.102, -0.527908, 0.0228405, -4.7021, 13.961, -4.981, -0.347),
+"tilts": PackedFloat32Array(0, -0.805)
+}
+point_count = 2
+
 [node name="Island" type="Node3D"]
+
+[node name="SP_Island" type="Node3D" parent="." groups=["spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7689, 7.10749, 16.9202)
 
 [node name="Environment" type="Node" parent="."]
 
@@ -347,6 +373,9 @@ transform = Transform3D(0.40178, 0, -0.0475254, 0, 0.404581, 0, 0.0475254, 0, 0.
 
 [node name="PF_Rock_Riser_Henge-n4" parent="Environment/Cliff" instance=ExtResource("8_l0s28")]
 transform = Transform3D(0.932251, 0, -0.181465, 0, 0.949748, 0, 0.181465, 0, 0.932251, 113.676, 4.33411, 24.7212)
+
+[node name="PF_Rock_Riser_Henge-n9" parent="Environment/Cliff" instance=ExtResource("8_l0s28")]
+transform = Transform3D(0.362852, 0.378669, 0.197592, 0.0523405, 0.304157, -0.360172, -0.483025, 0.317418, 0.109404, 115.292, 14.0544, 25.2084)
 
 [node name="Vegetation" type="Node" parent="Environment"]
 
@@ -486,39 +515,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.267131, 5.0941, 24.6226)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.128, 0)
 shape = SubResource("BoxShape3D_mbon0")
 
-[node name="Interact" type="Node" parent="."]
-
-[node name="PF_Sign_Post" parent="Interact" instance=ExtResource("22_pitnc")]
-transform = Transform3D(-0.421981, 0, -0.0792765, 0, 0.429363, 0, 0.0792765, 0, -0.421981, 0.588136, 2.17383, -1.02462)
-
-[node name="Gateway_01" type="Node3D" parent="Interact"]
-script = ExtResource("16_va1ck")
-
-[node name="GatewayA" type="Area3D" parent="Interact/Gateway_01"]
-transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 13.7933, 4.8519, 32.2021)
-collision_mask = 4
-script = ExtResource("16_7pq6p")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Gateway_01/GatewayA"]
-shape = SubResource("SphereShape3D_gxuhx")
-
-[node name="GatewayB" type="Area3D" parent="Interact/Gateway_01"]
-transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 120.434, 8.52962, 71.7538)
-collision_mask = 4
-script = ExtResource("16_7pq6p")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Gateway_01/GatewayB"]
-shape = SubResource("SphereShape3D_gxuhx")
-
-[node name="PF_Demo_Gateway_Platform-n1" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
-transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 14.3375, 2.93682, 31.1028)
-
-[node name="PF_Demo_Gateway_Platform-n2" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
-transform = Transform3D(-0.885572, 0, -0.464502, 0, 1, 0, 0.464502, 0, -0.885572, 119.882, 6.5248, 70.665)
-
-[node name="PF_Demo_Lever-n1" parent="Interact" instance=ExtResource("21_6go27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36608, 3.23373, 23.5733)
-
 [node name="Level_Portal" type="Node" parent="."]
 
 [node name="PF_Portal_To_Cave" parent="Level_Portal" instance=ExtResource("1_8qcsf")]
@@ -526,9 +522,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.19786, 4.5803, -2.63822)
 collision_layer = 16
 collision_mask = 4
 LevelToLoad = "Cave"
-
-[node name="SP_Island" type="Node3D" parent="Level_Portal" groups=["spawnpoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0498, 8.49678, 15.255)
 
 [node name="SP_From_Cave" type="Node3D" parent="Level_Portal" groups=["spawnpoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09793, 6.841, 5.57644)
@@ -540,15 +533,21 @@ transform = Transform3D(0.486221, 0, 3.97589, 0, 1, 0, -2.9669, 0, 0.651576, 132
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Platforms/FloatingCube"]
 material_override = ExtResource("17_qircf")
-mesh = SubResource("BoxMesh_vfh44")
+mesh = SubResource("BoxMesh_k8t1o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/FloatingCube"]
-shape = SubResource("BoxShape3D_quihk")
+shape = SubResource("BoxShape3D_a1nno")
 
 [node name="PF_Demo_Periodic_Platform-n1" parent="Platforms" instance=ExtResource("15_jw1sv")]
 transform = Transform3D(3.00648, 0, 0, 0, 1, 0, 0, 0, 4.02893, 114.659, 7.81224, 84.8917)
 restDuration = 1.0
 moveDistance = Vector3(0, 4, 0)
+moveDuration = 5.0
+
+[node name="PF_Demo_Periodic_Platform-n8" parent="Platforms" instance=ExtResource("15_jw1sv")]
+transform = Transform3D(0.551138, 0, 3.96066, 0, 1, 0, -2.95553, 0, 0.73857, 110.979, 13.2899, 20.8504)
+restDuration = 2.0
+moveDistance = Vector3(0, 13, 0)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n6" parent="Platforms" instance=ExtResource("15_jw1sv")]
@@ -587,50 +586,117 @@ restDuration = 1.0
 moveDistance = Vector3(5, 1, 0)
 moveDuration = 5.0
 
-[node name="TestPoi" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.0233, 33.2306, 31.7606)
-collision_mask = 4
-script = ExtResource("22_f2wgd")
-IconTexture = ExtResource("23_xv7xk")
+[node name="Confetti" type="Node3D" parent="."]
 
-[node name="PF_Rock_Riser_Henge_POI_Test" type="Node3D" parent="TestPoi"]
-transform = Transform3D(-0.20109, -0.000153807, -0.496018, 7.54592e-05, -0.560945, 0.000122023, -0.380756, -2.99389e-05, 0.261963, -0.117378, 0.120192, -1.34004)
+[node name="PF_Rock_Riser_Henge_POI_Test" type="Node3D" parent="Confetti"]
+transform = Transform3D(-0.051165, -0.000153807, -0.122041, 1.91997e-05, -0.560945, 3.00226e-05, -0.096879, -2.99389e-05, 0.0644536, 72.4272, 33.8043, 31.3359)
 
-[node name="SM_Rock_Riser_Henge" type="MeshInstance3D" parent="TestPoi/PF_Rock_Riser_Henge_POI_Test"]
+[node name="SM_Rock_Riser_Henge" type="MeshInstance3D" parent="Confetti/PF_Rock_Riser_Henge_POI_Test"]
 mesh = SubResource("ArrayMesh_4l6sd")
 skeleton = NodePath("")
 
-[node name="SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="StaticBody3D" parent="TestPoi/PF_Rock_Riser_Henge_POI_Test"]
+[node name="SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="StaticBody3D" parent="Confetti/PF_Rock_Riser_Henge_POI_Test"]
 collision_layer = 1073741827
 physics_material_override = ExtResource("23_j6ebb")
 
-[node name="CS_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="CollisionShape3D" parent="TestPoi/PF_Rock_Riser_Henge_POI_Test/SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone"]
+[node name="CS_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="CollisionShape3D" parent="Confetti/PF_Rock_Riser_Henge_POI_Test/SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone"]
 shape = SubResource("ConcavePolygonShape3D_6ho4e")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TestPoi"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176842, -1.26745, -1.31846)
-shape = SubResource("SphereShape3D_gqtt8")
+[node name="poi" parent="Confetti" instance=ExtResource("23_p1cgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.4302, 32.837, 31.3154)
 
-[node name="TestPoi2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.116, 9.18599, 50.2121)
+[node name="vfx" type="Area3D" parent="Confetti"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.5237, 32.5773, 31.3513)
 collision_mask = 4
-script = ExtResource("22_f2wgd")
-IconTexture = ExtResource("23_xv7xk")
+script = ExtResource("22_agvoy")
 
-[node name="PF_Rock_Riser_Henge_POI_Test" type="Node3D" parent="TestPoi2"]
-transform = Transform3D(-0.20109, -0.000153807, -0.496018, 7.54592e-05, -0.560945, 0.000122023, -0.380756, -2.99389e-05, 0.261963, -0.117378, 0.120192, -1.34004)
+[node name="vfx_confetti" parent="Confetti/vfx" instance=ExtResource("20_tggve")]
+emitting = false
 
-[node name="SM_Rock_Riser_Henge" type="MeshInstance3D" parent="TestPoi2/PF_Rock_Riser_Henge_POI_Test"]
-mesh = SubResource("ArrayMesh_4l6sd")
-skeleton = NodePath("")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confetti/vfx"]
+shape = SubResource("SphereShape3D_tfabf")
 
-[node name="SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="StaticBody3D" parent="TestPoi2/PF_Rock_Riser_Henge_POI_Test"]
-collision_layer = 1073741827
-physics_material_override = ExtResource("23_j6ebb")
+[node name="Interact" type="Node" parent="."]
 
-[node name="CS_SM_Rock_Riser_Henge-gcc-stone-L2-stone" type="CollisionShape3D" parent="TestPoi2/PF_Rock_Riser_Henge_POI_Test/SB_SM_Rock_Riser_Henge-gcc-stone-L2-stone"]
-shape = SubResource("ConcavePolygonShape3D_6ho4e")
+[node name="PF_Sign_Post" parent="Interact" instance=ExtResource("22_pitnc")]
+transform = Transform3D(-0.421981, 0, -0.0792765, 0, 0.429363, 0, 0.0792765, 0, -0.421981, 0.588136, 2.17383, -1.02462)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TestPoi2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176842, -1.26745, -1.31846)
-shape = SubResource("SphereShape3D_gqtt8")
+[node name="Gateway_01" type="Node3D" parent="Interact"]
+script = ExtResource("16_va1ck")
+
+[node name="GatewayA" type="Area3D" parent="Interact/Gateway_01"]
+transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 13.7933, 4.8519, 32.2021)
+collision_mask = 4
+script = ExtResource("16_7pq6p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Gateway_01/GatewayA"]
+shape = SubResource("SphereShape3D_gxuhx")
+
+[node name="GatewayB" type="Area3D" parent="Interact/Gateway_01"]
+transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 120.434, 8.52962, 71.7538)
+collision_mask = 4
+script = ExtResource("16_7pq6p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/Gateway_01/GatewayB"]
+shape = SubResource("SphereShape3D_gxuhx")
+
+[node name="PF_Demo_Gateway_Platform-n1" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
+transform = Transform3D(-0.888897, 0, 0.458107, 0, 1, 0, -0.458107, 0, -0.888897, 14.3375, 2.93682, 31.1028)
+
+[node name="PF_Demo_Gateway_Platform-n2" parent="Interact/Gateway_01" instance=ExtResource("19_0wj8r")]
+transform = Transform3D(-0.885572, 0, -0.464502, 0, 1, 0, 0.464502, 0, -0.885572, 119.882, 6.5248, 70.665)
+
+[node name="PF_Demo_Lever-n1" parent="Interact" instance=ExtResource("21_6go27")]
+transform = Transform3D(0.900531, 0, 0.434791, 0, 1, 0, -0.434791, 0, 0.900531, 107, 21, 75)
+script = ExtResource("27_cprpn")
+
+[node name="ThereAndBackPlatform" type="AnimatableBody3D" parent="Interact/PF_Demo_Lever-n1"]
+transform = Transform3D(-0.655635, -0.0682062, -0.751976, 3.72519e-09, 0.995874, -0.0903356, 0.75504, -0.0592265, -0.652974, 38.0412, -3.85069, -34.9853)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/PF_Demo_Lever-n1/ThereAndBackPlatform"]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0, 0)
+material_override = ExtResource("17_qircf")
+mesh = SubResource("BoxMesh_vfh44")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/PF_Demo_Lever-n1/ThereAndBackPlatform"]
+shape = SubResource("BoxShape3D_quihk")
+
+[node name="Path3D" type="Path3D" parent="Interact/PF_Demo_Lever-n1"]
+transform = Transform3D(0.900531, 0, -0.434791, 0, 1, 0, 0.434791, 0, 0.900531, 37.6426, -5.56982, -30.2058)
+curve = SubResource("Curve3D_o1edb")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Interact/PF_Demo_Lever-n1/Path3D"]
+transform = Transform3D(-0.262135, -0.087173, -0.961086, 3.72519e-09, 0.995874, -0.0903356, 0.965002, -0.0236798, -0.261071, -1.71916, 1.71913, -4.47738)
+script = ExtResource("20_saexe")
+RestDuration = 4.0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Interact/PF_Demo_Lever-n1/Path3D/PathFollow3D"]
+remote_path = NodePath("../../../ThereAndBackPlatform")
+
+[node name="PF_Demo_Lever-n2" parent="Interact" instance=ExtResource("21_6go27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 27, 28)
+script = ExtResource("27_cprpn")
+
+[node name="ThereAndBackPlatform" type="AnimatableBody3D" parent="Interact/PF_Demo_Lever-n2"]
+transform = Transform3D(0.993751, 0.000538558, 0.111568, 0, 0.999982, -0.00482711, -0.111569, 0.00479696, 0.993742, -17.3055, 4.78431, -1.27305)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/PF_Demo_Lever-n2/ThereAndBackPlatform"]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0, 0)
+material_override = ExtResource("17_qircf")
+mesh = SubResource("BoxMesh_vfh44")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact/PF_Demo_Lever-n2/ThereAndBackPlatform"]
+shape = SubResource("BoxShape3D_quihk")
+
+[node name="Path3D" type="Path3D" parent="Interact/PF_Demo_Lever-n2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3055, 4.78431, -1.27305)
+curve = SubResource("Curve3D_hbo8a")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Interact/PF_Demo_Lever-n2/Path3D"]
+transform = Transform3D(0.993751, 0.000538558, 0.111568, 0, 0.999982, -0.00482711, -0.111569, 0.00479696, 0.993742, 0, 0, 0)
+script = ExtResource("20_saexe")
+RestDuration = 2.0
+MoveDuration = 7.0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Interact/PF_Demo_Lever-n2/Path3D/PathFollow3D"]
+remote_path = NodePath("../../../ThereAndBackPlatform")

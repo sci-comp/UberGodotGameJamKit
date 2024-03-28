@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bu3fd0p42gblx"]
+
+[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/cliff_old.gdshader" id="1_aqpee"]
+[ext_resource type="Texture2D" uid="uid://x2fb66fru55k" path="res://Demo/Texture/T_Demo_Grass.png" id="2_y1mue"]
+[ext_resource type="Texture2D" uid="uid://cp1nawjx5nvll" path="res://Demo/Texture/T_Demo_Grass_n.png" id="3_7b4ar"]
+[ext_resource type="Texture2D" uid="uid://cv6jkne4sodvu" path="res://Demo/Texture/T_Demo_Stone.png" id="4_h7jwl"]
+[ext_resource type="Texture2D" uid="uid://bjuetweqy3afl" path="res://Demo/Texture/T_Demo_Stone_n.png" id="5_qsd07"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_aqpee")
+shader_parameter/blend_smoothness = 0.2
+shader_parameter/threshold = 0.0
+shader_parameter/use_world_direction = true
+shader_parameter/world_direction = Vector3(0, 1, 0)
+shader_parameter/tex_scale = Vector2(1, 1)
+shader_parameter/tex_1_albedo = ExtResource("2_y1mue")
+shader_parameter/tex_1_normal = ExtResource("3_7b4ar")
+shader_parameter/tex_2_albedo = ExtResource("4_h7jwl")
+shader_parameter/tex_2_normal = ExtResource("5_qsd07")

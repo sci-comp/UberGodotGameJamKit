@@ -30,7 +30,7 @@ project/assembly_name="GodotBlenderRPGFramework"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg", "res://addons/SceneBuilder/plugin.cfg")
+enabled=PackedStringArray("res://addons/EditorToolbox/plugin.cfg")
 
 [file_customization]
 
@@ -38,6 +38,8 @@ folder_colors={
 "res://Demo/": "teal",
 "res://Demo/Material/": "orange",
 "res://Demo/Prefab/": "blue",
+"res://Demo/Texture/": "yellow",
+"res://Demo/VFX/": "pink",
 "res://Level/": "green",
 "res://Todo/": "red",
 "res://addons/StandardAssets/Material/": "orange",
