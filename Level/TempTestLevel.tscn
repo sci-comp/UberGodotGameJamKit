@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ofse63sbehg4"]
+
+[ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Prefab/Stone/PF_Rock_Plate.glb" id="1_6qyfx"]
+[ext_resource type="PackedScene" uid="uid://clrroqgutxg5x" path="res://Demo/Prefab/Stone/PF_Rock_Arch.glb" id="2_vko0l"]
+[ext_resource type="PackedScene" uid="uid://bh31t7rauktqm" path="res://Demo/Prefab/Stone/PF_Rock_Rubble.glb" id="3_4vrbl"]
+[ext_resource type="PackedScene" uid="uid://b8h3n1lu0cty5" path="res://Demo/Prefab/Stone/PF_Rock_Riser_Slant.glb" id="4_2webo"]
+
+[node name="TempTestLevel" type="Node3D"]
+
+[node name="PF_Rock_Plate-n1" parent="." instance=ExtResource("1_6qyfx")]
+transform = Transform3D(4.78188, 0, 0, 0, 1, 0, 0, 0, 3.40915, 0, 0, 0)
+
+[node name="SceneBuilderTemp" type="Node" parent="."]
+
+[node name="PF_Rock_Arch" parent="." instance=ExtResource("2_vko0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7845, 3.79569, 25.5222)
+
+[node name="PF_Rock_Rubble" parent="." instance=ExtResource("3_4vrbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0016, 3.7932, -29.7714)
+
+[node name="PF_Rock_Rubble-n2" parent="." instance=ExtResource("3_4vrbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6063, 3.59713, -8.06144)
+
+[node name="PF_Rock_Riser_Slant" parent="." instance=ExtResource("4_2webo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0708, 4.15092, -14.4585)
