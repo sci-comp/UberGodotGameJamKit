@@ -98,7 +98,7 @@ public partial class DemoCharacterController : CharacterBody3D
                 Velocity = Velocity.Normalized() * Mathf.Clamp(Velocity.Length() - 3.0f * acceleration * dt, 0.0f, maxSpeed);
             }
 
-            if (Input.IsActionJustPressed("jump") && !proximityDetector.SelectionExists)
+            if (Input.IsActionJustPressed("button_a") && !proximityDetector.SelectionExists)
             {
                 Velocity += Vector3.Up * jumpImpulse;
             }
