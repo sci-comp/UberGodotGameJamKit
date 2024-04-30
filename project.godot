@@ -28,10 +28,6 @@ LevelManager="*res://Demo/Prefab/LevelManager.tscn"
 
 project/assembly_name="GodotBlenderRPGFramework"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/SceneBuilder/plugin.cfg")
-
 [file_customization]
 
 folder_colors={

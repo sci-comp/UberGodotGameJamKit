@@ -666,7 +666,7 @@ transform = Transform3D(0.900531, 0, -0.434791, 0, 1, 0, 0.434791, 0, 0.900531, 
 curve = SubResource("Curve3D_o1edb")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Interact/PF_Demo_Lever-n1/Path3D"]
-transform = Transform3D(-0.262135, -0.0871731, -0.961086, 3.72519e-09, 0.995874, -0.0903356, 0.965002, -0.0236798, -0.261071, -1.71916, 1.71913, -4.47738)
+transform = Transform3D(-0.262135, -0.087173, -0.961086, 3.72519e-09, 0.995874, -0.0903356, 0.965002, -0.0236798, -0.261071, -1.71916, 1.71913, -4.47738)
 script = ExtResource("20_saexe")
 RestDuration = 4.0
 
