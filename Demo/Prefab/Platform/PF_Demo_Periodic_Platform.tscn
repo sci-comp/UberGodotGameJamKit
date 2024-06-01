@@ -4,8 +4,10 @@
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/PeriodicPlatform.cs" id="1_ygylb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hpc6v"]
+size = Vector3(3, 1, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5gxqj"]
+size = Vector3(3, 1, 4)
 
 [node name="PF_Demo_Periodic_Platform-n1" type="AnimatableBody3D"]
 transform = Transform3D(3.00648, 0, 0, 0, 1, 0, 0, 0, 4.02893, 0, 0, 0)

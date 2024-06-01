@@ -193,9 +193,10 @@ buffer = PackedFloat32Array(0.137845, 0.111473, -1.40489, 125.652, 0.00155592, 1
 size = Vector3(400, 40, 400)
 
 [sub_resource type="BoxMesh" id="BoxMesh_k8t1o"]
+size = Vector3(3, 1, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a1nno"]
-size = Vector3(2, 0.5, 3)
+size = Vector3(3, 1, 4)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hmhub"]
 _surfaces = [{
@@ -541,7 +542,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09793, 6.841, 5.57644)
 [node name="Platforms" type="Node3D" parent="."]
 
 [node name="FloatingCube" type="AnimatableBody3D" parent="Platforms"]
-transform = Transform3D(0.486221, 0, 3.97589, 0, 1, 0, -2.9669, 0, 0.651576, 132.721, 14.6156, 88.5727)
+transform = Transform3D(0.161724, 0, 0.986836, 0, 1, 0, -0.986836, 0, 0.161724, 132.721, 14.6156, 88.5727)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Platforms/FloatingCube"]
 material_override = ExtResource("17_qircf")
@@ -551,55 +552,55 @@ mesh = SubResource("BoxMesh_k8t1o")
 shape = SubResource("BoxShape3D_a1nno")
 
 [node name="PF_Demo_Periodic_Platform-n1" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(3.00648, 0, 0, 0, 1, 0, 0, 0, 4.02893, 114.659, 7.81224, 84.8917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.659, 7.81224, 84.8917)
 restDuration = 1.0
 moveDistance = Vector3(0, 4, 0)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n9" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(1.96858, 0, 3.04514, 0, 1, 0, -2.27236, 0, 2.63806, 96.8933, 12.0646, 79.089)
+transform = Transform3D(0.654779, 0, 0.755821, 0, 1, 0, -0.755821, 0, 0.654779, 96.8933, 12.0646, 79.089)
 restDuration = 1.0
 moveDistance = Vector3(0, 7, 0)
 moveDuration = 2.0
 
 [node name="PF_Demo_Periodic_Platform-n8" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(0.551138, 0, 3.96066, 0, 1, 0, -2.95553, 0, 0.73857, 110.979, 13.2899, 20.8504)
+transform = Transform3D(0.183317, 0, 0.983054, 0, 1, 0, -0.983054, 0, 0.183317, 110.979, 13.2899, 20.8504)
 restDuration = 2.0
 moveDistance = Vector3(0, 13, 0)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n6" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(0.969332, 0, -3.81378, 0, 1, 0, 2.84593, 0, 1.29899, 118.891, 19.0907, 81.1603)
+transform = Transform3D(0.322414, 0, -0.946599, 0, 1, 0, 0.946599, 0, 0.322414, 118.891, 19.0907, 81.1603)
 restDuration = 0.0
 moveDistance = Vector3(0, 4, 0)
 moveDuration = 2.0
 
 [node name="PF_Demo_Periodic_Platform-n7" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(2.7817, 0, -1.52854, 0, 1, 0, 1.14063, 0, 3.72771, 124.177, 13.6121, 76.8146)
+transform = Transform3D(0.925236, 0, -0.379391, 0, 1, 0, 0.379391, 0, 0.925236, 124.177, 13.6121, 76.8146)
 restDuration = 0.1
 moveDistance = Vector3(0, 4, 0)
 moveDuration = 3.0
 
 [node name="PF_Demo_Periodic_Platform-n2" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(2.80157, 0, 1.46194, 0, 1, 0, -1.09093, 0, 3.75433, 126.702, 10.6837, 81.3225)
+transform = Transform3D(0.931844, 0, 0.36286, 0, 1, 0, -0.36286, 0, 0.931844, 126.702, 10.6837, 81.3225)
 restDuration = 1.0
 moveDistance = Vector3(-6, -1, 0)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n3" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(2.968, 0, -0.642554, 0, 1, 0, 0.479488, 0, 3.97736, 131.317, 9.65019, 80.3897)
+transform = Transform3D(0.9872, 0, -0.159485, 0, 1, 0, 0.159485, 0, 0.9872, 131.317, 9.65019, 80.3897)
 restDuration = 1.0
 moveDistance = Vector3(0, 5, 2)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n4" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(2.968, 0, -0.642554, 0, 1, 0, 0.479488, 0, 3.97736, 135.182, 14.6156, 85.3184)
+transform = Transform3D(0.9872, 0, -0.159485, 0, 1, 0, 0.159485, 0, 0.9872, 135.182, 14.6156, 85.3184)
 restDuration = 1.0
 moveDistance = Vector3(0, 10, -20)
 moveDuration = 5.0
 
 [node name="PF_Demo_Periodic_Platform-n5" parent="Platforms" instance=ExtResource("15_jw1sv")]
-transform = Transform3D(2.54429, 0, -2.14645, 0, 1, 0, 1.60173, 0, 3.40955, 129.62, 23.4507, 58.5677)
+transform = Transform3D(0.846267, 0, -0.532758, 0, 1, 0, 0.532758, 0, 0.846267, 129.62, 23.4507, 58.5677)
 restDuration = 1.0
 moveDistance = Vector3(5, 1, 0)
 moveDuration = 5.0
@@ -669,7 +670,7 @@ transform = Transform3D(0.900531, 0, 0.434791, 0, 1, 0, -0.434791, 0, 0.900531, 
 script = ExtResource("27_cprpn")
 
 [node name="ThereAndBackPlatform" type="AnimatableBody3D" parent="Interact/PF_Demo_Lever-n1"]
-transform = Transform3D(-0.655635, -0.0682062, -0.751976, 3.72519e-09, 0.995874, -0.0903356, 0.755041, -0.0592265, -0.652974, 38.0412, -3.85069, -34.9853)
+transform = Transform3D(-0.655635, -0.0682062, -0.751976, 3.72519e-09, 0.995874, -0.0903356, 0.75504, -0.0592265, -0.652974, 38.0412, -3.85069, -34.9853)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Interact/PF_Demo_Lever-n1/ThereAndBackPlatform"]
 transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0, 0)

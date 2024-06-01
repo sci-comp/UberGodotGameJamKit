@@ -23,6 +23,7 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 [autoload]
 
 LevelManager="*res://Demo/Prefab/LevelManager.tscn"
+PlayerSpawner="*res://Demo/Prefab/PlayerSpawner.tscn"
 
 [dotnet]
 
