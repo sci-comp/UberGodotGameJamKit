@@ -24,10 +24,15 @@ buses/default_bus_layout="res://addons/StandardAssets/Default/default_bus_layout
 
 LevelManager="*res://Demo/Prefab/LevelManager.tscn"
 PlayerSpawner="*res://Demo/Prefab/PlayerSpawner.tscn"
+SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 
 [dotnet]
 
 project/assembly_name="GodotBlenderRPGFramework"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
 [file_customization]
 
@@ -40,7 +45,8 @@ folder_colors={
 "res://Level/": "green",
 "res://Todo/": "red",
 "res://addons/StandardAssets/Material/": "orange",
-"res://addons/StandardAssets/Prefab/": "blue"
+"res://addons/StandardAssets/Prefab/": "blue",
+"res://addons/StandardAssets/Texture/": "yellow"
 }
 
 [filesystem]
@@ -188,4 +194,40 @@ locale/translations_pot_files=PackedStringArray("res://Data/Dialogue/demo.dialog
 time_scale={
 "type": "float",
 "value": 1.0
+}
+sgt_player_position={
+"type": "vec3",
+"value": Vector3(1e+06, 1e+06, 1e+06)
+}
+sgt_player_mov={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+sgt_normal_displacement={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/normal.png"
+}
+sgt_motion_texture={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/motion.png"
+}
+sgt_wind_direction={
+"type": "vec3",
+"value": Vector3(1, 0, 0)
+}
+sgt_wind_movement={
+"type": "vec3",
+"value": Vector2(0, 0)
+}
+sgt_wind_strength={
+"type": "float",
+"value": 0.15
+}
+sgt_wind_turbulence={
+"type": "float",
+"value": 1.0
+}
+sgt_wind_pattern={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/wind_pattern.png"
 }

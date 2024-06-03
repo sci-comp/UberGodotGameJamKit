@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://qdvupwxcs1jy"]
 
 [ext_resource type="Shader" path="res://addons/StandardAssets/Shader/foliage.gdshader" id="1_idgt8"]
-[ext_resource type="Texture2D" uid="uid://cv0c0kscw7e3i" path="res://Demo/Material/T_Demo_Pine_Tex.png" id="2_tut1l"]
+[ext_resource type="Texture2D" uid="uid://k0um66nvcntx" path="res://Demo/Material/T_Demo_Grass_Tex.png" id="2_fd51w"]
 
 [sub_resource type="Gradient" id="Gradient_ri3qc"]
 offsets = PackedFloat32Array(0, 0.515385, 0.992308)
@@ -20,5 +20,5 @@ shader_parameter/wind_direction = Vector2(1, -0.5)
 shader_parameter/wind_speed = 1.0
 shader_parameter/wind_strength = 2.0
 shader_parameter/noise_scale = 20.0
-shader_parameter/texture_albedo = ExtResource("2_tut1l")
+shader_parameter/texture_albedo = ExtResource("2_fd51w")
 shader_parameter/texture_gradient = SubResource("GradientTexture1D_26fva")
