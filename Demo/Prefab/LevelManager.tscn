@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelManager.cs" id="1_1rch1"]
 [ext_resource type="Texture2D" uid="uid://7ypismovx1sv" path="res://addons/StandardAssets/Texture/Gradient/horizontal.png" id="2_m745a"]
-[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/Dissolve2d.gdshader" id="3_4lg3s"]
-[ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/StandardAssets/Shader/ShaderFade.tres" id="4_hjws5"]
+[ext_resource type="Shader" path="res://addons/StandardAssets/Shader/dissolve_2d.gdshader" id="3_4lg3s"]
+[ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/StandardAssets/Shader/dissolve_2d.tres" id="4_hjws5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mrsu"]
 shader = ExtResource("3_4lg3s")

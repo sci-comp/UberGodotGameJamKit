@@ -47,12 +47,6 @@ folder_colors={
 
 import/blender/enabled=false
 
-[importer_defaults]
-
-scene={
-"import_script/path": "res://addons/EditorToolbox/Import/glb_post_import.gd"
-}
-
 [input]
 
 camera_up={

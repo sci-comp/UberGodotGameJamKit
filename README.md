@@ -21,7 +21,7 @@ The StandardAssets repository is a submodule that aims to be a lightweight and r
 
 Simply type,
 
-`git clone https://github.com/sci-comp/GodotBlenderRPGFramework
+`git clone https://github.com/sci-comp/GodotBlenderRPGFramework`
 
 or use Github Desktop. By cloning, the [StandardAssets](https://github.com/sci-comp/StandardAssets) submodule will automatically be included.
 
