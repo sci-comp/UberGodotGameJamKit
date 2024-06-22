@@ -1,37 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxep3pm4ggp5a"]
+[gd_scene load_steps=6 format=3 uid="uid://ca6ks1tqilwmb"]
 
 [ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="1_d7msg"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Platform/PlatformLever.cs" id="2_rp4ys"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Lever.cs" id="2_3op0b"]
 [ext_resource type="Material" uid="uid://c8tluwc4qvph4" path="res://Demo/Material/MI_Item_Highlighter.tres" id="3_qx5kh"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_hpc6v"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_5gxqj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cfekh"]
 size = Vector3(0.1, 0.8, 0.1)
 
-[node name="PF_Demo_Lever-n1" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_hpc6v"]
 
-[node name="Base" type="StaticBody3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Base"]
-material_override = ExtResource("1_d7msg")
-mesh = SubResource("BoxMesh_hpc6v")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Base"]
-shape = SubResource("BoxShape3D_5gxqj")
-
-[node name="Lever" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.862752, 0.505627, 0, -0.505627, 0.862752, 0, 0.499409, 0)
+[node name="Lever" type="AnimatableBody3D"]
+transform = Transform3D(1, -1.49012e-08, 2.98023e-08, 0, 0.862752, 0.505627, -2.98023e-08, -0.505627, 0.862752, 0, 0.499409, 0)
 collision_layer = 17
-script = ExtResource("2_rp4ys")
+script = ExtResource("2_3op0b")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lever"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_cfekh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lever"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.8, 0, 0, 0, 0.1, 0, 0, 0)
 material_override = ExtResource("1_d7msg")
 material_overlay = ExtResource("3_qx5kh")

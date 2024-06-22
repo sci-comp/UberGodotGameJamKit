@@ -394,6 +394,7 @@ radial_segments = 4
 rings = 4
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
+collision_layer = 4
 script = ExtResource("1_0t4e8")
 default_reticle = "res://addons/fpc/reticles/reticle_1.tscn"
 HEAD = NodePath("Head")
@@ -472,6 +473,7 @@ script = ExtResource("3_v3ckk")
 collision_layer = 8
 collision_mask = 48
 script = ExtResource("4_5a40d")
+InteractButton = "interact"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityDetector"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)

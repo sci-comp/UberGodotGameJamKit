@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btl6rhjf4mykn"]
+[gd_scene load_steps=20 format=3 uid="uid://btl6rhjf4mykn"]
 
 [ext_resource type="Environment" uid="uid://dwie2bscwqilh" path="res://Demo/demo_environment_cave.tres" id="1_5mu74"]
 [ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/PF_Level_Portal.tscn" id="1_k7wlx"]
@@ -8,6 +8,25 @@
 [ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Demo/Prefab/Stone/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
 [ext_resource type="PackedScene" uid="uid://bcdixo0uw7igd" path="res://Demo/Prefab/Stone/PF_Rock_Boulder.glb" id="6_fp03x"]
 [ext_resource type="PackedScene" uid="uid://c5gec85a0kuek" path="res://Demo/Prefab/Stone/PF_Rock_Overhang.glb" id="7_rdjie"]
+[ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="9_df5a3"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Particle/PlayParticlesOnEnter.cs" id="12_oysvp"]
+[ext_resource type="PackedScene" uid="uid://fbtwdx1e3358" path="res://Demo/VFX/vfx_confetti.tscn" id="13_torjq"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/PuzzleManager.cs" id="13_yfvll"]
+[ext_resource type="PackedScene" uid="uid://ca6ks1tqilwmb" path="res://Demo/Prefab/PF_Demo_Lever.tscn" id="14_snkgd"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/HiddenReward.cs" id="16_hqj7m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_imnq8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mecyf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1yja"]
+size = Vector3(0.25, 2, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ppq24"]
+size = Vector3(0.25, 2, 0.25)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qlhu5"]
+radius = 2.0
 
 [node name="Cave" type="Node3D"]
 
@@ -28,12 +47,6 @@ transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 
 [node name="SP_Cave" type="Node3D" parent="Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.967, 4.26007, -13.5516)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Trigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1184, 2.92989, 10.7818)
-light_color = Color(0.639216, 0.74902, 0.878431, 1)
-light_energy = 0.3
-omni_range = 8.0
-
 [node name="Geometry" type="Node" parent="."]
 
 [node name="PF_Rock_Plate-n2" parent="Geometry" instance=ExtResource("2_i2c66")]
@@ -49,7 +62,13 @@ transform = Transform3D(-0.0685063, 1.73237e-07, 1.9816, 0, -1.98278, 1.7334e-07
 transform = Transform3D(-0.895261, 0, 0.445542, 0, 1, 0, -0.445542, 0, -0.895261, -1.23974, -0.53185, 29.5764)
 
 [node name="PF_Rock_Riser_Tall-n1" parent="Geometry" instance=ExtResource("4_lr3e0")]
-transform = Transform3D(0.620174, 0, 0, 0, 0.620174, 0, 0, 0, 0.620174, 24.6582, -1.05484, -31.6449)
+transform = Transform3D(0.620174, 0, 0, 0, 0.620174, 0, 0, 0, 0.620174, 26.7517, -1.59388, -5.71035)
+
+[node name="PF_Rock_Riser_Tall-n2" parent="Geometry" instance=ExtResource("4_lr3e0")]
+transform = Transform3D(0.620174, 0, 0, 0, 0.620174, 0, 0, 0, 0.620174, 9.49683, -1.59388, -9.13027)
+
+[node name="PF_Rock_Riser_Tall-n3" parent="Geometry" instance=ExtResource("4_lr3e0")]
+transform = Transform3D(0.620174, 0, 0, 0, 0.620174, 0, 0, 0, 0.620174, 23.3918, -1.59388, -23.8306)
 
 [node name="PF_Rock_Riser_Henge-n1" parent="Geometry" instance=ExtResource("5_38m8c")]
 transform = Transform3D(2.37519, 0, 0.757473, 0, 2.49305, 0, -0.757473, 0, 2.37519, 13.7916, -7.59492, -42.9349)
@@ -84,8 +103,103 @@ transform = Transform3D(-0.489008, 0, 2.96994, 0, 3.00993, 0, -2.96994, 0, -0.48
 [node name="Light" type="Node" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light"]
-transform = Transform3D(0.997838, 0.0420501, -0.0505005, 0.00661789, 0.700266, 0.713851, 0.0653814, -0.712642, 0.698474, 16.0116, 10.1786, 2.54847)
+transform = Transform3D(0.853989, 0.14252, -0.500391, 0, 0.961752, 0.273923, 0.520292, -0.233927, 0.821325, 9.3174, 9.17511, 8.81143)
 light_energy = 16.0
 shadow_enabled = true
 spot_range = 77.7767
-spot_angle = 50.2919
+spot_angle = 74.21
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1184, 2.92989, 8.5435)
+light_color = Color(0.639216, 0.74902, 0.878431, 1)
+light_energy = 6.595
+omni_range = 8.0
+
+[node name="Puzzle" type="Node" parent="."]
+script = ExtResource("13_yfvll")
+
+[node name="Lever_01" parent="Puzzle" instance=ExtResource("14_snkgd")]
+transform = Transform3D(0.631732, 0.391955, -0.668794, 1.29578e-08, 0.862752, 0.505627, 0.775187, -0.319421, 0.545028, 16.7919, 1.45675, -32.6933)
+Reusable = false
+_Title = "Lever 1"
+
+[node name="Lever_Base_01" type="StaticBody3D" parent="Puzzle"]
+transform = Transform3D(0.631732, 0, -0.775187, 0, 1, 0, 0.775187, 0, 0.631732, 16.7919, 0.95734, -32.6933)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Lever_Base_01"]
+material_override = ExtResource("9_df5a3")
+mesh = SubResource("BoxMesh_imnq8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Lever_Base_01"]
+shape = SubResource("BoxShape3D_mecyf")
+
+[node name="Lever_02" parent="Puzzle" instance=ExtResource("14_snkgd")]
+transform = Transform3D(0.903447, 0.216761, -0.36986, 1.29578e-08, 0.862752, 0.505627, 0.428698, -0.456807, 0.779451, 32.6887, 1.40818, -2.68274)
+Reusable = false
+_Title = "Lever 2"
+
+[node name="Lever_Base_02" type="StaticBody3D" parent="Puzzle"]
+transform = Transform3D(0.903447, 0, -0.428698, 0, 1, 0, 0.428698, 0, 0.903447, 32.6887, 0.908772, -2.68274)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Lever_Base_02"]
+material_override = ExtResource("9_df5a3")
+mesh = SubResource("BoxMesh_imnq8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Lever_Base_02"]
+shape = SubResource("BoxShape3D_mecyf")
+
+[node name="Lever_03" parent="Puzzle" instance=ExtResource("14_snkgd")]
+transform = Transform3D(-0.0812775, -0.503954, 0.859897, 1.29578e-08, 0.862752, 0.505627, -0.996691, 0.0410961, -0.0701224, 3.51639, 1.42537, 1.878)
+Reusable = false
+_Title = "Lever 3"
+
+[node name="Lever_Base_03" type="StaticBody3D" parent="Puzzle"]
+transform = Transform3D(-0.0812775, 0, 0.996691, 0, 1, 0, -0.996691, 0, -0.0812775, 3.51639, 0.925962, 1.878)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Lever_Base_03"]
+material_override = ExtResource("9_df5a3")
+mesh = SubResource("BoxMesh_imnq8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Lever_Base_03"]
+shape = SubResource("BoxShape3D_mecyf")
+
+[node name="Lever_04" parent="Puzzle" instance=ExtResource("14_snkgd")]
+transform = Transform3D(0.905901, -0.214127, 0.365365, 1.40893e-08, 0.862752, 0.505627, -0.423488, -0.458048, 0.781568, 26.6257, 1.42537, -18.9945)
+Reusable = false
+_Title = "Lever 4"
+
+[node name="Lever_Base_04" type="StaticBody3D" parent="Puzzle"]
+transform = Transform3D(0.905901, 0, 0.423488, 0, 1, 0, -0.423488, 0, 0.905901, 26.6257, 0.925962, -18.9945)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Lever_Base_04"]
+material_override = ExtResource("9_df5a3")
+mesh = SubResource("BoxMesh_imnq8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Lever_Base_04"]
+shape = SubResource("BoxShape3D_mecyf")
+
+[node name="Unlockable" type="Node3D" parent="Puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5704, 0.815078, -11.4825)
+visible = false
+script = ExtResource("16_hqj7m")
+
+[node name="Post" type="StaticBody3D" parent="Puzzle/Unlockable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Unlockable/Post"]
+material_override = ExtResource("9_df5a3")
+mesh = SubResource("BoxMesh_p1yja")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Unlockable/Post"]
+shape = SubResource("BoxShape3D_ppq24")
+
+[node name="vfx" type="Area3D" parent="Puzzle/Unlockable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 4
+script = ExtResource("12_oysvp")
+
+[node name="vfx_confetti" parent="Puzzle/Unlockable/vfx" instance=ExtResource("13_torjq")]
+emitting = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Unlockable/vfx"]
+shape = SubResource("SphereShape3D_qlhu5")
