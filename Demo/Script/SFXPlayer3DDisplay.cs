@@ -1,15 +1,19 @@
 using Godot;
-using System;
 
-public partial class SFXPlayer3DDisplay : Control
+namespace Game
 {
-    public void Initialize(SFXPlayer3D player)
+    public partial class SFXPlayer3DDisplay : Control
     {
+        public void Initialize(SFXPlayer3D player)
+        {
 
-    }
+        }
 
-    public void UpdateSoundGroup(SoundGroup3D soundGroup)
-    {
+        public void UpdateSoundGroup(SoundGroup3D soundGroup)
+        {
+
+        }
+
     }
 
 }

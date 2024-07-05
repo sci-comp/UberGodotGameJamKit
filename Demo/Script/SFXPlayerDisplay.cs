@@ -1,10 +1,13 @@
 using Godot;
-using System;
 
-public partial class SFXPlayerDisplay : Control
+namespace Game
 {
-    public void Initialize(SFXPlayer player)
+    public partial class SFXPlayerDisplay : Control
     {
+        public void Initialize(SFXPlayer player)
+        {
+
+        }
 
     }
 

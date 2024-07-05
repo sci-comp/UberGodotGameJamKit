@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6cgap8p8kb3p"
-path="res://.godot/imported/T_Chicken_Friend.png-c08c180482329266ccea21645c5b65bd.ctex"
+uid="uid://p2kq5qvrdk4a"
+path="res://.godot/imported/PF_Chicken_Friend_T_Chicken_Friend.png-ae08c1c55d060902d9e8f1e3ccebf15b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Documentation/Blender/T_Chicken_Friend.png"
-dest_files=["res://.godot/imported/T_Chicken_Friend.png-c08c180482329266ccea21645c5b65bd.ctex"]
+source_file="res://Demo/Prefab/PF_Chicken_Friend_T_Chicken_Friend.png"
+dest_files=["res://.godot/imported/PF_Chicken_Friend_T_Chicken_Friend.png-ae08c1c55d060902d9e8f1e3ccebf15b.ctex"]
 
 [params]
 

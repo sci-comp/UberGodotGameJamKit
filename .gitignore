@@ -12,7 +12,5 @@
 *.old
 *.old*
 
-addons/dialogue_manager
-
 # Necessary when building Godot to Windows
 rcedit-x86.exe
