@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://cc1m2a1obsyn4"]
+[gd_scene load_steps=22 format=3 uid="uid://cc1m2a1obsyn4"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_0t4e8"]
+[ext_resource type="Script" path="res://Demo/Script/CharacterHub.cs" id="1_p8ic4"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_v3ckk"]
-[ext_resource type="Script" path="res://addons/fpc/debug.gd" id="3_x1wcc"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/ProximityDetector.cs" id="4_5a40d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
@@ -377,26 +377,16 @@ _data = {
 "land_right": SubResource("Animation_vsknp")
 }
 
-[sub_resource type="Theme" id="Theme_wdf0f"]
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_right = 10
-MarginContainer/constants/margin_top = 10
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_k4wwl"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_e1pvd"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_b052r"]
-radius = 0.75
-height = 1.5
-radial_segments = 4
-rings = 4
+[node name="CharacterHub" type="Node"]
+script = ExtResource("1_p8ic4")
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
 collision_layer = 4
 script = ExtResource("1_0t4e8")
-default_reticle = "res://addons/fpc/reticles/reticle_1.tscn"
 HEAD = NodePath("Head")
 CAMERA = NodePath("Head/Camera")
 HEADBOB_ANIMATION = NodePath("Head/HeadbobAnimation")
@@ -404,82 +394,56 @@ JUMP_ANIMATION = NodePath("Head/JumpAnimation")
 CROUCH_ANIMATION = NodePath("CrouchAnimation")
 COLLISION_MESH = NodePath("Collision")
 
-[node name="Mesh" type="MeshInstance3D" parent="."]
+[node name="Mesh" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_jw1de")
 
-[node name="Collision" type="CollisionShape3D" parent="."]
+[node name="Collision" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_uy03j")
 
-[node name="CrouchAnimation" type="AnimationPlayer" parent="."]
+[node name="CrouchAnimation" type="AnimationPlayer" parent="Player"]
 libraries = {
 "": SubResource("AnimationLibrary_5e5t5")
 }
 
-[node name="Head" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Camera" type="Camera3D" parent="Head"]
+[node name="Camera" type="Camera3D" parent="Player/Head" groups=["MainCamera"]]
 transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391, 0, 0, 0)
 cull_mask = 983039
 
-[node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
+[node name="HeadbobAnimation" type="AnimationPlayer" parent="Player/Head"]
 libraries = {
 "": SubResource("AnimationLibrary_o0unb")
 }
 blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"walk", 0.5, &"walk", &"RESET", 0.5]
 
-[node name="JumpAnimation" type="AnimationPlayer" parent="Head"]
+[node name="JumpAnimation" type="AnimationPlayer" parent="Player/Head"]
 libraries = {
 "": SubResource("AnimationLibrary_qeg5r")
 }
 speed_scale = 4.0
 
-[node name="UserInterface" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="DebugPanel" type="PanelContainer" parent="UserInterface"]
-visible = false
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 453.0
-offset_bottom = 50.0
-theme = SubResource("Theme_wdf0f")
-script = ExtResource("3_x1wcc")
-
-[node name="MarginContainer" type="MarginContainer" parent="UserInterface/DebugPanel"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/DebugPanel/MarginContainer"]
-layout_mode = 2
-
-[node name="CrouchCeilingDetection" type="ShapeCast3D" parent="."]
+[node name="CrouchCeilingDetection" type="ShapeCast3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_k4wwl")
 target_position = Vector3(0, 0.5, 0)
 
-[node name="EditorModule" type="Node" parent="."]
+[node name="EditorModule" type="Node" parent="Player"]
 script = ExtResource("3_v3ckk")
 
-[node name="ProximityDetector" type="Area3D" parent="."]
+[node name="Proximity" type="Area3D" parent="Player"]
 collision_layer = 8
 collision_mask = 48
 script = ExtResource("4_5a40d")
-InteractButton = "interact"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityDetector"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Proximity"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 shape = SubResource("SphereShape3D_e1pvd")
 
-[node name="Title" type="Label" parent="ProximityDetector"]
+[node name="Title" type="Label" parent="Player/Proximity"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -493,7 +457,7 @@ text = "Title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Details" type="Label" parent="ProximityDetector"]
+[node name="Details" type="Label" parent="Player/Proximity"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -506,9 +470,3 @@ theme_override_font_sizes/font_size = 24
 text = "Example Details"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="DisplacementArea" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000487804, 0.660589, -0.000190258)
-visible = false
-layers = 65536
-mesh = SubResource("SphereMesh_b052r")

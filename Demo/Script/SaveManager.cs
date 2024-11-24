@@ -1,0 +1,65 @@
+using Game;
+using Godot;
+using System;
+
+public partial class SaveManager : Node
+{
+    // Todo: This is a placeholder. A save manager has not yet been added to this project.
+
+    public string SpawnpointName = "SP_Island";
+    public string CurrentLevel = "Island";
+
+    private LevelManager levelManager;
+
+    public override void _Ready()
+    {
+        levelManager = GetNode<LevelManager>("/root/LevelManager");
+        levelManager.BeginUnloadingLevel += OnBeginUnloadingLevel;
+    }
+    private void OnBeginUnloadingLevel(string levelName, string spawnpoint)
+    {
+        CurrentLevel = levelName;
+        SpawnpointName = spawnpoint;
+    }
+
+    public Marker3D FindSpawnpoint()
+    {
+        if (levelManager.CurrentLevel == null)
+        {
+            GD.PrintErr("[SaveManager] Current level not found");
+            return null;
+        }
+
+        SceneTree tree = levelManager.CurrentLevel.GetTree();
+        if (tree == null)
+        {
+            GD.PrintErr("[SaveManager] Could not find SceneTree");
+            return null;
+        }
+
+        foreach (Node node in tree.GetNodesInGroup("Spawnpoint"))
+        {
+            if (node.Name == SpawnpointName)
+            {
+                if (node is not Marker3D marker)
+                {
+                    GD.PrintErr("[SaveManager] Spawnpoint is not of type Marker3D");
+                    return null;
+                }
+
+                GD.Print("[SaveManager] Requested spawnpoint found: " + SpawnpointName);
+                return marker;
+            }
+            else
+            {
+                GD.Print($"[SaveManager] Spawnpoint {node.Name} does not match the desired spawnpoint: {SpawnpointName}");
+            }
+        }
+
+        GD.PrintErr("[SaveManager] No spawnpoint found in level: " + levelManager.CurrentLevelName);
+        GD.PrintErr("[SaveManager] tree.GetNodesInGroup(\"Spawnpoint\").Count", tree.GetNodesInGroup("Spawnpoint").Count);
+        return null;
+    }
+
+
+}

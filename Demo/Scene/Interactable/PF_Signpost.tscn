@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://e54icttacva1"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://d3l23g4fpbanh" path="res://addons/StandardAssets/PhysicsMaterial/phys_stone.tres" id="1_t7bps"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/Signpost.cs" id="2_os0ka"]
+[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/Objects/Guidepost.cs" id="2_os0ka"]
 [ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="3_nwfqq"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ro1r6"]

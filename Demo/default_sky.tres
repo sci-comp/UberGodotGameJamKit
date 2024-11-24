@@ -12,12 +12,12 @@ color_ramp = SubResource("Gradient_fkvl5")
 noise = SubResource("FastNoiseLite_u26kj")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rs8hx"]
-sky_top_color = Color(0.982328, 0.931897, 0.954836, 1)
-sky_horizon_color = Color(0.65098, 0.784314, 0.866667, 1)
+sky_top_color = Color(0.32549, 0.533333, 0.690196, 1)
+sky_horizon_color = Color(0.34902, 0.52549, 0.654902, 1)
 sky_cover = SubResource("NoiseTexture2D_747fn")
 sky_cover_modulate = Color(0.443137, 0.443137, 0.443137, 0.129412)
-ground_bottom_color = Color(0.619608, 0.85098, 0.976471, 1)
-ground_horizon_color = Color(0.65098, 0.784314, 0.866667, 1)
+ground_bottom_color = Color(0.294118, 0.47451, 0.631373, 1)
+ground_horizon_color = Color(0.34902, 0.52549, 0.654902, 1)
 
 [resource]
 sky_material = SubResource("ProceduralSkyMaterial_rs8hx")

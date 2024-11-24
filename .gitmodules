@@ -7,3 +7,6 @@
 [submodule "addons/SceneBuilder"]
 	path = addons/SceneBuilder
 	url = https://github.com/sci-comp/SceneBuilder
+[submodule "addons/addons/EditorToolbox"]
+	path = addons/addons/EditorToolbox
+	url = https://github.com/sci-comp/EditorToolbox

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Game
 {
-
     public partial class PossibleSFX3D : Node
     {
         public void Initialize(SFXPlayer3D player)
@@ -13,7 +12,7 @@ namespace Game
 
         public Dictionary<string, SoundGroup3D> GetSoundGroups()
         {
-            return null;
+            return new();
         }
 
     }

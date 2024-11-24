@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://blxngopptepmp"
-path="res://.godot/imported/PF_Rock_Cave.glb-3e3b40787514f2e4f10cb7e453d5c1ab.scn"
+uid="uid://bh31t7rauktqm"
+path="res://.godot/imported/PF_Rock_Rubble.glb-5d90f05182d0710c4835e64456ee53ba.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Stone/PF_Rock_Cave.glb"
-dest_files=["res://.godot/imported/PF_Rock_Cave.glb-3e3b40787514f2e4f10cb7e453d5c1ab.scn"]
+source_file="res://Demo/Scene/Stone/PF_Rock_Rubble.glb"
+dest_files=["res://.godot/imported/PF_Rock_Rubble.glb-5d90f05182d0710c4835e64456ee53ba.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,6 +29,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path="res://addons/EditorToolbox/Import/glb_post_import.gd"
 _subresources={}
 gltf/naming_version=1

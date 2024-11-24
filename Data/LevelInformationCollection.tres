@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cld0k6tas5xah"]
-
-[ext_resource type="Resource" uid="uid://dmun2byjeapoi" path="res://Data/LevelInformation_Cave.tres" id="1_na4wd"]
-[ext_resource type="Resource" uid="uid://bkg83ic34tg65" path="res://Data/LevelInformation_Island.tres" id="2_g3odj"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelInfoCollection.cs" id="4_sdeyj"]
-
-[resource]
-script = ExtResource("4_sdeyj")
-LevelInfoList = [ExtResource("1_na4wd"), ExtResource("2_g3odj")]

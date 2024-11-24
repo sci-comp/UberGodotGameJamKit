@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://hckru6bawymd"]
 
-[ext_resource type="PackedScene" uid="uid://c5d5e2op3g71b" path="res://Demo/Prefab/Vegetation/PF_Tree_Pine.glb" id="1_0epkx"]
+[ext_resource type="PackedScene" uid="uid://c5d5e2op3g71b" path="res://Demo/Scene/Vegetation/PF_Tree_Pine.glb" id="1_0epkx"]
 [ext_resource type="Material" uid="uid://b4igysnd6du44" path="res://Demo/Material/MI_Bark.tres" id="2_ajy6s"]
 [ext_resource type="Material" uid="uid://d2nfy850cxg6s" path="res://Demo/Material/MI_Stump.tres" id="3_p1eln"]
 [ext_resource type="Material" uid="uid://dw3lws1kasc13" path="res://Demo/Material/MI_Branch.material" id="3_xwb11"]

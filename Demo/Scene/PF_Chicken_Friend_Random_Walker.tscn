@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Critter/RandomWalker.cs" id="1_oxktt"]
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Utility/NextEventTimer.cs" id="2_7ppe6"]
-[ext_resource type="PackedScene" uid="uid://c8alf2ra2jals" path="res://Demo/Prefab/PF_Chicken_Friend.glb" id="3_vl7ar"]
+[ext_resource type="PackedScene" uid="uid://c8alf2ra2jals" path="res://Demo/Scene/PF_Chicken_Friend.glb" id="3_vl7ar"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_byfd3"]
 height = 1.0

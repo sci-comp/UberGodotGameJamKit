@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5d5e2op3g71b"
-path="res://.godot/imported/PF_Tree_Pine.glb-9fb102fa91c0476ac58cda1670b3902b.scn"
+uid="uid://clrroqgutxg5x"
+path="res://.godot/imported/PF_Rock_Arch.glb-16af42517c37cba2033b3f7c7042a905.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Vegetation/PF_Tree_Pine.glb"
-dest_files=["res://.godot/imported/PF_Tree_Pine.glb-9fb102fa91c0476ac58cda1670b3902b.scn"]
+source_file="res://Demo/Scene/Stone/PF_Rock_Arch.glb"
+dest_files=["res://.godot/imported/PF_Rock_Arch.glb-16af42517c37cba2033b3f7c7042a905.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,7 +29,8 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
-import_script/path=""
+animation/import_rest_as_RESET=false
+import_script/path="res://addons/EditorToolbox/Import/glb_post_import.gd"
 _subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

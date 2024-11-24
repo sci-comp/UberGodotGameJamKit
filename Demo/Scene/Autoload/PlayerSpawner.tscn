@@ -4,4 +4,4 @@
 
 [node name="PlayerSpawner" type="Node"]
 script = ExtResource("1_5cagm")
-PlayerPath = "res://Demo/Prefab/Player.tscn"
+PlayerPath = "res://Demo/Scene/Player.tscn"

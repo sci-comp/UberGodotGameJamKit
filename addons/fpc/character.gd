@@ -1,13 +1,8 @@
-
 # COPYRIGHT Colormatic Studios
 # MIT licence
 # Quality Godot First Person Controller v2
 
-
 extends CharacterBody3D
-
-# TODO: Add descriptions for each value
-
 
 @export_category("Character")
 @export var base_speed : float = 3.0
@@ -18,7 +13,6 @@ extends CharacterBody3D
 @export var jump_velocity : float = 4.5
 @export var mouse_sensitivity : float = 0.1
 @export var immobile : bool = false
-@export_file var default_reticle
 
 @export_group("Nodes")
 @export var HEAD : Node3D
@@ -39,12 +33,6 @@ extends CharacterBody3D
 @export var CROUCH : String = "crouch"
 @export var SPRINT : String = "sprint"
 
-# Uncomment if you want full controller support
-#@export var LOOK_LEFT : String
-#@export var LOOK_RIGHT : String
-#@export var LOOK_UP : String
-#@export var LOOK_DOWN : String
-
 @export_group("Feature Settings")
 @export var jumping_enabled : bool = true
 @export var in_air_momentum : bool = true
@@ -60,7 +48,6 @@ extends CharacterBody3D
 @export var pausing_enabled : bool = true
 @export var gravity_enabled : bool = true
 
-
 # Member variables
 var speed : float = base_speed
 var current_speed : float = 0.0
@@ -69,12 +56,8 @@ var state : String = "normal"
 var low_ceiling : bool = false # This is for when the cieling is too low and the player needs to crouch.
 var was_on_floor : bool = true # Was the player on the floor last frame (for landing animation)
 
-# The reticle should always have a Control node as the root
-var RETICLE : Control
-
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") # Don't set this as a const, see the gravity section in _physics_process
-
 
 func _ready():
 	#It is safe to comment this line if your game doesn't start with the mouse captured
@@ -83,9 +66,6 @@ func _ready():
 	# If the controller is rotated in a certain direction for game design purposes, redirect this rotation into the head.
 	HEAD.rotation.y = rotation.y
 	rotation.y = 0
-	
-	if default_reticle:
-		change_reticle(default_reticle)
 	
 	# Reset the camera position
 	# If you want to change the default head height, change these animations.
@@ -121,16 +101,6 @@ func check_controls(): # If you add a control, you might want to add a check for
 		push_error("No control mapped for sprint. Please add an input map control. Disabling sprinting.")
 		sprint_enabled = false
 
-
-func change_reticle(reticle): # Yup, this function is kinda strange
-	if RETICLE:
-		RETICLE.queue_free()
-	
-	RETICLE = load(reticle).instantiate()
-	RETICLE.character = self
-	$UserInterface.add_child(RETICLE)
-
-
 func _physics_process(delta):
 	
 	# This doesn't seem to work well
@@ -138,8 +108,7 @@ func _physics_process(delta):
 	
 	# Big thanks to github.com/LorenzoAncora for the concept of the improved debug values
 	current_speed = Vector3.ZERO.distance_to(get_real_velocity())
-	$UserInterface/DebugPanel.add_property("Speed", snappedf(current_speed, 0.001), 1)
-	$UserInterface/DebugPanel.add_property("Target speed", speed, 2)
+	
 	var cv : Vector3 = get_real_velocity()
 	var vd : Array[float] = [
 		snappedf(cv.x, 0.001),
@@ -147,7 +116,6 @@ func _physics_process(delta):
 		snappedf(cv.z, 0.001)
 	]
 	var readable_velocity : String = "X: " + str(vd[0]) + " Y: " + str(vd[1]) + " Z: " + str(vd[2])
-	$UserInterface/DebugPanel.add_property("Velocity", readable_velocity, 3)
 	
 	# Gravity
 	#gravity = ProjectSettings.get_setting("physics/3d/default_gravity") # If the gravity changes during your game, uncomment this code
@@ -217,7 +185,6 @@ func handle_movement(delta, input_dir):
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
 
-
 func handle_state(moving):
 	if sprint_enabled:
 		if sprint_mode == 0:
@@ -260,7 +227,6 @@ func handle_state(moving):
 						if !$CrouchCeilingDetection.is_colliding():
 							enter_normal_state()
 
-
 # Any enter state function should only be called once when you want to enter that state, not every frame.
 
 func enter_normal_state():
@@ -286,13 +252,11 @@ func enter_sprint_state():
 	state = "sprinting"
 	speed = sprint_speed
 
-
 func update_camera_fov():
 	if state == "sprinting":
 		CAMERA.fov = lerp(CAMERA.fov, 80.0, 0.3)
 	else:
 		CAMERA.fov = lerp(CAMERA.fov, 75.0, 0.3)
-
 
 func headbob_animation(moving):
 	if moving and is_on_floor():
@@ -311,7 +275,6 @@ func headbob_animation(moving):
 		HEADBOB_ANIMATION.speed_scale = (current_speed / base_speed) * 1.75
 		if !was_playing:
 			HEADBOB_ANIMATION.seek(float(randi() % 2)) # Randomize the initial headbob direction
-			# Let me explain that piece of code because it looks like it does the opposite of what it actually does.
 			# The headbob animation has two starting positions. One is at 0 and the other is at 1.
 			# randi() % 2 returns either 0 or 1, and so the animation randomly starts at one of the starting positions.
 			# This code is extremely performant but it makes no sense.
@@ -321,16 +284,10 @@ func headbob_animation(moving):
 			HEADBOB_ANIMATION.play("RESET", 0.25)
 			HEADBOB_ANIMATION.speed_scale = 1
 
-
 func _process(delta):
-	
-	
-	
-	$UserInterface/DebugPanel.add_property("FPS", Performance.get_monitor(Performance.TIME_FPS), 0)
 	var status : String = state
 	if !is_on_floor():
 		status += " in the air"
-	$UserInterface/DebugPanel.add_property("State", status, 4)
 	
 	if pausing_enabled:
 		if Input.is_action_just_pressed(PAUSE):
@@ -342,12 +299,6 @@ func _process(delta):
 	
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	
-	# Uncomment if you want full controller support
-	#var controller_view_rotation = Input.get_vector(LOOK_LEFT, LOOK_RIGHT, LOOK_UP, LOOK_DOWN)
-	#HEAD.rotation_degrees.y -= controller_view_rotation.x * 1.5
-	#HEAD.rotation_degrees.x -= controller_view_rotation.y * 1.5
-
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

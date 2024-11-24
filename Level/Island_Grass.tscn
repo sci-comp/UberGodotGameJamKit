@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://by2ybaihd4370"]
+[gd_scene load_steps=7 format=4 uid="uid://by2ybaihd4370"]
 
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="1_0iju0"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="2_2egsb"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="3_gm4cc"]
-[ext_resource type="Script" path="res://Demo/Script/set_grass_interactive.gd" id="4_j5r82"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6f31"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hgmv0"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("1_0iju0")
@@ -36,15 +35,15 @@ shader_parameter/texture_albedo = ExtResource("2_2egsb")
 [sub_resource type="ArrayMesh" id="ArrayMesh_rmgu2"]
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5, 1, 1.00001, 1),
-"attribute_data": PackedByteArray(255, 0, 0, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 255, 0, 0, 0, 0, 0, 0, 128, 63, 255, 0, 0, 255, 0, 0, 128, 63, 0, 0, 0, 0, 255, 0, 0, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 255, 0, 0, 0, 0, 0, 0, 128, 63, 255, 0, 0, 255, 0, 0, 128, 63, 0, 0, 0, 0),
+"attribute_data": PackedByteArray("/wAA/wAAAAAAAAAAAAAA/wAAgD8AAIA/AAAA/wAAAAAAAIA//wAA/wAAgD8AAAAA/wAA/wAAAAAAAAAAAAAA/wAAgD8AAIA/AAAA/wAAAAAAAIA//wAA/wAAgD8AAAAA"),
 "format": 34359742495,
 "index_count": 12,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_r6f31"),
+"index_data": PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQA"),
+"material": SubResource("ShaderMaterial_hgmv0"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 63, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191)
+"vertex_data": PackedByteArray("AAAAvwAAgD8AAAAAAAAAPwAAAAAAAAAAAAAAvwAAAAAAAAAAAAAAPwAAgD8AAAAAAAAAAAAAgD8AAAC/AAAAAAAAAAAAAAA/AAAAAAAAAAAAAAC/AAAAAAAAgD8AAAA//3//f////7//f/9/////v/9//3////+//3//f////78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//vw==")
 }]
 
 [sub_resource type="MultiMesh" id="MultiMesh_xbmv3"]
@@ -65,6 +64,3 @@ sgt_rotation_rand = 1.0
 sgt_dist_min = 0.4
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "2.0.3"
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource("4_j5r82")

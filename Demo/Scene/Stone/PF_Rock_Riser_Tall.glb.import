@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8h3n1lu0cty5"
-path="res://.godot/imported/PF_Rock_Riser_Slant.glb-984cd3f3e4ef9814799fac1f096b8571.scn"
+uid="uid://b5dhrk8y5kro2"
+path="res://.godot/imported/PF_Rock_Riser_Tall.glb-e2ab74ca4376b7fa90cf726c32f4b9e9.scn"
 
 [deps]
 
-source_file="res://Demo/Prefab/Stone/PF_Rock_Riser_Slant.glb"
-dest_files=["res://.godot/imported/PF_Rock_Riser_Slant.glb-984cd3f3e4ef9814799fac1f096b8571.scn"]
+source_file="res://Demo/Scene/Stone/PF_Rock_Riser_Tall.glb"
+dest_files=["res://.godot/imported/PF_Rock_Riser_Tall.glb-e2ab74ca4376b7fa90cf726c32f4b9e9.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,6 +29,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path="res://addons/EditorToolbox/Import/glb_post_import.gd"
 _subresources={}
 gltf/naming_version=1

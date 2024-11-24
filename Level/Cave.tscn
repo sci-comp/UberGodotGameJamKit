@@ -1,29 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://btl6rhjf4mykn"]
+[gd_scene load_steps=11 format=3 uid="uid://btl6rhjf4mykn"]
 
 [ext_resource type="Environment" uid="uid://dwie2bscwqilh" path="res://Demo/demo_environment_cave.tres" id="1_5mu74"]
 [ext_resource type="PackedScene" uid="uid://cpbxu2g60vnq" path="res://addons/StandardAssets/Prefab/VFX_Level_Portal.tscn" id="1_k7wlx"]
-[ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Prefab/Stone/PF_Rock_Plate.glb" id="2_i2c66"]
-[ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Demo/Prefab/Stone/PF_Rock_Cave.glb" id="3_y30aa"]
-[ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Demo/Prefab/Stone/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]
-[ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Demo/Prefab/Stone/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
-[ext_resource type="PackedScene" uid="uid://bcdixo0uw7igd" path="res://Demo/Prefab/Stone/PF_Rock_Boulder.glb" id="6_fp03x"]
-[ext_resource type="PackedScene" uid="uid://c5gec85a0kuek" path="res://Demo/Prefab/Stone/PF_Rock_Overhang.glb" id="7_rdjie"]
-[ext_resource type="Material" uid="uid://dtadar3khr1iq" path="res://Demo/Material/MI_Demo_Stone.tres" id="9_df5a3"]
-[ext_resource type="PackedScene" uid="uid://cofvl6bgrpwqo" path="res://Demo/Prefab/PF_Demo_Lever.tscn" id="10_suq18"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Particle/PlayParticlesOnEnter.cs" id="12_oysvp"]
-[ext_resource type="PackedScene" uid="uid://fbtwdx1e3358" path="res://Demo/VFX/vfx_confetti.tscn" id="13_torjq"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/PuzzleManager.cs" id="13_yfvll"]
-[ext_resource type="PackedScene" uid="uid://4pssytbq3qo1" path="res://Demo/Prefab/PF_Chicken_Friend_Random_Walker.tscn" id="15_7x6pc"]
-[ext_resource type="Script" path="res://addons/StandardAssets/Script/Interact/HiddenReward.cs" id="16_hqj7m"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_p1yja"]
-size = Vector3(0.25, 2, 0.25)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ppq24"]
-size = Vector3(0.25, 2, 0.25)
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_qlhu5"]
-radius = 2.0
+[ext_resource type="PackedScene" uid="uid://rva731ydt5wo" path="res://Demo/Scene/Stone/PF_Rock_Plate.glb" id="2_i2c66"]
+[ext_resource type="PackedScene" uid="uid://blxngopptepmp" path="res://Demo/Scene/Stone/PF_Rock_Cave.glb" id="3_y30aa"]
+[ext_resource type="PackedScene" uid="uid://b5dhrk8y5kro2" path="res://Demo/Scene/Stone/PF_Rock_Riser_Tall.glb" id="4_lr3e0"]
+[ext_resource type="PackedScene" uid="uid://dcf27axl81pxk" path="res://Demo/Scene/Stone/PF_Rock_Riser_Henge.glb" id="5_38m8c"]
+[ext_resource type="PackedScene" uid="uid://bcdixo0uw7igd" path="res://Demo/Scene/Stone/PF_Rock_Boulder.glb" id="6_fp03x"]
+[ext_resource type="PackedScene" uid="uid://c5gec85a0kuek" path="res://Demo/Scene/Stone/PF_Rock_Overhang.glb" id="7_rdjie"]
+[ext_resource type="PackedScene" uid="uid://4pssytbq3qo1" path="res://Demo/Scene/PF_Chicken_Friend_Random_Walker.tscn" id="15_7x6pc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_f7xue"]
 vertices = PackedVector3Array(23.5935, 0.397345, -42.1568, 15.5935, 0.647345, -45.1568, 11.8435, 0.397345, -43.4068, 21.8435, 1.14734, -26.4068, 23.5935, 1.14734, -26.6568, 23.5935, 1.14734, -33.7023, 15.415, 1.14734, -37.3354, 0.843538, -0.602655, -37.1568, -0.906462, 0.397345, -31.4068, -1.90646, -0.102655, -24.9068, -1.29535, 0.397345, -27.6291, -0.378684, 0.397345, -31.7124, 11.8435, 0.397345, -43.4068, 9.59354, 0.147345, -42.6568, 0.843538, -0.602655, -37.1568, -1.90646, -0.102655, -24.9068, 20.0935, 1.14734, -24.9068, 21.8435, 1.14734, -26.4068, 15.415, 1.14734, -37.3354, -0.378684, 0.397345, -31.7124, -1.29535, 0.397345, -27.6291, -0.439795, 0.647345, -24.9068, 9.82687, 1.39734, -24.9068, 2.59408, 0.647345, -31.8874, 5.57885, 0.147345, -34.8962, 7.09912, 0.897345, -31.9045, 25.0935, 1.14734, -26.6568, 26.8435, 0.897345, -24.6568, 29.5935, 0.397345, -39.9068, 27.3435, 1.14734, -33.2818, 28.5935, 1.14734, -34.3614, 23.5935, 1.14734, -26.6568, 25.0935, 1.14734, -26.6568, 29.5935, 0.397345, -39.9068, 23.5935, 0.397345, -42.1568, 23.5935, 1.14734, -33.7023, 27.3435, 1.14734, -33.2818, 43.5935, 0.397345, -22.9068, 43.5935, 0.147345, -25.4068, 41.8435, -1.85266, -33.6568, 42.7185, -0.352655, -28.2818, 41.8435, -1.85266, -33.6568, 34.8435, 0.397345, -38.1568, 29.5935, 0.397345, -39.9068, 26.8435, 0.897345, -24.6568, 26.8435, 0.897345, -23.1568, 43.5935, 0.397345, -22.9068, 42.7185, -0.352655, -28.2818, 28.5935, 1.14734, -34.3614, 35.5787, 1.14734, -33.406, 38.6042, 0.897345, -27.4215, 38.6089, 0.897345, -30.4083, 41.5742, 0.397345, -27.3995, 10.8435, 1.39734, -11.9068, 20.3435, 1.39734, -20.9068, 19.8435, 1.39734, -22.1568, -4.15646, -1.60266, -12.6568, 7.84354, 1.39734, -11.6568, 10.8435, 1.39734, -11.9068, 19.8435, 1.39734, -22.1568, 20.0935, 1.14734, -24.9068, -1.90646, -0.102655, -24.9068, 1.17687, 1.14734, -12.2124, 9.82687, 1.39734, -24.9068, -0.439795, 0.647345, -24.9068, 1.10943, 0.897345, -13.9188, -0.43098, 0.647345, -18.3924, 21.8435, 1.39734, -21.6568, 22.8435, 1.14734, -20.9068, 24.0935, 1.14734, -20.9068, 24.0935, 1.14734, -20.9068, 25.3435, 0.897345, -22.1568, 25.5935, 0.897345, -23.4068, 22.5935, 0.897345, -24.9068, 21.3435, 1.14734, -23.4068, 21.8435, 1.39734, -21.6568, 24.0935, 1.14734, -20.9068, 25.5935, 0.897345, -23.4068, 24.3435, 0.897345, -24.9068, 22.3435, 6.39734, -22.9068, 22.3435, 6.64734, -21.9068, 23.3435, 6.64734, -21.1568, 24.8435, 6.14734, -22.9068, 24.3435, 6.14734, -23.9068, 22.8435, 6.39734, -24.1568, 24.8435, 1.14734, -19.6568, 25.0935, 1.39734, -8.15684, 28.3435, 1.39734, -8.40684, 26.5935, 0.897345, -20.9068, 43.8435, 0.397345, -18.4068, 43.5935, 0.397345, -22.9068, 26.8435, 0.897345, -23.1568, 26.5935, 0.897345, -20.9068, 28.3435, 1.39734, -8.40684, 29.5935, 1.39734, -7.15684, 46.0935, -0.602655, -14.6568, 43.8435, 0.397345, -18.4068, 26.8435, 0.897345, -23.1568, 39.7474, 0.147345, -11.7722, 43.5551, 0.147345, -13.503, 38.6091, 0.147345, -13.8984, 12.8435, 1.39734, -10.1568, 12.5935, 1.39734, -6.65684, 23.0935, 1.39734, -5.90684, 25.0935, 1.39734, -8.15684, 24.8435, 1.14734, -19.6568, 22.0935, 1.39734, -19.4068, 12.8435, 1.39734, -10.1568, 23.0935, 1.39734, -5.90684, 25.0935, 1.39734, -8.15684, 22.0935, 1.39734, -19.4068, 20.3435, 1.39734, -20.9068, 10.8435, 1.39734, -11.9068, 47.0935, -2.35266, -6.40684, 47.5935, -1.35266, -12.4068, 46.0935, -0.602655, -14.6568, 30.0935, 1.39734, -6.90684, 29.8435, 1.14734, -3.15684, 39.3435, 0.147345, -0.656841, 40.4507, -0.102655, -1.47827, 43.4269, 0.147345, -13.3652, 39.4269, 0.147345, -11.4277, 33.915, 1.14734, -2.08541, 43.0836, -0.102655, -9.38296, 40.0788, 0.397345, -6.39618, 41.6139, 0.147345, -6.38519, 41.5941, -0.602655, -3.38742, 46.1037, -1.60266, -9.41098, 44.6086, -0.352655, -10.8879, 29.5935, 1.39734, -7.15684, 30.0935, 1.39734, -6.90684, 46.0935, -0.602655, -14.6568, 43.5551, 0.147345, -13.503, 39.7474, 0.147345, -11.7722, 39.4269, 0.147345, -11.4277, 43.4269, 0.147345, -13.3652, 6.09354, 1.39734, -9.90684, 7.84354, 1.39734, -11.6568, -4.15646, -1.60266, -12.6568, 0.968538, 0.897345, -11.2818, 1.17687, 1.14734, -12.2124, 5.84354, 1.39734, -7.90684, 6.09354, 1.39734, -9.90684, -4.15646, -1.60266, -12.6568, -5.40646, -1.60266, -7.90684, 1.62479, 1.14734, -7.90684, 0.968538, 0.897345, -11.2818, 11.5935, 1.39734, -8.15684, 11.3435, 1.39734, -9.40684, 10.3435, 1.39734, -10.1568, 7.84354, 1.39734, -6.90684, 8.84354, 1.39734, -6.15684, 10.0935, 1.39734, -6.15684, 10.3435, 1.39734, -10.1568, 8.84354, 1.39734, -10.1568, 7.59354, 1.39734, -8.90684, 7.84354, 1.39734, -6.90684, 10.0935, 1.39734, -6.15684, 11.5935, 1.39734, -8.15684, 8.34354, 6.39734, -7.40684, 9.09354, 6.64734, -6.65684, 9.84354, 6.39734, -6.65684, 11.0935, 6.14734, -8.40684, 10.0935, 6.39734, -9.40684, 8.84354, 6.39734, -9.40684, -10.1565, 0.147345, 7.84316, -10.1565, 0.147345, 8.59316, -6.40646, 0.147345, 14.0932, -7.65646, -0.852655, 15.3432, -13.6565, -4.60266, 12.8432, -9.90646, -6.10266, 22.3432, -6.40646, 0.147345, 15.0932, -7.65646, -0.852655, 15.3432, -9.90646, -6.10266, 22.3432, -0.656462, -0.352655, 23.0932, -1.97789, -0.602655, 22.986, 32.0935, -0.102655, 7.34316, 28.3435, 1.14734, -1.65684, 27.8435, 1.14734, -1.15684, 29.665, 0.897345, 2.48602, 29.9507, 0.897345, 2.2003, -10.1565, 0.147345, 7.84316, -6.40646, 0.147345, 14.0932, -0.656462, -0.352655, 23.0932, -4.6148, 0.147345, 16.739, -4.25021, 0.147345, 17.4682, -6.40646, 0.147345, 14.0932, -6.40646, 0.147345, 15.0932, -0.656462, -0.352655, 23.0932, -4.25021, 0.147345, 17.4682, 32.0935, -0.102655, 7.34316, 27.8435, 1.14734, -1.15684, 25.5935, 1.14734, -1.15684, 27.2185, 1.14734, 0.968159, 29.665, 0.897345, 2.48602, 23.5935, 1.14734, -2.65684, 23.0935, 1.39734, -5.90684, 12.5935, 1.39734, -6.65684, 6.34354, 1.39734, -6.15684, 5.84354, 1.39734, -7.90684, -5.40646, -1.60266, -7.90684, 1.93729, 1.14734, -6.81309, 1.62479, 1.14734, -7.90684, 32.0935, -0.102655, 7.34316, 25.5935, 1.14734, -1.15684, 24.3435, 1.14734, -1.90684, 27.5935, 0.147345, 12.3432, 27.2185, 1.14734, 0.968159, 24.3435, 1.14734, -1.90684, 23.5935, 1.14734, -2.65684, 12.5935, 1.39734, -6.65684, 10.5935, 1.39734, -4.65684, -0.656462, -0.352655, 23.0932, 9.09354, -0.602655, 26.3432, 23.3435, 0.397345, 18.0932, 24.3435, 1.14734, -1.90684, 8.34354, 1.39734, -4.65684, -10.1565, 0.147345, 7.84316, -4.6148, 0.147345, 16.739, 14.2754, 0.897345, 23.3432, 3.4102, 1.39734, -1.32351, 11.606, 1.39734, 14.5766, 8.60657, 1.14734, 19.0759, 7.07155, 0.647345, 19.1149, 4.11112, 1.14734, 16.0694, -3.42486, 0.397345, 10.0794, 8.34354, 1.39734, -4.65684, 6.34354, 1.39734, -6.15684, -5.40646, -1.60266, -7.90684, -10.1565, 0.147345, 7.84316, 3.4102, 1.39734, -1.32351, 1.93729, 1.14734, -6.81309, -6.2701, -1.85266, -5.04321, -0.396208, 1.14734, -1.90111, -3.39141, -0.852655, -4.88789, 1.11362, 0.897345, -4.90493, 2.59863, 1.39734, -4.89394, 23.3435, 0.397345, 18.0932, 27.5935, 0.147345, 12.3432, 24.3435, 1.14734, -1.90684, 24.3435, 1.14734, -1.90684, 10.5935, 1.39734, -4.65684, 8.34354, 1.39734, -4.65684, 9.09354, -0.602655, 26.3432, 16.0935, 0.897345, 24.8432, 23.3435, 0.397345, 18.0932, 14.2754, 0.897345, 23.3432, 28.8435, 1.39734, -4.65684, 28.5935, 1.39734, -5.90684, 27.8435, 1.39734, -6.65684, 25.0935, 1.39734, -3.40684, 26.3435, 1.14734, -2.65684, 27.5935, 1.14734, -2.90684, 27.8435, 1.39734, -6.65684, 25.8435, 1.39734, -6.65684, 24.8435, 1.39734, -5.40684, 25.0935, 1.39734, -3.40684, 27.5935, 1.14734, -2.90684, 28.8435, 1.39734, -4.65684, 28.3435, 6.14734, -5.15684, 27.5935, 6.14734, -5.90684, 26.3435, 6.39734, -6.15684, 25.5935, 6.39734, -4.15684, 26.8435, 6.64734, -3.15684, 32.0935, -0.102655, 7.34316, 39.3435, 0.147345, -0.656841, 29.8435, 1.14734, -3.15684, 28.3435, 1.14734, -1.65684, 29.9507, 0.897345, 2.2003, 33.915, 1.14734, -2.08541)
@@ -31,21 +16,22 @@ polygons = [PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Arr
 
 [node name="Cave" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="Setup" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Setup"]
 environment = ExtResource("1_5mu74")
 
-[node name="Trigger" type="Node" parent="."]
-
-[node name="PF_Level_Portal" parent="Trigger" instance=ExtResource("1_k7wlx")]
+[node name="PF_Level_Portal" parent="Setup" instance=ExtResource("1_k7wlx")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.05725, 1.73836, 14.2878)
 collision_layer = 16
 collision_mask = 4
 LevelToLoad = "Island"
+Spawnpoint = "SP_From_Cave"
 
-[node name="SP_From_Island" type="Node3D" parent="Trigger"]
-transform = Transform3D(0.200326, 0, -0.979729, 0, 1, 0, 0.979729, 0, 0.200326, 11.5041, 4.36762, 2.69019)
+[node name="SP_From_Island" type="Marker3D" parent="Setup" groups=["Spawnpoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5041, 4.36762, 2.69019)
 
-[node name="SP_Cave" type="Node3D" parent="Trigger"]
+[node name="SP_Cave" type="Marker3D" parent="Setup" groups=["Spawnpoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.967, 4.26007, -13.5516)
 
 [node name="Geometry" type="Node" parent="."]
@@ -111,53 +97,6 @@ transform = Transform3D(0.396828, 0, -0.917893, 0, 1, 0, 0.917893, 0, 0.396828, 
 
 [node name="PF_Chicken_Friend_Random_Walker-n13" parent="ChickenFriends" instance=ExtResource("15_7x6pc")]
 transform = Transform3D(0.396828, 0, -0.917893, 0, 1, 0, 0.917893, 0, 0.396828, 7.46504, 0.928027, 7.35582)
-
-[node name="Puzzle" type="Node" parent="."]
-script = ExtResource("13_yfvll")
-
-[node name="Lever_01" parent="Puzzle" instance=ExtResource("10_suq18")]
-transform = Transform3D(0.999084, 0, -0.0427999, 0, 1, 0, 0.0427999, 0, 0.999084, 3.97776, 1.70493, 4.62257)
-Reusable = false
-_Title = "Lever 1"
-_Details = ""
-
-[node name="Lever_02" parent="Puzzle" instance=ExtResource("10_suq18")]
-transform = Transform3D(-0.910576, 0, -0.413343, 0, 1, 0, 0.413343, 0, -0.910575, 30.6114, 1.70493, -15.3158)
-Reusable = false
-_Title = "Lever 2"
-_Details = ""
-
-[node name="Lever_03" parent="Puzzle" instance=ExtResource("10_suq18")]
-transform = Transform3D(0.0250778, 0, -0.999685, 0, 1, 0, 0.999686, 0, 0.0250778, 17.6763, 1.70493, -32.9795)
-Reusable = false
-_Title = "Lever 3"
-_Details = ""
-
-[node name="Unlockable" type="Node3D" parent="Puzzle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5704, 0.815078, -11.4825)
-visible = false
-script = ExtResource("16_hqj7m")
-
-[node name="Post" type="StaticBody3D" parent="Puzzle/Unlockable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Puzzle/Unlockable/Post"]
-material_override = ExtResource("9_df5a3")
-mesh = SubResource("BoxMesh_p1yja")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Unlockable/Post"]
-shape = SubResource("BoxShape3D_ppq24")
-
-[node name="vfx" type="Area3D" parent="Puzzle/Unlockable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03059, 0)
-collision_mask = 4
-script = ExtResource("12_oysvp")
-
-[node name="vfx_confetti" parent="Puzzle/Unlockable/vfx" instance=ExtResource("13_torjq")]
-emitting = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle/Unlockable/vfx"]
-shape = SubResource("SphereShape3D_qlhu5")
 
 [node name="PF_Rock_Plate-n3" parent="." instance=ExtResource("2_i2c66")]
 transform = Transform3D(-0.0685063, 1.73237e-07, 1.9816, 0, -1.98278, 1.7334e-07, 1.9816, 5.98901e-09, 0.0685063, -2.57185, 0.43638, 32.7224)

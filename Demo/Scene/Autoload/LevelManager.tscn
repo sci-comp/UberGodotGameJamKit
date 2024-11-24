@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cc3kgpdoricri"]
+[gd_scene load_steps=6 format=3 uid="uid://cc3kgpdoricri"]
 
 [ext_resource type="Script" path="res://addons/StandardAssets/Script/Level/LevelManager.cs" id="1_1rch1"]
-[ext_resource type="Texture2D" uid="uid://7ypismovx1sv" path="res://addons/StandardAssets/Texture/Gradient/horizontal.png" id="2_m745a"]
 [ext_resource type="Shader" path="res://addons/StandardAssets/Shader/dissolve_2d.gdshader" id="3_4lg3s"]
 [ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/StandardAssets/Shader/dissolve_2d.tres" id="4_hjws5"]
 
@@ -14,13 +13,11 @@ shader_parameter/inverted = false
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2j4fm"]
 _data = {
-"ShaderFade": ExtResource("4_hjws5")
+"FadeToBlack": ExtResource("4_hjws5")
 }
 
 [node name="LevelManager" type="Node2D"]
 script = ExtResource("1_1rch1")
-Speed = 1
-Pattern = ExtResource("2_m745a")
 LevelInfoCollectionPath = "res://Data/LevelInformationCollection.tres"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -32,6 +29,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
