@@ -35,3 +35,10 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_2j4fm")
 }
+
+[node name="LevelNameLabel" type="Label" parent="."]
+visible = false
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 704.0
+offset_bottom = 192.0

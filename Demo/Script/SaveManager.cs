@@ -56,10 +56,21 @@ public partial class SaveManager : Node
             }
         }
 
-        GD.PrintErr("[SaveManager] No spawnpoint found in level: " + levelManager.CurrentLevelName);
+        GD.PrintErr("[SaveManager] No spawnpoint found in level: " + levelManager.CurrentLevelID);
         GD.PrintErr("[SaveManager] tree.GetNodesInGroup(\"Spawnpoint\").Count", tree.GetNodesInGroup("Spawnpoint").Count);
         return null;
     }
 
+    public void UpdateBooleanValue(string _id, bool _)
+    {
+        // Placeholder
+    }
+
+    public bool GetBooleanValue(string _id)
+    {
+        // Placeholder
+        return false;
+    }
 
 }
+

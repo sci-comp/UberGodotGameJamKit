@@ -56,6 +56,7 @@ All content was originally in the public domain, or under the MIT license. Pleas
 
 - The lookup tables for color grading come from this project: https://github.com/thiagoamendola/godot-color-lut-shader
 - While making the scene manager, I used the following repository for guidance: https://github.com/glass-brick/Scene-Manager
+- A copy of Sky3D has been included, which will be kept up to date: https://github.com/TokisanGames/Sky3D
 
 ### Art
 
